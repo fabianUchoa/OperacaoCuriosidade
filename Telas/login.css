@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('../Fonts/Poppins-Light.ttf') format('truetype');
+}
+
+*{
+    font-family: 'Poppins';
+
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+header{
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+}
+
+#onionLog{
+    position: absolute;
+    left: 0;
+}
+
+header>h1{
+    color: #7827a1;
+    position: relative;
+    text-indent: 40px;
+}
+
+header>hr{
+    width: 50%;
+    
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.inputTxt{
+    margin: auto 20px;
+    font-size: 12px;
+}
+
+.inputBox{
+    margin: 0 auto 25px auto;
+    width: 100%;
+    position: relative;
+    
+}
+
+.inputLogin{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    width: 90%;
+    outline:none;
+    box-sizing: border-box;
+}
+
+
+.inputIcons{
+    width: 15px;
+    position: absolute;
+    left: 30px;
+    top: 14px;
+    transition: 200ms linear;
+}
+
+.placeholder{
+    color: lightgray;
+    margin: 10px;
+    top: 4px;
+    position: absolute;
+    left: 45px;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Poppins-light';
+    transition: 200ms linear;
+}
+
+.inputBox:focus-within .inputIcons, .inputLogin:valid ~ .inputLabel .inputIcons{
+    top: 1.5px;
+    width: 10px;
+}
+
+.inputBox:focus-within .placeholder, .inputLogin:valid ~ .inputLabel .placeholder{
+    top: -10px;
+    left: 35px;
+    font-size: 8px;
+    color: #7827a1;
+}
+
+#rec{
+    display: flex;
+    font-size: 10px;
+    justify-content: right;
+    margin: 8px 20px;
+    color: #7827a1;
+}
+
+#rec > a{
+    
+    color: #7827a1;
+}
+
+footer{
+    margin: auto;
+}
+
+#logBtt{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    background-color: #7827a1;
+    color: whitesmoke;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+    transition: 300ms linear;
+}
+
+#logBtt:hover{
+    background-color: #6b228f;
+    transform: scale(1.05);
+}
+
+#logBtt:active{
+    transform: scale(0.9);
+}

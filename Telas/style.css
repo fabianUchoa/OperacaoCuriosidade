@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-flow:column wrap
+}
+
+#login{
+    background-color: lightblue;
+    width: 430px;
+    height: 1024px;
+}
+
+#onion{
+    background-color: lightcoral;
+}

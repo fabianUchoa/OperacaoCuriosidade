@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('../Fonts/Poppins-Light.ttf') format('truetype');
+}
+
 *{
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
 
 html,body{
@@ -19,35 +29,13 @@ body{
 
 #login{
     background-color: rgb(255, 255, 255);
-    width: 30vw;
+    width: 38vw;
     height: 80vh;
     border-radius: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.142);
     margin: 50px;
     display: flex;
     flex-flow: row wrap;
-}
-
-#onion{
-    background-color: lightcoral;
-    width: 50vw;
-    height: 100vw;
-    
-    float: right;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Poppins-light';
-    src: url('../Fonts/Poppins-Light.ttf') format('truetype');
-}
-
-*{
-    font-family: 'Poppins';
-
 }
 
 header{
@@ -194,4 +182,66 @@ footer{
 
 #logBtt:active{
     transform: scale(0.9);
+}
+
+/*Parte direita da pag*/
+
+#onion{
+    background-color: lightcoral;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+}
+
+#onionArea{
+    margin: 30px;
+    width: 100%;
+
+}
+
+#onionImg{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+#txtArea{
+    background-color: aqua;
+    font-style: italic;
+    margin: 10px auto;
+    width: 80%;
+    font-family: 'Poppins';
+    font-size: 115%;
+}
+
+
+
+#navPoint{
+    width: 40%;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    align-self: flex-end;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.ball{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: inline-block;
+    background-color: white;
+    margin: 5%;
+    transition: 300ms linear;
+   
+}
+
+#nav0{
+    background-color: #000000a1;
 }

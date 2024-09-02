@@ -20,19 +20,12 @@
         
     }
     
-    body{
-        display: flex;
-        flex-flow:column wrap;
-        justify-content: center;
-        align-content: space-evenly;
-    }
-    
     /* Parte de Login - Esquerda*/
     
     #login{
         background-color: rgb(255, 255, 255);
-        width: 38vw;
-        height: 82vh;
+        width: 100vw;
+        height: 100vh;
         border-radius: 30px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.142);
         min-width: 430px;
@@ -168,10 +161,9 @@
     }
     
     #logBtt{
-        padding: 0.7vw;
+        padding: 20%;
         border: none;
         border-radius: 8px;
-        width: 13vw;
         background-color: #8348c8;
         color: whitesmoke;
         font-weight: 600;

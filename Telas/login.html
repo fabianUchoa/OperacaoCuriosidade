@@ -3,36 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <script src=""></script>
-    <title>Operação Curiosidade</title>
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="mobileStyle.css" >
+    <script src="teste.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>
-            <img src="../Imgs/onionLogo.svg" id="onionLog" alt="Onion Logo">peração Curiosidade
-        </h1>
-        <p>
-            Bem-vindo de volta! Faça o login para continuar.
-        </p>
-        <hr>
-    </header>
-    <main>
-        <p class="inputTxt">E-mail ou nome do usuário</p>
-        <div class="inputBox">
-            <input type="text" name="user" id="user" class="inputLogin" required>
-            <label for="user" class="inputLabel"><img src="../Imgs/mail-icon.png" class="inputIcons" alt="Mail Icon"><span class="placeholder" id="teste">Insira aqui seu e-mail ou nome de usuário</span></label>
+    <section id="login">
+        <div id="loginHeader">
+            <h1>
+                <img src="../Imgs/onionLogo.svg" id="onionLog" alt="Onion Logo">
+            </h1>
+            <p>
+                Bem-vindo de volta! Faça o login para continuar.
+            </p>
+            <hr>
         </div>
-        <p class="inputTxt">Senha</p>
-        <div class="inputBox">
-            <input type="password" min="8" max="16" name="password" id="password" class="inputLogin" required>
-            <label for="password" class="inputLabel"><img src="../Imgs/lock-icon.png" alt="Lock Icon" class="inputIcons"><span class="placeholder">Insira aqui a sua senha</span></label>
-            <p id="rec">Esqueceu sua senha? <a href="">Clique aqui</a></p>
+        <div id="loginMain">
+            <p class="inputTxt">E-mail ou nome do usuário</p>
+            <div class="inputBox">
+                <input type="text" name="user" id="user" class="inputLogin" required>
+                <label for="user" class="inputLabel"><img src="../Imgs/mail-icon.png" class="inputIcons" alt="Mail Icon"><span class="placeholder" id="phUser">Insira aqui seu e-mail ou nome de usuário</span></label>
+            </div>
+            <p class="inputTxt">Senha</p>
+            <div class="inputBox">
+                <input type="password" min="8" max="16" name="password" id="password" class="inputLogin" required>
+                <label for="password" class="inputLabel"><img src="../Imgs/lock-icon.png" id="lock" alt="Lock Icon" class="inputIcons"><span class="placeholder" id="phSenha">Insira aqui a sua senha</span></label>
+                <p id="rec">Esqueceu sua senha? <a href="">Clique aqui</a></p>
+            </div>
+            
         </div>
-        
-    </main>
-    <footer>
-        <input type="button" value="ENTRAR" id="logBtt">
-    </footer>
+        <div id="loginFooter">
+            <input type="button" value="ENTRAR" id="logBtt">
+        </div>
+    </section>
+    <section id="onion">
+        <div id="onionArea">
+            <img id="onionImg" src="../Imgs/OnionSlices/onion0.svg" alt="">
+         </div>
+         <div id="txtArea">
+            <p id="txtCuriosidade">"A primeira camada da cebola é sobre conhecer o colaborador além do cargo, revelando suas <span class="txtPurple">necessidades</span> e <span class="txtPurple">objetivos pessoais</span>."</p>
+        </div>
+         <div id="navPoint">
+            <a class="ball" id="nav0" href="#" onclick="manualTxt(this.id)"></a>
+            <a class="ball" id="nav1" href="#" onclick="manualTxt(this.id)"></a>
+            <a class="ball" id="nav2" href="#" onclick="manualTxt(this.id)"></a>
+            <a class="ball" id="nav3" href="#" onclick="manualTxt(this.id)"></a>
+        </div>
+        <div id="onionFooter">
+            <p>Powered by <img id="logoForlogic" src="../Imgs/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="Forlogic Logo"></p>
+            
+        </div>
+    </section>
 </body>
 </html>

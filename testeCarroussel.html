@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="teste.js"></script>
+    <title>Document</title>
+    <style>
+        body, html{
+            height: 100vh;
+            width: 100vw;
+            margin:0;
+            box-sizing: border-box;
+        }
+
+
+        body{
+            margin: 0;
+
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+        #ceb{
+            margin: 0;
+            width: 100vw;
+            
+        }
+
+        #ceb>img{
+            width: 30%;
+            display: block;
+            margin: auto;
+        }
+        #navPoint{
+            width: 20%;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .ball{
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: inline-block;
+            background-color: white;
+            margin: auto;
+            transition: 300ms linear;
+        }
+
+        #nav0{
+            background-color: #000000a1;
+        }
+
+        #img1{
+            transition: 200ms linear;
+        }
+
+    </style>
+</head>
+<body>
+     <div id="ceb">
+        <img id="img1" src="Imgs/OnionSlices/onion0.svg" alt="">
+     </div>
+     <div id="Txt">
+        <p id="txtCuriosidade"></p>
+     </div>
+     <div id="navPoint">
+        <a class="ball" id="nav0" href="#"></a>
+        <a class="ball" id="nav1" href="#"></a>
+        <a class="ball" id="nav2" href="#"></a>
+        <a class="ball" id="nav3" href="#"></a>
+    </div>
+</body>
+</html>

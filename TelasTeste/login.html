@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src=""></script>
+    <title>Operação Curiosidade</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="../Imgs/onionLogo.svg" id="onionLog" alt="Onion Logo">peração Curiosidade
+        </h1>
+        <p>
+            Bem-vindo de volta! Faça o login para continuar.
+        </p>
+        <hr>
+    </header>
+    <main>
+        <p class="inputTxt">E-mail ou nome do usuário</p>
+        <div class="inputBox">
+            <input type="text" name="user" id="user" class="inputLogin" required>
+            <label for="user" class="inputLabel"><img src="../Imgs/mail-icon.png" class="inputIcons" alt="Mail Icon"><span class="placeholder" id="teste">Insira aqui seu e-mail ou nome de usuário</span></label>
+        </div>
+        <p class="inputTxt">Senha</p>
+        <div class="inputBox">
+            <input type="password" min="8" max="16" name="password" id="password" class="inputLogin" required>
+            <label for="password" class="inputLabel"><img src="../Imgs/lock-icon.png" alt="Lock Icon" class="inputIcons"><span class="placeholder">Insira aqui a sua senha</span></label>
+            <p id="rec">Esqueceu sua senha? <a href="">Clique aqui</a></p>
+        </div>
+        
+    </main>
+    <footer>
+        <input type="button" value="ENTRAR" id="logBtt">
+    </footer>
+</body>
+</html>

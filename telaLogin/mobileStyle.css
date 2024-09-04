@@ -28,6 +28,7 @@
         height: 100vh;
         display: flex;
         align-content:space-evenly;
+        justify-content: center;
         flex-flow: row wrap;
     }
     
@@ -36,22 +37,23 @@
         display: flex;
         justify-content: center;
         flex-flow: row wrap;
-        align-items: center;
-        align-content: center;
+        align-content: space-around;
        
-        width: 100%;
-        height: 18%;
+        width: 100vw;
+        height: 18vh;
     }
+  #logoImg{
+        height: 10vh;
+        margin: auto;
+        text-align: center;
+    }
+    #logoImg{
+        margin: auto;
+        width: 80vw;
+        height: 18vh;
+    }
+
     
-    #onionLog{
-        margin: auto;
-    }
-
-    #loginHeader > h1{
-        height: 100%;
-        margin: auto;
-
-    }
     
     #loginHeader>p{
         font-size: 75%;

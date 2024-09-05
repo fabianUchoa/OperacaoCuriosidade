@@ -1,16 +1,18 @@
 @font-face {
     font-family: 'Poppins';
-    src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Poppins-light';
-    src: url('../Fonts/Poppins-Light.ttf') format('truetype');
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
 }
+
 
 *{
     box-sizing: border-box;
     font-size: 0.9vw;
-    font-family: 'Poppins';
+    font-family: 'Poppins-Light';
+    font-weight: bold;
     outline: none;
 }
 
@@ -228,7 +230,7 @@ main{
 }
 
 #infoPerfil{
-    font-family: 'Poppins-light';
+    font-weight: normal;
     color: white;
     text-align: center;
     font-size: 0.8vw;

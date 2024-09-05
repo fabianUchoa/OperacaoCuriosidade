@@ -9,8 +9,9 @@
 
 *{
     box-sizing: border-box;
-    font-size: 95%;
+    font-size: 0.9vw;
     font-family: 'Poppins';
+    outline: none;
 }
 
 a{
@@ -35,7 +36,7 @@ body{
 }
 
 hr{
-    width: 70%;
+    width: 12.5vw;
     background-color: lightgray;
     margin: 0 auto;
 }
@@ -72,7 +73,7 @@ hr{
 #opcsBar{
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: white;
     width: 100%;
     height: fit-content;
@@ -80,21 +81,39 @@ hr{
 
 .txtOpcBar{
     font-size: 0.9vw;
+    transition: 200ms linear;
 }
 
 .opcs{
-    width: 18vw;
-    padding:1vw 3vw ;
+    width: 15vw;
+    padding:0.8vw 0vw 0.8vw 3vw;
     border-radius: 10px;
-    margin: 0.5vw 0.5vw 0.5vw 1vw;
+    margin: 0.5vw 0;
     text-align: justify;
     position: relative;
+    transition: 200ms linear;
+}
+
+#imgWhite{
+    z-index: -1;
+    transition: 200ms linear;
+}
+.opcs:hover{
+    background-color: #6b1bc6;
+}
+
+.opcs:hover #imgWhite{
+    z-index: 2;
+}
+
+.opcs:hover .txtOpcBar{
+    color: whitesmoke;
 }
 
 .iconOpc{
     position: absolute;
     left: 1vw;
-    top: 1.8vh;
+    top: 1.5vh;
     width: 1.5vw;
 }
 
@@ -239,8 +258,7 @@ main{
 
 .conteudoHeader{
     width: 45vw;
-    height: 6vh;
-    
+    height: 4vh;
     display: flex;
     flex-flow: column wrap;
     align-content: space-around;
@@ -250,16 +268,22 @@ main{
     width: 1vw;
     height: 2vh;
     position: absolute;
-    left: 0vw;
-    top: 0.2vh;
+    left: 0.3vw;
+    top: 0.4vh;
 }
 
 .opc{
-    font-family: 'Poppins-light';
     color: #6b1bc6;
     position: relative;
-    padding-left: 1.3vw;
+    padding:0.2vh 0.5vw 0.2vh 1.6vw;
+    border-radius: 15px;
     font-size: 0.85vw;
+    transition: 200ms linear;
+}
+
+.opc:hover{
+    background-color: #6b1bc637;
+    transform: scale(1.1);
 }
 
 #iframe{

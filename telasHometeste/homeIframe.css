@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('../Fonts/Poppins-Light.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins';
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+/*Configs Gerais*/
+
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+hr{
+    width: 12.5vw;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+#sideBar{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.196);
+}
+
+#headerBar{
+    background-color: #6b1bc6;
+    border-radius: 0 0 10px 0;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#headerBar >img{
+    width: 80%;
+    height: 100%;
+    
+
+}
+
+#opcsBar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+
+.txtOpcBar{
+    font-size: 0.9vw;
+    transition: 200ms linear;
+}
+
+.opcs{
+    width: 15vw;
+    padding:0.8vw 0vw 0.8vw 3vw;
+    border-radius: 10px;
+    margin: 0.5vw 0;
+    text-align: justify;
+    position: relative;
+    transition: 200ms linear;
+}
+
+#imgWhite{
+    z-index: -1;
+    transition: 200ms linear;
+}
+.opcs:hover{
+    background-color: #6b1bc6;
+}
+
+.opcs:hover #imgWhite{
+    z-index: 2;
+}
+
+.opcs:hover .txtOpcBar{
+    color: whitesmoke;
+}
+
+.iconOpc{
+    position: absolute;
+    left: 1vw;
+    top: 1.5vh;
+    width: 1.5vw;
+}
+
+main{
+    width: 80vw;
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0 2%;
+}
+
+#search{
+    position: relative;
+    width: 45vw;
+    height: fit-content;
+    align-self: center;
+    
+}
+
+#pesq{
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 45vw;
+    height: 3.5vw;
+    padding: 1vw 3vw;
+    outline: none;
+    
+}
+
+#inputIcon{
+    width: 1.5vw;
+}
+
+#inputTxt{
+    position: absolute;
+    left: 0.5vw;
+    top: 0.9vw;
+}
+
+#pesq::placeholder{
+    font-family: 'Poppins-light';
+    font-size: 0.9vw;
+}
+
+#icons{
+   
+    width: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-self: center;
+}
+
+#toggleBt{
+    background-color: rgb(180, 179, 179);
+    width: 35%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    justify-content:flex-start;
+    align-content: center;
+    align-self: center;
+}
+
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 65%;
+    border: 2px solid rgb(180, 179, 179);
+    display: flex;
+    
+}
+#notBox{
+    align-self: center;
+}
+
+#notification{
+    display: flex;
+    height: fit-content;
+    
+}
+
+#notIcon{
+    width: 1.5vw;
+}
+
+#paintIcon{
+    width: 100%;
+    margin: auto;
+}
+
+.topPerfil{
+    background-color: #7227c8;
+    width: 22%;
+    height:max-content ;
+    display: flex;
+    border-radius: 10px;
+    flex-flow: row;
+    
+    justify-content: space-evenly;
+    align-content: center;
+    margin-right: 20px;
+}
+
+#fotoPerfil{
+    width: 22%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+#infoPerfil{
+    font-family: 'Poppins-light';
+    color: white;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+/*Conteúdo principal da pag*/
+
+.conteiner{
+    width: 80vw;
+    height: 85vh;
+
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+/*Conteudo Principal*/
+
+.conteudo{
+    
+    width: 53vw;
+    height: 85vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.conteudoHeader{
+    width: 45vw;
+    height: 4vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+}
+
+.opcImg{
+    width: 1vw;
+    height: 2vh;
+    position: absolute;
+    left: 0.3vw;
+    top: 0.4vh;
+}
+
+.opc{
+    color: #6b1bc6;
+    position: relative;
+    padding:0.2vh 0.5vw 0.2vh 1.6vw;
+    border-radius: 15px;
+    font-size: 0.85vw;
+    transition: 200ms linear;
+}
+
+.opc:hover{
+    background-color: #6b1bc637;
+    transform: scale(1.1);
+}
+
+#iframe{
+    width: 50vw;
+    height: 77vh;
+    
+    align-self: flex-start;
+}
+
+/*Barra lateral Direita*/
+
+.dadosLateral{
+    width: 25vw;
+    height: 85vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.dados{
+    width: 16vw;
+    height: 20vh;
+    background-color: rgb(255, 255, 255);
+    margin: 2vh 1vw;
+    border-radius: 23px ;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.188)  ;
+    border: 1px solid lightgray;
+}
+
+.dadosHeader{
+    width: 17vw;
+    height: 3.3vh;
+    background-color: #6b1bc6;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 0.9vw;
+    letter-spacing: 0.5px;
+    
+}
+
+.dado{
+    width: 10vw;
+    height: 15vh;
+    text-align: center;
+    color: #6b1bc6;
+    line-height: 15vh;
+    font-size: 4vw;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+}
+

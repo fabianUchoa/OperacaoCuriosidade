@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="meuCad.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sideBar">
+         <div id="headerBar">
+            <img src="/Imgs/onionLogo.svg" alt="">
+         </div>
+         <div id="opcsBar">
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
+                Visão Geral</a></div>
+            <hr>
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
+                Cadastrar Curiosidade</a></div>
+            <hr>
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Meus Cadastros</a></div>
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/insert-char.svg" alt="" > <img src="/Imgs/homeIcons/insert-char-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Relatórios</a></div>
+            <hr>
+         </div>
+    </div>
+    <main>
+        <div id="search">
+            <input type="text" name="pesq" placeholder="Pesquise aqui" id="pesq">
+            <label for="pesq" id="inputTxt"><img id="inputIcon" src="/Imgs/homeIcons/seactIcon.svg" alt=""></label>
+        </div>
+        <div id="icons">
+            <div id="toggleBt"><a href="" id="toggle"><img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt=""></a></div>
+            <div id="notBox"><a href="" id="notification"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></a></div>
+        </div>
+        <div class="topPerfil">
+            <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+            <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
+            <img src="/Imgs/homeIcons/expandIcon.svg" width="8%">
+            
+        </div>
+    </main>
+    <div class="conteiner">
+        <div class="conteudoHeader">
+
+            <div id="inputs">
+                <div id="inputs">
+                    <div class="inputId">
+                        <label for="id">Código</label><br>
+                        <select name="id" id="id" class="estiloSelect" >
+                                    <option value="null">-</option>
+                                    <option value="id1">24-00016</option>
+                                    <option value="id2">24-00015</option>
+                                    <option value="id3">24-00014</option>
+                                    <option value="id4">24-00013</option>
+                        </select>
+                    </div>
+                    <div class="inputStatus">
+                        <label for="status">Status</label><br>
+                        <select name="status" class="estiloSelect" id="status">
+                            <option value="null">-</option>
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                    <div class="inputName">
+                        <label for="nome">Nome</label><br>
+                        <select name="nome" id="nome" class="estiloSelect">
+                            <option value="null">-</option>
+                            <option value="nome1">Pablinto Salabin</option>
+                            <option value="nome2">Rosangela Maria Pereira</option>
+                        </select>
+                    </div>
+                    
+                    <div class="inputDate">
+                        <label for="data">Periodo</label><br>
+                        <div id="date">
+                            <input type="date" name="dataIn" class="estiloSelect" id="dataIn"> -
+                            <input type="date" name="dataOut" class="estiloSelect" id="dataOut">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="posBtt">
+                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar">
+                <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar">
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="cabeçalho">
+                <div class="codHeader">
+
+                </div>
+                <div class="nomeHeader">
+
+                </div>
+                <div class="mailHeader">
+
+                </div>
+                <div class="createDateHeader">
+
+                </div>
+                <div class="status">
+                    
+                </div>
+            </div>
+            <div class="listagem">
+                
+            </div>
+        </div>
+        <div class="conteudoFotter">
+
+        </div>
+    </div>
+    
+</body>
+</html>

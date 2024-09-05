@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+/*Configs Gerais*/
+
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+hr{
+    width: 12.5vw;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+#sideBar{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.196);
+}
+
+#headerBar{
+    background-color: #6b1bc6;
+    border-radius: 0 0 10px 0;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#headerBar >img{
+    width: 80%;
+    height: 100%;
+    
+
+}
+
+#opcsBar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+
+.txtOpcBar{
+    font-size: 0.9vw;
+    transition: 200ms linear;
+}
+
+.opcs{
+    width: 15vw;
+    padding:0.8vw 0vw 0.8vw 3vw;
+    border-radius: 10px;
+    margin: 0.5vw 0;
+    text-align: justify;
+    position: relative;
+    transition: 200ms linear;
+}
+
+#imgWhite{
+    z-index: -1;
+    transition: 200ms linear;
+}
+.opcs:hover{
+    background-color: #6b1bc6;
+}
+
+.opcs:hover #imgWhite{
+    z-index: 2;
+}
+
+.opcs:hover .txtOpcBar{
+    color: whitesmoke;
+}
+
+.iconOpc{
+    position: absolute;
+    left: 1vw;
+    top: 1.5vh;
+    width: 1.5vw;
+}
+
+main{
+    width: 80vw;
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0 2%;
+}
+
+#search{
+    position: relative;
+    width: 45vw;
+    height: fit-content;
+    align-self: center;
+    
+}
+
+#pesq{
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 45vw;
+    height: 3.5vw;
+    padding: 1vw 3vw;
+    outline: none;
+    
+}
+
+#inputIcon{
+    width: 1.5vw;
+}
+
+#inputTxt{
+    position: absolute;
+    left: 0.5vw;
+    top: 0.9vw;
+}
+
+#pesq::placeholder{
+    font-family: 'Poppins-light';
+    font-size: 0.9vw;
+}
+
+#icons{
+   
+    width: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-self: center;
+}
+
+#toggleBt{
+    background-color: rgb(180, 179, 179);
+    width: 35%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    justify-content:flex-start;
+    align-content: center;
+    align-self: center;
+}
+
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 65%;
+    border: 2px solid rgb(180, 179, 179);
+    display: flex;
+    
+}
+#notBox{
+    align-self: center;
+}
+
+#notification{
+    display: flex;
+    height: fit-content;
+    
+}
+
+#notIcon{
+    width: 1.5vw;
+}
+
+#paintIcon{
+    width: 100%;
+    margin: auto;
+}
+
+.topPerfil{
+    background-color: #7227c8;
+    width: 22%;
+    height:max-content ;
+    display: flex;
+    border-radius: 10px;
+    flex-flow: row;
+    
+    justify-content: space-evenly;
+    align-content: center;
+    margin-right: 20px;
+}
+
+#fotoPerfil{
+    width: 22%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+#infoPerfil{
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+/*Conteúdo principal da pag*/
+
+.conteiner{
+    width: 77vw;
+    height: 82vh;
+    background-color:;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    
+}
+
+/*Parte de cabeça do conteudo*/
+
+.conteudoHeader{
+    background-color: rgb(247, 247, 247);
+    width: 75vw;
+    height: 12vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center ;
+    align-content: space-between;
+    border-radius: 8px;
+    border: 1px solid rgb(172, 172, 172);
+    
+}
+
+#inputs{
+    height: 10vh;
+    width: 45vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-around;
+    
+}
+
+#date{
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgb(172, 172, 172);
+}
+
+#dataIn, #dataOut{
+    border: none;
+    
+}
+
+.estiloSelect{
+    border-radius: 8px;
+    border: 1px solid rgb(172, 172, 172);
+    padding: 0.2vw;
+}
+
+label{
+    font-size: 0.8vw;
+}
+
+input{
+    font-size: 0.8vw;
+}
+
+select{
+    font-size: 0.8vw;
+    
+}
+
+.posBtt{
+    height: 7.5vh;
+    width: 15vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    
+}
+
+.bttEstilo{
+    padding: 0.25vw 1.8vw;
+    border: 1px solid #6b1bc6;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    font-weight: normal;
+}
+
+#bttFiltrar{
+    color: white;
+    background-color: #6b1bc6;
+}
+
+#bttLimpar{
+    background-color: white;
+    color: #6b1bc6;
+}
+
+.conteudo{
+    background-color: lightgreen;
+    width: 75vw;
+    height: 60vh;
+}
+
+.conteudoFotter{
+    background-color: yellow;
+    width: 75vw;
+    height: 10vh;
+}
+

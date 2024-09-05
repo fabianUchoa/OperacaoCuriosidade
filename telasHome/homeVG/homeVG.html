@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeVG.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sideBar">
+         <div id="headerBar">
+            <img src="/Imgs/onionLogo.svg" alt="">
+         </div>
+         <div id="opcsBar">
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
+                Visão Geral</a></div>
+            <hr>
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
+                Cadastrar Curiosidade</a></div>
+            <hr>
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Meus Cadastros</a></div>
+            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/insert-char.svg" alt="" > <img src="/Imgs/homeIcons/insert-char-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Relatórios</a></div>
+            <hr>
+         </div>
+    </div>
+    <main>
+        <div id="search">
+            <input type="text" name="pesq" placeholder="Pesquise aqui" id="pesq">
+            <label for="pesq" id="inputTxt"><img id="inputIcon" src="/Imgs/homeIcons/seactIcon.svg" alt=""></label>
+        </div>
+        <div id="icons">
+            <div id="toggleBt"><a href="" id="toggle"><img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt=""></a></div>
+            <div id="notBox"><a href="" id="notification"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></a></div>
+        </div>
+        <div class="topPerfil">
+            <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+            <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
+            <img src="/Imgs/homeIcons/expandIcon.svg" width="8%">
+            
+        </div>
+
+    </main>
+
+    <div class="conteiner">
+        <div class="conteudo">
+            <div class="conteudoHeader">
+                <p class="opc"><a href="./telasIframe/recentPosts/recents.html" target="frame">
+                        <img src="/Imgs/homeIcons/ConteudoIcons/recentIcon.svg" alt="" class="opcImg">
+                        Últimos cadastrados
+                </a>
+                </p>
+                <p class="opc">
+                    <a href="./telasIframe/shareByMe/shareBM.html" target="frame">
+                        <img src="/Imgs/homeIcons/ConteudoIcons/shareIcon.svg" alt="" class="opcImg">
+                        Compartilhados por mim
+                </a>
+                </p>
+                <p class="opc">
+                    <a href="./telasIframe/shareWithMe/shareWM.html" target="frame">
+                        <img src="/Imgs/homeIcons/ConteudoIcons/diversityIcon.svg" alt="" class="opcImg">
+                        Compartilhados comigo
+                    </a>
+                </p>
+            </div>
+            <iframe id="iframe" name="frame" src="./telasIframe/shareWithMe/shareWM.html" frameborder="0">
+
+            </iframe>
+        </div>
+        <div class="dadosLateral">
+            <div class="dados">
+                <div class="dadosHeader">
+                    Total Cadastrados
+                </div>
+                <div class="dado">
+                    26
+                </div>
+            </div>
+            <div class="dados">
+                <div class="dadosHeader">
+                    Cadastros Pendentes
+                </div>
+                <div class="dado">
+                    2
+                </div>
+            </div>
+            <div class="dados">
+                <div class="dadosHeader">
+                    Cadastros Ativos
+                </div>
+                <div class="dado">
+                    24
+                </div>
+            </div>
+            <div class="poweredBy">
+                <img src="/Imgs/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -39,6 +39,7 @@ body{
     border-radius: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.24);
     min-width: 430px;
+    max-width: 1024px;
     display: flex;
     align-content:space-evenly;
     justify-content: center;
@@ -218,10 +219,10 @@ body{
     margin: auto;
     width: 90%;
     padding: 10px;
-    height: auto;
+    height: 12vh;
     text-align: justify;
     font-family: 'Poppins';
-    font-size: 85%;
+    font-size: 0.8vw;
 }
 
 #txtCuriosidade{

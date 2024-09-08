@@ -6,7 +6,10 @@
     font-family: 'Poppins-light';
     src: url('/Fonts/Poppins-Light.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('/Fonts/Poppins-Regular.ttf') format('truetype');
+}
 
 *{
     box-sizing: border-box;
@@ -252,101 +255,20 @@ main{
 
 .conteiner{
     width: 77vw;
-    height: 82vh;
+    height: 85vh;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
 /*Parte de cabeça do conteudo*/
 
-.conteudoHeader{
-    background-color: rgb(247, 247, 247);
-    width: 75vw;
-    height: 10vh;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content:center ;
-    align-content: space-between;
-    border-radius: 8px;
-    border: 0.5px solid rgb(172, 172, 172);
-    
-}
-
-#inputs{
-    height: 9vh;
-    width: 45vw;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    justify-content: space-around;
-    
-}
-
-#date{
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid rgb(172, 172, 172);
-}
-
-#dataIn, #dataOut{
-    border: none;
-    
-}
-
-.estiloSelect{
-    border-radius: 8px;
-    border: 1px solid rgb(172, 172, 172);
-    padding: 0.2vw;
-}
-
-label{
-    font-size: 0.8vw;
-}
-
-input{
-    font-size: 0.8vw;
-}
-
-select{
-    font-size: 0.8vw;
-    
-}
-
-.posBtt{
-    height: 7.5vh;
-    width: 15vw;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    
-}
-
-.bttEstilo{
-    padding: 0.25vw 1.8vw;
-    border: 1px solid #6b1bc6;
-    border-radius: 6px;
-    font-family: 'Poppins';
-    font-weight: normal;
-}
-
-#bttFiltrar{
-    color: white;
-    background-color: #6b1bc6;
-}
-
-#bttLimpar{
-    background-color: white;
-    color: #6b1bc6;
-}
-
 .conteudo{
     width: 75vw;
-    height: 72vh;
-    display: none;
+    height: 75vh;
+    display: flex;
     flex-flow: row wrap;
     align-content: space-around;     
 }
@@ -399,14 +321,14 @@ select{
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    
+    margin-left: 4vw;
 }
 
 .createDateColumn{
     width: 15vw;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     
 }
@@ -536,14 +458,13 @@ iframe{
     width: 75vw;
     height: 72vh;
     margin: none;
-    display: flex;
+    display: none;
 }
 
 /*Fotter do conteúdo*/
 .conteudoFotter{
-    
     width: 20.1vw;
-    height: 10vh;
+    height: 1vh;
     align-self: flex-end;
     display: flex;
     flex-flow: row;
@@ -551,8 +472,10 @@ iframe{
     align-content: center;
     align-items: center;
     font-size: 0.8vw;
-    margin-right: 1vw;
+    
 }
+
+
 
 #logoForlogic{
     width: 15vw;

@@ -98,6 +98,7 @@ hr{
 
 #opcMeusCad{
     background-color: #6b1bc6;
+    transform: scale(1.05);
 }
 
 #opcMeusCad .txtOpcBar{
@@ -114,6 +115,7 @@ hr{
 }
 .opcs:hover{
     background-color: #6b1bc6;
+    transform: scale(1.05);
 }
 
 .opcs:hover #imgWhite{

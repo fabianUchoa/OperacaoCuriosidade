@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homeVG.css">
+    <link rel="stylesheet" href="configuracoes.css">
     <title>Document</title>
 </head>
 <body>
     <div id="sideBar">
          <div id="headerBar">
-            <img src="/Imgs//GeralIcons/onionLogo.svg" alt="">
+            <img src="/Imgs/GeralIcons/onionLogo.svg" alt="">
          </div>
          <div id="opcsBar">
             <div class="opcs" id="visaoGeral"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
@@ -30,7 +30,7 @@
             </a></div>
          </div>
     </div>
-    <main>
+    <header>
         <div id="search">
             <input type="text" name="pesq" placeholder="Pesquise aqui" id="pesq">
             <label for="pesq" id="inputTxt"><img id="inputIcon" src="/Imgs/homeIcons/seactIcon.svg" alt=""></label>
@@ -43,66 +43,63 @@
             <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
             <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
             <img src="/Imgs/homeIcons/expandIcon.svg" width="8%">
-            
         </div>
-
-    </main>
-
+    </header>
     <div class="conteiner">
         <div class="conteudo">
             <div class="conteudoHeader">
-                <p class="opc"><a href="./telasIframe/recentPosts/recents.html" target="frame">
-                        <img src="/Imgs/homeIcons/ConteudoIcons/recentIcon.svg" alt="" class="opcImg">
-                        Últimos cadastrados
+                <a href="./iframeConfigurações/meuPerfilConfig.html" target="frame" class="opc">
+                        <img src="/Imgs/ConfiguraçõesIcon/accountCircleIcon.svg" alt="" class="opcImg">
+                        Meu Perfil
                 </a>
-                </p>
-                <p class="opc">
-                    <a href="./telasIframe/shareByMe/shareBM.html" target="frame">
-                        <img src="/Imgs/homeIcons/ConteudoIcons/shareIcon.svg" alt="" class="opcImg">
-                        Compartilhados por mim
+                <a href="./telasIframe/shareByMe/shareBM.html" target="frame" class="opc">
+                        <img src="/Imgs/ConfiguraçõesIcon/shareIcon.svg" alt="" class="opcImg">
+                        Opções de Compartilhamento
                 </a>
-                </p>
-                <p class="opc">
-                    <a href="./telasIframe/shareWithMe/shareWM.html" target="frame">
-                        <img src="/Imgs/homeIcons/ConteudoIcons/diversityIcon.svg" alt="" class="opcImg">
-                        Compartilhados comigo
-                    </a>
-                </p>
+                <a href="" target="frame" class="opc">
+                        <img src="/Imgs/ConfiguraçõesIcon/manageAccountIcon.svg" alt="" class="opcImg" onclick="expandeIframe()">
+                        Gerenciar Usuários
+                </a>
+                <a href="./telasIframe/shareWithMe/shareWM.html" target="frame" class="opc">
+                        <img src="/Imgs/ConfiguraçõesIcon/searchFrameIcon.svg" alt="" class="opcImg">
+                        Trilha de Auditoria
+                </a>
             </div>
-            <iframe id="iframe" name="frame" src="./telasIframe/recentPosts/recents.html" frameborder="0">
-
+            <iframe id="iframe" name="frame" src="./iframeConfigurações/gerenciarUsers/gerenciarUsers.html" frameborder="0">
             </iframe>
         </div>
         <div class="dadosLateral">
-            <div class="dados">
-                <div class="dadosHeader">
-                    Total Cadastrados
-                </div>
-                <div class="dado">
-                    26
-                </div>
+            <h2>Sua foto</h2>
+            <div class="dadosHead">
+                <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
+                    Atualize sua imagem
+                </a>
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
+                    Remover Imagem
+                </a>
             </div>
-            <div class="dados">
-                <div class="dadosHeader">
-                    Cadastros Pendentes
-                </div>
-                <div class="dado">
-                    2
-                </div>
+            <h2>Altere sua senha</h2>
+            <div class="dadosMain">
+                <label for="senhaAtual" class="labelDados">Senha Atual</label>
+                <input type="password" name="senhaAtual" class="senhaBox">
+                <label for="senhaNova" class="labelDados">Nova Senha</label>
+                <input type="password" name="senhaNova" class="senhaBox">
             </div>
-            <div class="dados">
-                <div class="dadosHeader">
-                    Cadastros Ativos
-                </div>
-                <div class="dado">
-                    24
-                </div>
+            <div class="dadosFotter">
+                <input type="checkbox" name="cargo" id="cargo"> <label for="cargo" id="labelCheckbox">Administrador</label>
+                <a href="" id="saveBtt">
+                    <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
+                </a>
             </div>
+        </div>
             <div class="logoFotter">
-                Powered by <img id="logoForlogic" src="/Imgs/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="Forlogic Logo">
+                Powered by <img id="logoForlogic" src="/Imgs/GeralIcons/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="Forlogic Logo">
         </div>
-        </div>
+        
     </div>
-    
+    <script src="/telasHome/homeRelatorios/homeRelatiorios.js"></script>
 </body>
 </html>

@@ -6,11 +6,14 @@
     font-family: 'Poppins-light';
     src: url('/Fonts/Poppins-Light.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('/Fonts/Poppins-Regular.ttf') format('truetype');
+}
 
 *{
     box-sizing: border-box;
-    font-size: 0.9vw;
+    font-size: 0.85vw;
     font-family: 'Poppins-Light';
     font-weight: bold;
     outline: none;
@@ -33,7 +36,7 @@ body,html{
 body{
     display: flex;
     flex-flow: column wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-content: space-between;
 }
 
@@ -96,16 +99,16 @@ hr{
     transition: 200ms linear;
 }
 
-#visaoGeral{
+#relatorios{
     background-color: #6b1bc6;
     transform: scale(1.05);
 }
 
-#visaoGeral .txtOpcBar{
+#relatorios .txtOpcBar{
     color: white;
 }
 
-#visaoGeral #imgWhite{
+#relatorios #imgWhite{
     z-index: 2;
 }
 
@@ -134,13 +137,12 @@ hr{
 }
 
 main{
-    width: 80vw;
+    width: 78.5vw;
     height: 15vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: center;
-    padding: 0 2%;
 }
 
 #search{
@@ -253,124 +255,232 @@ main{
 /*Conteúdo principal da pag*/
 
 .conteiner{
-    width: 80vw;
-    height: 85vh;
-
+    width: 77vw;
+    height: 80vh;
     display: flex;
     flex-flow: column wrap;
-
+    align-content: center;
+    justify-content: space-around;
+    
 }
 
-/*Conteudo Principal*/
+/*Parte de cabeça do conteudo*/
 
 .conteudo{
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;     
+}
+
+.cabecalho{
+    width: 75vw;
+    height: 5vh;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around ;
+    border: 0.5px solid rgb(172, 172, 172);
+    border-radius: 8px;
+    padding: 1vh 1vw;
+    margin-bottom: 0.5vh;
+    background-color: rgb(247, 247, 247);
+}
+
+#fontWeightCabecalho{
+    font-family: 'Poppins';
+}
+
+.arrowDown{
+    width: 1.5vw;
+    height: 2.5vh;
+}
+
+.codColumn{
+    width: 10vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
     
-    width: 53vw;
-    height: 85vh;
+}
+
+
+.nomeRelatorioColumn{
+    width: 25vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.mailCriadorColumn{
+    width: 15vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 4vw;
+}
+
+.createDateColumn{
+    width: 15vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    
 }
 
-.conteudoHeader{
-    width: 45vw;
+.statusColumn{
+    width:5vw ;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.listagem{
+    width: 75vw;
+    height: 64vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: flex-start ;
+    border-radius: 8px;
+}
+
+.cadDetalhes{
+    text-decoration: none;
+    color: black;
+}
+
+.cadastro{
+    width: 75vw;
+    height: 7vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around ;
+    border: 0.5px solid rgba(172, 172, 172, 0.514);
+    border-radius: 8px;
+    padding: 1vh 1vw;
+    margin-bottom: 0.1vh;
+}
+
+.ativo{
+    background-color: rgba(174, 239, 174, 0.382);
+    font-size: 0.8vw;
+    color: rgb(7, 162, 7);
+    border: 1px solid rgba(7, 162, 7, 0.425);
+    font-weight: normal;
+    padding: 0vh 0.5vw;
+    border-radius:20px;
+}
+
+.inativo{
+    background-color: rgba(239, 174, 174, 0.382);
+    font-size: 0.8vw;
+    color: rgb(162, 7, 7);
+    border: 1px solid rgba(162, 7, 7, 0.425);
+    font-weight: normal;
+    padding: 0vh 0.5vw;
+    border-radius:20px;
+}
+
+.detailBtt{
+    background-color: #6b1bc6;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    justify-content:space-between;
+    margin-left: 2vw;
+    border-radius: 5px;
+    height: 4vh;
+    width: 7vw;
+    padding: 1.8vh 1.3vw 1.8vh 0.8vw;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 0.9vw;
+    font-weight: normal;
+}
+
+.moreVertical{
+    width: 1.3vw;
+    height: 2.7vh;
+}
+
+.paginacao{
+    border: 0.5px solid rgb(172, 172, 172);
+    border-radius: 8px;
+    width: 75vw;
     height: 4vh;
     display: flex;
-    flex-flow: column wrap;
-    align-content: space-around;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    margin-top: 0.2vh;
 }
 
-.opcImg{
-    width: 1vw;
-    height: 2vh;
-    position: absolute;
-    left: 0.3vw;
-    top: 0.4vh;
-}
-
-.opc{
-    color: #6b1bc6;
-    position: relative;
-    padding:0.2vh 0.5vw 0.2vh 1.6vw;
-    border-radius: 15px;
-    font-size: 0.85vw;
-    transition: 200ms linear;
-}
-
-.opc:hover{
-    background-color: #6b1bc637;
-    transform: scale(1.1);
-}
-
-#iframe{
-    width: 50vw;
-    height: 77vh;
-    
-    align-self: flex-start;
-}
-
-/*Barra lateral Direita*/
-
-.dadosLateral{
-    width: 25vw;
-    height: 85vh;
+.pag{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: space-around;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 15vw;
+    font-size: 0.7vw;
+    margin-right: 1vw;
 }
 
-.dados{
-    width: 16vw;
-    height: 20vh;
-    background-color: rgb(255, 255, 255);
-    margin: 2vh 1vw;
-    border-radius: 23px ;
-    overflow: hidden;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.188)  ;
-    border: 1px solid lightgray;
+#adjustXDirection{
+    transform: scaleX(-1);
+    background: none;
+    border: 2px solid lightgray;
 }
 
-.dadosHeader{
-    width: 17vw;
-    height: 3.3vh;
-    background-color: #6b1bc6;
-    text-align: center;
-    color: whitesmoke;
-    font-weight: 400;
-    font-size: 0.9vw;
-    letter-spacing: 0.5px;
-    
+.pagBtt{
+    background:none;
+    border-radius: 6px;
+    width: 1.3vw;
+    padding: 0.2vw;
+    border: 2px solid lightgray;
 }
 
-.dado{
-    width: 10vw;
-    height: 15vh;
-    text-align: center;
-    color: #6b1bc6;
-    line-height: 15vh;
-    font-size: 4vw;
-    font-family: 'Poppins-light';
-    font-weight: bold;
+/*Iframe*/
+
+iframe{
+    width: 75vw;
+    height: 72vh;
+    margin: none;
+    display: none;
 }
 
-.logoFotter{
-    width: 17vw;
-    height: 5vh;
+/*Fotter do conteúdo*/
+.conteudoFotter{
+    width: 20.1vw;
+    height: 3vh;
     align-self: flex-end;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-
+    align-content: center;
     align-items: center;
     font-size: 0.8vw;
-    margin-right: 1vw;
+    
 }
 
+
+
 #logoForlogic{
-    width: 12vw;
+    width: 15vw;
 }
+
+
+

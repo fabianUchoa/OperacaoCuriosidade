@@ -6,6 +6,14 @@
     font-family: 'Poppins-light';
     src: url('/Fonts/Poppins-Light.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('/Fonts/Poppins-Regular.ttf') format('truetype');
+}
 
 
 *{
@@ -133,8 +141,8 @@ hr{
     width: 1.5vw;
 }
 
-main{
-    width: 80vw;
+header{
+    width: 78vw;
     height: 15vh;
     display: flex;
     flex-flow: row wrap;
@@ -226,8 +234,9 @@ main{
 
 .topPerfil{
     background-color: #7227c8;
-    width: 22%;
-    height:max-content ;
+    width: 17vw;
+    height: 9vh;
+    
     display: flex;
     border-radius: 10px;
     flex-flow: row;
@@ -258,6 +267,8 @@ main{
 
     display: flex;
     flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: space-between;
 
 }
 
@@ -266,32 +277,37 @@ main{
 .conteudo{
     
     width: 53vw;
-    height: 85vh;
+    height: 84vh;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: flex-end;
 }
 
 .conteudoHeader{
-    width: 45vw;
+    width: 52vw;
     height: 4vh;
     display: flex;
     flex-flow: column wrap;
     align-content: space-around;
+    justify-self: flex-end; 
 }
 
 .opcImg{
-    width: 1vw;
-    height: 2vh;
-    position: absolute;
-    left: 0.3vw;
-    top: 0.4vh;
+    width: 1.5vw;
+    height: 2.3vh;
 }
 
 .opc{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: normal;
+    padding: 0 0.5vw 0 0.2vw;
+    height:3vh;
     color: #6b1bc6;
     position: relative;
-    padding:0.2vh 0.5vw 0.2vh 1.6vw;
     border-radius: 15px;
     font-size: 0.85vw;
     transition: 200ms linear;
@@ -303,72 +319,134 @@ main{
 }
 
 #iframe{
-    width: 50vw;
+    width: 50.5vw;
     height: 77vh;
-    
-    align-self: flex-start;
+    background-color: aquamarine;
+    align-self: flex-end;
 }
 
 /*Barra lateral Direita*/
 
 .dadosLateral{
-    width: 25vw;
-    height: 85vh;
-    display: flex;
+    width: 23vw;
+    height: 65vh;
+    display: none;
     flex-flow: row wrap;
-    justify-content: center;
-    align-content: space-around;
+    justify-content: flex-start;
+    align-content: center;
 }
 
-.dados{
-    width: 16vw;
-    height: 20vh;
-    background-color: rgb(255, 255, 255);
-    margin: 2vh 1vw;
-    border-radius: 23px ;
-    overflow: hidden;
+.dadosHead{
+    height: 11vh;
+    width: 17vw;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.188)  ;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    
+}
+.dadosLateral>h2{
+    color: #6b1bc6;
+    width: 20vw;
+    font-family: 'Poppins-bold';
+    font-size: 1.15vw;
+    margin-bottom: 1.5vh;
+}
+
+#altFoto{
+    background-color: #6b1bc61f;
+    width: 4.5vw;
+    padding: 1.1vw;
+    border-radius: 8px;
     border: 1px solid lightgray;
 }
 
-.dadosHeader{
-    width: 17vw;
-    height: 3.3vh;
-    background-color: #6b1bc6;
-    text-align: center;
-    color: whitesmoke;
-    font-weight: 400;
-    font-size: 0.9vw;
-    letter-spacing: 0.5px;
-    
+.opcsPerfil{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: fit-content;
+    height: 3vh;
+    border: 1px solid lightgray;
+    color: black;
+    font-size: 0.8vw;
+    margin-top: 1.7vh;
+    border-radius: 5px;
+    padding: 0 0.5vw;
 }
 
-.dado{
-    width: 10vw;
-    height: 15vh;
-    text-align: center;
-    color: #6b1bc6;
-    line-height: 15vh;
-    font-size: 4vw;
-    font-family: 'Poppins-light';
-    font-weight: bold;
+.opcsIcons{
+    width: 1vw;
+    margin-right: 0.3vw;
 }
+
+
+.dadosMain{
+    display: flex;
+    flex-flow: row wrap;
+    width: 25vw;
+    justify-content: flex-start;
+    align-content: space-around;
+    height: 16vh;
+
+}   
+
+.labelDados{
+    color: #6b1bc6;
+    font-size: 0.8vw;
+    width: 20vw;
+}
+
+.senhaBox{
+    width: 19vw;
+    border: 1.5px solid lightgray;
+    border-radius: 5px;
+    padding: 0.5vh 1vw;
+    margin-bottom: 2vh;
+}
+
+.dadosFotter{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 15vh;
+}
+
+
+#labelCheckbox{
+    font-size: 0.8vw;
+}
+
+#saveBtt{
+    background-color: #6b1bc6;
+    padding: 1.4vh 1vw;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 19vw;
+    height: 6vh;
+    font-size: 1vw;
+    border-radius: 8px;
+    font-family: 'Poppins-regular';
+}
+
+#saveBtt> img{
+    margin-right: 0.8vw;
+}
+
 
 .logoFotter{
-    width: 17vw;
-    height: 5vh;
-    align-self: flex-end;
+    width: 19vw;
+    height: 10vh;
+    align-self: flex-start;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-
+    
     align-items: center;
     font-size: 0.8vw;
-    margin-right: 1vw;
+
 }
 
 #logoForlogic{

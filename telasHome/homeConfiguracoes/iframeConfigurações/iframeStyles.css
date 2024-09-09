@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('/Fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+*{
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body,html{
+    width: 90vw;
+    height: 100vh;
+}
+
+h1{
+    font-family: 'Poppins-bold';
+    color: #6b1bc6;
+    font-size: 2.8vw;
+}
+
+.conteudoIframe{   
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:space-around;
+    width: 90vw;
+}
+
+.inputBox{
+    border: 1.7px solid lightgray;
+    height: 5vh;
+    border-radius: 5px;
+    margin-bottom: 3vh;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+}
+
+.inputLabel{
+    color: #6b1bc6;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 1.5vw;
+    width: 50vw;
+}
+
+#inputNome, #end, #cargo, #estadoCivil, #inputMail{
+    width: 70vw;
+}
+
+#userName, #nasc, #inputIdade, #tel{
+    width: 35vw;
+}

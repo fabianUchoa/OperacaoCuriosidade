@@ -11,3 +11,9 @@
             conteudo.style.display = 'flex'
             iframe.style.display = 'none'
         }
+
+        function expandeIframe(){
+            document.querySelector('.dadosLateral').style.display = 'none'
+            conteudo.style.width = '80vw'
+            iframe.style.width = '80vw'
+        }

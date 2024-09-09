@@ -44,6 +44,7 @@ body{
     text-decoration: none;
     border-radius: 8px;
     align-items: center;
+    justify-content: space-between;
 }
 
 #replayImg{
@@ -124,6 +125,7 @@ select{
     font-family: 'Poppins';
     font-weight: normal;
     transition: 200ms linear;
+    
 }
 
 #bttImprimir{
@@ -146,7 +148,7 @@ select{
     height: 78vh;
     display: flex;
     flex-flow: row wrap;
-    align-content: space-around;   
+    align-content: center;   
 
 }
 
@@ -221,7 +223,7 @@ select{
 
 .listagem{
     width: 100vw;
-    height: 65vh;
+    height: 62vh;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;

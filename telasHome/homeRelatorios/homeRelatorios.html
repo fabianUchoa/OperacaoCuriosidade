@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homeRelatorios.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -18,9 +19,9 @@
             <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
                 Cadastrar Curiosidade</a></div>
             <hr>
-            <div class="opcs" id="opcMeusCad"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
+            <div class="opcs"><a href="/telasHome/homeMeusCadastros/meusCad.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
                 Meus Cadastros</a></div>
-            <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/insert-char.svg" alt="" > <img src="/Imgs/homeIcons/insert-char-white.svg" class="iconOpc" alt=""  id="imgWhite">
+            <div class="opcs" id="relatorios"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/insert-char.svg" alt="" > <img src="/Imgs/homeIcons/insert-char-white.svg" class="iconOpc" alt=""  id="imgWhite">
                 Relatórios</a></div>
             <hr>
          </div>
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <div class="listagem">
-                <a href="#" class="cadDetalhes">
+                <a href="./telasIframeRelatorios/relatorioDetalhes.html" target="frame" class="cadDetalhes" onclick="abreIframe()">
                     <div class="cadastro">
                         <div class="codColumn">
                             24-00016
@@ -256,6 +257,6 @@
                 Powered by <img id="logoForlogic" src="/Imgs/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="Forlogic Logo">
         </div>
     </div>
-    
+    <script src="./homeRelatiorios.js"></script>
 </body>
 </html>

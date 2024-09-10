@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trilhaAuditoria.css">
+    <title>Trilha Auditoria</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="conteudoHeader">
+            <div id="inputs">
+                    <div class="selectItem">
+                        <label for="item">Item</label><br>
+                        <select name="item" id="item" class="estiloSelect" >
+                                    <option value="null">-</option>
+                                    <option value="id1">Organizacional</option>
+                        </select>
+                    </div>
+                    <div class="selectLocal">
+                        <label for="local">Local</label><br>
+                        <select name="local" class="estiloSelect" id="local">
+                            <option value="null">-</option>
+                            <option value="local1">Configurações</option>
+                            <option value="local2">Relatórios</option>
+                            <option value="local3">Cadastro</option>
+                        </select>
+                    </div>
+                    <div class="selectUser" id="user">
+                        <label for="user">Usuário</label><br>
+                        <select name="user" id="user" class="estiloSelect">
+                            <option value="null">-</option>
+                            <option value="user1">@Salabin</option>
+                            <option value="user2">@Rosangela</option>
+                        </select>
+                    </div>
+                    
+                    <div class="inputDate">
+                        <label for="data">Periodo</label><br>
+                        <div id="date">
+                            <input type="date" name="dataIn" class="estiloSelect" id="dataIn"> -
+                            <input type="date" name="dataOut" class="estiloSelect" id="dataOut">
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="posBtt">
+                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar">
+                <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar">
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="cabecalho">
+                <div class="localColumn">
+                    Local
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="dateColumn">
+                    Data
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="userColumn">
+                    Usuário
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="eventColumn">
+                    Evento
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="itemColumn">                  
+                    Item
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+            </div>
+            <div class="listagem">
+                <div class="cadastro">
+                    <div class="localColumn">
+                        Meus Cadastros
+                    </div>
+                    <div class="dateColumn">
+                        23 de ago. de 2024 17:10:32
+                    </div>
+                    <div class="userColumn">
+                        @rosangela.pereira
+                        
+                    </div>
+                    <div class="eventColumn">
+                        Operação removida
+                        
+                    </div>
+                    <div class="itemColumn">
+                        Organizacional
+                    </div>
+                </div>
+                <div class="cadastro">
+                    <div class="localColumn">
+                        Relatórios
+                    </div>
+                    <div class="dateColumn">
+                        03 de set. de 2024 16:30:54
+                        
+                    </div>
+                    <div class="userColumn">
+                        @JLucas
+                        
+                    </div>
+                    <div class="eventColumn">
+                        Relatório baixado
+                        
+                    </div>
+                    <div class="itemColumn">
+                        Organizacional
+                    </div>
+                </div>
+                <div class="cadastro">
+                    <div class="localColumn">
+                        Configurações
+                    </div>
+                    <div class="dateColumn">
+                        05 de set. de 2024 11:05:32
+                        
+                    </div>
+                    <div class="userColumn">
+                        @Liminha
+                        
+                    </div>
+                    <div class="eventColumn">
+                        Usuário cadastrado
+                        
+                    </div>
+                    <div class="itemColumn">
+                        Organizacional
+                    </div>
+                </div>
+                <div class="cadastro">
+                    <div class="localColumn">
+                        Cadastro
+                    </div>
+                    <div class="dateColumn">
+                        28 de ago. de 2024 09:23:45
+                        
+                    </div>
+                    <div class="userColumn">
+                        @xTudo
+                        
+                    </div>
+                    <div class="eventColumn">
+                        Operação cadastrada
+                        
+                    </div>
+                    <div class="itemColumn">
+                        Organizacional
+                    </div>
+                </div>
+                <div class="cadastro">
+                    <div class="localColumn">
+                        Configurações
+                    </div>
+                    <div class="dateColumn">
+                        14 de set. de 2024 13:40:54
+                        
+                    </div>
+                    <div class="userColumn">
+                        @Babidi
+                        
+                    </div>
+                    <div class="eventColumn">
+                        Operação cancelada
+                        
+                    </div>
+                    <div class="itemColumn">
+                        Organizacional
+                    </div>
+                </div>
+                <div class="cadastro">
+                    <div class="localColumn">
+                        Cadastro
+                    </div>
+                    <div class="dateColumn">
+                        13 de ago. de 2024 16:23:09
+                        
+                    </div>
+                    <div class="userColumn">
+                        @Salabi
+                        
+                    </div>
+                    <div class="eventColumn">
+                        Usuário alterado
+                        
+                    </div>
+                    <div class="itemColumn">
+                        Organizacional
+                    </div>
+                </div>
+            </div>
+            <div class="paginacao">
+                <div class="pag">
+                    Pagina 1 de 10 
+                    <img src="/Imgs/MeusCadIcons/skipPrevious.svg" class="pagBtt" id="adjustXDirection" alt="">
+                    <img src="/Imgs/MeusCadIcons/arrowPrevious.svg" class="pagBtt" id="adjustXDirection" alt="">
+                    <img src="/Imgs/MeusCadIcons/arrowNext.svg" class="pagBtt" alt="">
+                    <img src="/Imgs/MeusCadIcons/skipNext.svg" class="pagBtt" alt="">
+                </div>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

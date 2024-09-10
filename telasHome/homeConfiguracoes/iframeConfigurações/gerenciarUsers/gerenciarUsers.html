@@ -7,214 +7,261 @@
     <title>Gerencia de Usuários</title>
 </head>
 <body>
-    <div class="conteudo">
-        <div class="cabecalho">
-            <div class="codColumn" id="fontWeightCabecalho">
-                Código
-                <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+    <div class="conteiner">
+        <div class="conteudoHeader">
+            <div id="inputs">
+                <div id="inputs">
+                    <div class="inputStatus">
+                        <label for="status">Status</label><br>
+                        <select name="status" class="estiloSelect" id="status">
+                            <option value="null">-</option>
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                    <div class="inputTipo">
+                        <label for="tipo">Tipo</label><br>
+                        <select name="tipo" class="estiloSelect" id="tipo">
+                            <option value="null">-</option>
+                            <option value="admin">Administrador</option>
+                            <option value="operador">Operador</option>
+                        </select>
+                    </div>
+                    <div class="inputId">
+                        <label for="id">Código ou Nome</label><br>
+                        <select name="id" id="id" class="estiloSelect" >
+                            <option value="null">-</option>
+                            <option value="id1">24-00016</option>
+                            <option value="id2">24-00015</option>
+                            <option value="id3">24-00014</option>
+                            <option value="id4">24-00013</option>
+                            <option value="nome1">Pablinto Salabin</option>
+                            <option value="nome2">Rosangela Maria Pereira</option>
+                        </select>
+                    </div>
+                    <div class="inputDate">
+                        <label for="data">Periodo</label><br>
+                        <div id="date">
+                            <input type="date" name="dataIn" class="estiloSelect" id="dataIn"> -
+                            <input type="date" name="dataOut" class="estiloSelect" id="dataOut">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="nomeRelatorioColumn" id="fontWeightCabecalho">
-                Nome do Relatório
-                <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
-            </div>
-            <div class="mailCriadorColumn" id="fontWeightCabecalho">
-                Criado por
-                <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
-            </div>
-            <div class="createDateColumn" id="fontWeightCabecalho">
-                Data de Criação
-                <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+            <div class="posBtt">
+                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar">
+                <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar">
+                <input type="submit" class="bttEstilo" id="criarUser" value="Criar Usuário">
             </div>
         </div>
-        <div class="listagem">
-            <a href="./telasIframeRelatorios/relatorioDetalhes.html" target="frame" class="cadDetalhes" onclick="abreIframe()">
-                <div class="cadastro">
+        <div class="conteudo">
+            <div class="cabecalho">
+                <input type="checkbox" name="select" id="select" class="checkColumn">
+                <div class="codColumn">
+                    Código
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="nomeColumn">
+                    Nome
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="mailColumn">
+                    E-mail
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="createDateColumn">
+                    Data de Criação
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="statusColumn">
+                    Status
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+                <div class="tipoColumn">
+                    Tipo
+                    <img src="/Imgs/MeusCadIcons/arrowDown.svg" class="arrowDown" alt="" srcset="">
+                </div>
+            </div>
+            <div class="listagem">
+                <div class="cadastro"> 
+                    <input type="checkbox" name="select" id="select" class="checkColumn">
                     <div class="codColumn">
                         24-00016
                     </div>
-                    <div class="nomeRelatorioColumn">
-                        Relatório de nomes de usuário do sistema
-                
+                    <div class="nomeColumn">
+                        Rosangela Maria Pereira
+                        
                     </div>
-                    <div class="mailCriadorColumn">
+                    <div class="mailColumn">
                         rosangela.pereira@fakemail.br
-                
+                        
                     </div>
                     <div class="createDateColumn">
                         04/09/2024
-                
+                        
                     </div>
+                    <div class="statusColumn">
+                        <p class="ativo">Ativo</p>
+                    </div>
+                    <div class="tipoColumn">
+                        <p class="operador">Operador</p>
+                    </div>
+                    <a href="#" class="detailBtt">
+                        <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
+                            Detalhes
+                    </a>
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
+                <div class="cadastro"> 
+                    <input type="checkbox" name="select" id="select" class="checkColumn">
                     <div class="codColumn">
                         24-00015
                     </div>
-                    <div class="nomeRelatorioColumn">
-                        Relatório Detalhado de Vendas, Lucros e Impactos 
-                no Mercado Global Atual
-                
+                    <div class="nomeColumn">
+                        Jorge Luccas
+                        
                     </div>
-                    <div class="mailCriadorColumn">
+                    <div class="mailColumn">
                         JLucas@fakemail.br
-                
+                        
                     </div>
                     <div class="createDateColumn">
                         01/09/2024
-                
+                        
                     </div>
+                    <div class="statusColumn">
+                        <p class="inativo">Inativo</p>
+                    </div>
+                    <div class="tipoColumn">
+                        <p class="operador">Operador</p>
+                    </div>
+                    <a href="#" class="detailBtt">
+                        <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
+                            Detalhes
+                    </a>
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
-                    <div class="codColumn">
-                        24-00005
-                    </div>
-                    <div class="nomeRelatorioColumn">
-                        Estudo Comparativo dos Resultados Trimestrais 
-                com Enfoque em Crescimento Regional
-                
-                    </div>
-                    <div class="mailCriadorColumn">
-                        Ciprioni@fakemail.br
-                
-                    </div>
-                    <div class="createDateColumn">
-                        01/09/2024
-                
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
+               
+                <div class="cadastro"> 
+                    <input type="checkbox" name="select" id="select" class="checkColumn">
                     <div class="codColumn">
                         24-00008
                     </div>
-                    <div class="nomeRelatorioColumn">
-                        Relatório Completo de Progresso, Investimentos e 
-                Análise de Resultados em Projetos-Chave
-                
+                    <div class="nomeColumn">
+                        Liminha Lima
+                        
                     </div>
-                    <div class="mailCriadorColumn">
+                    <div class="mailColumn">
                         Liminha@fakemail.br
-                
+                        
                     </div>
                     <div class="createDateColumn">
                         01/09/2024
-                
+                        
                     </div>
+                    <div class="statusColumn">
+                        <p class="ativo">Ativo</p>
+                    </div>
+                    <div class="tipoColumn">
+                        <p class="operador">Operador</p>
+                    </div>
+                    <a href="#" class="detailBtt">
+                        <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
+                            Detalhes
+                    </a>
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
+                <div class="cadastro"> 
+                    <input type="checkbox" name="select" id="select" class="checkColumn">
                     <div class="codColumn">
                         24-00010
                     </div>
-                    <div class="nomeRelatorioColumn">
-                        Indicadores Chave de Performance Operacional 
-                Interna e Oportunidades para Melhorias Sustentáveis
-                
+                    <div class="nomeColumn">
+                        X-Tudo da Costa
+                        
                     </div>
-                    <div class="mailCriadorColumn">
+                    <div class="mailColumn">
                         xTudo@fakemail.br
-                
+                        
                     </div>
                     <div class="createDateColumn">
                         01/09/2024
-                
+                        
                     </div>
+                    <div class="statusColumn">
+                        <p class="inativo">Inativo</p>
+                    </div>
+                    <div class="tipoColumn">
+                        <p class="admin">Administrador</p>
+                    </div>
+                    <a href="#" class="detailBtt">
+                        <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
+                            Detalhes
+                    </a>
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
+                <div class="cadastro"> 
+                    <input type="checkbox" name="select" id="select" class="checkColumn">
                     <div class="codColumn">
                         24-00013
                     </div>
-                    <div class="nomeRelatorioColumn">
-                        Relatório Pesquisa Sobre Tendências do Mercado 
-                Global e Perspectivas de Desenvolvimento Futuro
-                
+                    <div class="nomeColumn">
+                        Babidi da Silva
+                        
                     </div>
-                    <div class="mailCriadorColumn">
+                    <div class="mailColumn">
                         Babidi@fakemail.br
-                
+                        
                     </div>
                     <div class="createDateColumn">
                         01/09/2024
-                
+                        
                     </div>
+                    <div class="statusColumn">
+                        <p class="ativo">Ativo</p>
+                    </div>
+                    <div class="tipoColumn">
+                        <p class="operador">Operador</p>
+                    </div>
+                    <a href="#" class="detailBtt">
+                        <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
+                            Detalhes
+                    </a>
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
+                <div class="cadastro"> 
+                    <input type="checkbox" name="select" id="select" class="checkColumn">
                     <div class="codColumn">
                         24-00001
                     </div>
-                    <div class="nomeRelatorioColumn">
-                        Avaliação de Projetos, Metas Corporativas e Estratégias 
-                para Maximização de Resultados
-                
+                    <div class="nomeColumn">
+                        Pablinto Salabi
+                        
                     </div>
-                    <div class="mailCriadorColumn">
+                    <div class="mailColumn">
                         Salabi@fakemail.br
-                
+                        
                     </div>
                     <div class="createDateColumn">
                         01/09/2024
-                
+                        
                     </div>
+                    <div class="statusColumn">
+                        <p class="ativo">Ativo</p>
+                    </div>
+                    <div class="tipoColumn">
+                        <p class="admin">Administrador</p>
+                    </div>
+                    <a href="#" class="detailBtt">
+                        <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
+                            Detalhes
+                    </a>
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
-                    <div class="codColumn">
-                        24-00001
-                    </div>
-                    <div class="nomeRelatorioColumn">
-                        esumo Semestral das Ações de Marketing, 
-                Publicidade e Eficácia em Diferentes Regiões
-                
-                    </div>
-                    <div class="mailCriadorColumn">
-                        Salabi@fakemail.br
-                
-                    </div>
-                    <div class="createDateColumn">
-                        01/09/2024
-                
-                    </div>
+            </div>
+            <div class="paginacao">
+                <div class="pag">
+                    Pagina 1 de 10 
+                    <img src="/Imgs/MeusCadIcons/skipPrevious.svg" class="pagBtt" id="adjustXDirection" alt="">
+                    <img src="/Imgs/MeusCadIcons/arrowPrevious.svg" class="pagBtt" id="adjustXDirection" alt="">
+                    <img src="/Imgs/MeusCadIcons/arrowNext.svg" class="pagBtt" alt="">
+                    <img src="/Imgs/MeusCadIcons/skipNext.svg" class="pagBtt" alt="">
                 </div>
-            </a>
-            <a href="" class="cadDetalhes">
-                <div class="cadastro">
-                    <div class="codColumn">
-                        24-00001
-                    </div>
-                    <div class="nomeRelatorioColumn">
-                        Análise Comparativa de Inovações Tecnológicas e 
-                Impacto na Produtividade da Empresa
-                    </div>
-                    <div class="mailCriadorColumn">
-                        Salabi@fakemail.br
-                
-                    </div>
-                    <div class="createDateColumn">
-                        01/09/2024
-                
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="paginacao">
-            <div class="pag">
-                Pagina 1 de 1 
-                <img src="/Imgs/MeusCadIcons/skipPrevious.svg" class="pagBtt" id="adjustXDirection" alt="">
-                <img src="/Imgs/MeusCadIcons/arrowPrevious.svg" class="pagBtt" id="adjustXDirection" alt="">
-                <img src="/Imgs/MeusCadIcons/arrowPrevious.svg" class="pagBtt" alt="">
-                <img src="/Imgs/MeusCadIcons/skipPrevious.svg" class="pagBtt" alt="">
             </div>
         </div>
-    </div>
 </body>
 </html>

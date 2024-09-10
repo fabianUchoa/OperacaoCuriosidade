@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('/Fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+*{
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body,html{
+    width: 90vw;
+    height: 100vh;
+}
+
+h1{
+    font-family: 'Poppins-bold';
+    color: #6b1bc6;
+    font-size: 2.8vw;
+    width: 100vw;
+}
+
+.conteudoIframe{   
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+    width: 90vw;
+}
+
+.inputArea{
+    display: flex;
+    flex-flow: column;
+    margin-right: 1vw;
+}
+
+.inputBox{
+    border: 1.7px solid rgb(183, 183, 183);
+    height: 5vh;
+    border-radius: 5px;
+    margin-bottom: 3vh;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.inputLabel{
+    color: #6b1bc6;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 1.5vw;
+    
+}
+
+#inputNome, #cargo, #inputMail, #fAcademica{
+    width: 41vw;
+}
+
+#nasc, #estadoCivil{
+    width: 33vw;
+}
+
+#userName{
+    width: 21vw;
+}
+
+#end{
+    width: 54vw;
+}
+
+#tel{
+    width: 34vw;
+}
+
+#cargo{
+    width: 49vw;
+}
+
+#inputIdade{
+    width: 5vw; 
+}
+
+.valores{
+    color: #6b1bc6;
+    display: flex;
+    flex-flow: row;
+    font-size: 2.5vw;
+    margin: 0 0 1.5vh 0;
+    align-items: center;
+    align-content: center;
+}
+
+.valores>img{
+    margin-right: 0.5vw;
+    width: 3.5vw;
+}
+
+.labelValores{
+    color: black;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.inputValores{
+    width: 90vw;
+    height: 20vh;
+    border:1.5px solid rgb(184, 184, 184);
+    border-radius: 8px;
+    margin-bottom: 3vh;
+    vertical-align: top;
+    resize: none;
+    padding: 1vh 1vw;
+}

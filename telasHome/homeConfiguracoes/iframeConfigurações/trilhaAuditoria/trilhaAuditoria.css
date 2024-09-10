@@ -10,7 +10,7 @@
 
 *{
     box-sizing: border-box;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     font-family: 'Poppins-Light';
     font-weight: bold;
     outline: none;
@@ -67,7 +67,7 @@ body{
 
 #inputs{
     height: 15vh;
-    width: 60vw;
+    width: 70vw;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -79,21 +79,31 @@ body{
     background-color: white;
     border-radius: 8px;
     border: 1px solid rgb(172, 172, 172);
+    
 
 }
 
 #dataIn, #dataOut{
     border: none;
-    height: 6.5vh;
+    height: 6vh;
     
+    padding: 0.2vh 0.2vw;
 }
 
 .estiloSelect{
-    height: 6.5vh;
-    width: 10.5vw;
+    height: 6vh;
+    width: 14vw;
     border-radius: 8px;
     border: 1px solid rgb(172, 172, 172);
     padding: 0.2vh 0.2vw;
+}
+
+#user{
+    width: 13vw;
+}
+
+#item, #local{
+    width: 12vw;
 }
 
 label{
@@ -113,7 +123,7 @@ select{
 
 .posBtt{
     height: 7vh;
-    width: 38vw;
+    width: 25vw;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -124,28 +134,21 @@ select{
 .bttEstilo{
     padding: 0.25vw 1.3vw;
     width: 11vw;
-    height: 6.5vh;
+    height: 6vh;
     border: 1px solid #6b1bc6;
     border-radius: 6px;
     font-family: 'Poppins';
     font-weight: normal;
     font-size: 1em;
     transition: 200ms linear;
+    background-color: white;
+    color: #6b1bc6;
 }
 
 .bttEstilo:hover{
     transform: scale(1.1);
 }
 
-#criarUser{
-    color: white;
-    background-color: #6b1bc6;
-}
-
-#bttFiltrar,#bttLimpar{
-    background-color: white;
-    color: #6b1bc6;
-}
 
 .conteudo{
     width: 100vw;
@@ -161,7 +164,7 @@ select{
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: flex-start ;
+    justify-content: space-around ;
     border: 0.5px solid rgb(172, 172, 172);
     border-radius: 8px;
     padding: 1vh 1vw;
@@ -177,7 +180,7 @@ select{
     width: 5vw;
 }
 
-.codColumn{
+.localColumn{
     width: 10vw;
     display: flex;
     flex-flow: row wrap;
@@ -185,15 +188,7 @@ select{
     align-items: center;
 }
 
-.nomeColumn{
-    width: 15vw;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.mailColumn{
+.dateColumn{
     width: 20vw;
     display: flex;
     flex-flow: row wrap;
@@ -201,7 +196,15 @@ select{
     align-items: center;
 }
 
-.createDateColumn{
+.userColumn{
+    width: 20vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.eventColumn{
     width: 12vw;
     display: flex;
     flex-flow: row wrap;
@@ -209,7 +212,7 @@ select{
     align-items: center;
 }
 
-.statusColumn{
+.itemColumn{
     width: 10vw ;
     display: flex;
     flex-flow: row wrap;
@@ -242,7 +245,7 @@ select{
     flex-flow: row wrap;
     align-items: center;
     align-content: center;
-    justify-content: flex-start ;
+    justify-content: space-around ;
     border: 0.5px solid rgba(172, 172, 172, 0.514);
     border-radius: 8px;
     padding: 1vh 1vw;

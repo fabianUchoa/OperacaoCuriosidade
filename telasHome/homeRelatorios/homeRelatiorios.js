@@ -13,7 +13,19 @@
         }
 
         function expandeIframe(){
-            document.querySelector('.dadosLateral').style.display = 'none'
-            conteudo.style.width = '80vw'
-            iframe.style.width = '80vw'
+            let dadosLateral = document.querySelector('.dadosLateral')
+            let conteudoConfig = document.querySelector('.conteudo')
+
+            dadosLateral.style.display = 'none'
+            conteudoConfig.style.width = '70vw'
+            document.querySelector('.logoFotter').style.margin = '0'
+        }
+
+        function minimizaIframe(){
+            let dadosLateral = document.querySelector('.dadosLateral')
+            let conteudoConfig = document.querySelector('.conteudo')
+
+            dadosLateral.style.display = 'flex'
+            conteudoConfig.style.width = '52vw'
+            document.querySelector('.logoFotter').style.margin = ' 0 5vw 0 0'
         }

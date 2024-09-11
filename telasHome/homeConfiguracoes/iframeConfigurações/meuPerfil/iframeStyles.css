@@ -64,7 +64,7 @@ h1{
     
 }
 
-#inputNome, #cargo, #inputMail, #fAcademica{
+#inputNome, #inputMail, #fAcademica{
     width: 41vw;
 }
 
@@ -111,7 +111,7 @@ h1{
     color: black;
     font-family: 'Poppins-light';
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1.5vw;
 }
 
 .inputValores{

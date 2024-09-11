@@ -92,6 +92,7 @@ hr{
 .txtOpcBar{
     font-size: 0.9vw;
     transition: 200ms linear;
+    color: #6b1bc6;
 }
 
 .opcs{

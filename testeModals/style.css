@@ -160,12 +160,12 @@ span{
     overflow: hidden;
 }
 
-#bttEdit{
-
+#bttEdit2, #bttEdit3{
+   display: none;
 }
 
-#bttVisualizar{
-    
+#bttVisualizar1{
+    display: none;
 }
 
 .overlay {

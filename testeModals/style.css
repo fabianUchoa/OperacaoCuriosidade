@@ -142,6 +142,7 @@ span{
 
 .opcUser{
     width: 40%;
+    height: 8vh;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -151,11 +152,19 @@ span{
 }
 
 .escolheTipo{
-    height: 4vh;
+    height: 9vh;
     width: 6.12vw;
-    z-index: 2000;
+    z-index: 900;
     display: none;
-    position: fixed;
+    position: absolute;  
+    overflow: hidden;
+}
+
+#bttEdit{
+
+}
+
+#bttVisualizar{
     
 }
 
@@ -167,8 +176,10 @@ span{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
     display: none;
-    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+    z-index: 800; /* Para garantir que fique acima de outros elementos */
 }
+
+
 
 .bttEdit{
     background-color: #6b1bc6;
@@ -176,7 +187,7 @@ span{
     
     margin-bottom: 0.5vh;
     width: 6.12vw;
-    height: 4vh;
+    height: 4.0vh;
     letter-spacing: 0.05vw;
     padding: 0.6vh 0.5vw 0.6vh 0.8vw;
     border-radius: 8px;
@@ -191,6 +202,8 @@ span{
 .bttVisualizar{
     background-color: #ffffff;
     color: #6b1bc6;
+    height: 4vh;
+    width: 6.12vw;
     border: 1.5px solid #6b1bc6;
     padding: 0.5vh 0.5vw 0.5vh 0.8vw;
     border-radius: 8px;

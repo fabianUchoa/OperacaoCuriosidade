@@ -190,6 +190,7 @@ body{
     transform: scaleX(-1);
 }
 
+
 .cardOpcs{
     width: 100%;
     text-align: center;
@@ -198,6 +199,7 @@ body{
 .cardOpcs>img{
     width: 2.5vw;
     height: 3.5vh;
+    cursor: pointer;
 }
 /*Style exclusivo para a página Share With Me*/
 

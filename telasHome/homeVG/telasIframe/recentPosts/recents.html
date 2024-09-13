@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <div class="card">
+    <div class="card" id="card1">
         <div class="user">
             <div class="header">
                 <img class="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
@@ -57,13 +57,13 @@
                 24-00016
             </div>
             <div class="cardOpcs">
-                <img src="/Imgs/shareIcons/reply.svg" alt="">
-                <img src="/Imgs/shareIcons/delete.svg" alt="">
-                <img src="/Imgs/shareIcons/edit.svg" alt="">
+                <img src="/Imgs/shareIcons/reply.svg" alt="" onclick="abreModal('.modal')">
+                <img src="/Imgs/shareIcons/delete.svg" alt="" onclick="abreModal('.confirmDelete', '#card1')">
+                <img src="/Imgs/shareIcons/edit.svg" alt="" onclick="abreModal('.userEdit')">
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card" id="card2">
         <div class="user">
             <div class="header">
                 <img class="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
@@ -113,13 +113,13 @@
                 24-00016
             </div>
             <div class="cardOpcs">
-                <img src="/Imgs/shareIcons/reply.svg" alt="">
-                <img src="/Imgs/shareIcons/delete.svg" alt="">
+                <img src="/Imgs/shareIcons/reply.svg" alt="" onclick="abreModal('.modal')">
+                <img src="/Imgs/shareIcons/delete.svg" alt="" onclick="abreModal('.confirmDelete', '#card2')">
                 <img src="/Imgs/shareIcons/edit.svg" alt="">
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card" id="card3">
         <div class="user">
             <div class="header">
                 <img class="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
@@ -170,11 +170,12 @@
                 24-00016
             </div>
             <div class="cardOpcs">
-                <img src="/Imgs/shareIcons/reply_all_24dp_6B1BC6_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <img src="/Imgs/shareIcons/delete.svg" alt="">
+                <img src="/Imgs/shareIcons/reply.svg" alt="" onclick="abreModal('.modal')">
+                <img src="/Imgs/shareIcons/delete.svg" alt="" onclick="abreModal('.confirmDelete', '#card3')">
                 <img src="/Imgs/shareIcons/edit.svg" alt="">
             </div>
         </div>
     </div>
+    <script src="/telasHome/homeVG/onFocus.js"></script>
 </body>
 </html>

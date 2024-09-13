@@ -222,7 +222,7 @@ body{
     height: 12vh;
     text-align: justify;
     font-family: 'Poppins';
-    font-size: 0.8vw;
+    font-size: 1vw;
 }
 
 #txtCuriosidade{
@@ -270,13 +270,13 @@ body{
     margin: auto;
 }
 #logoForlogic{
-    width: 40%;
+    width: 12vw;
     margin: 0;
 }
 
 #onionFooter>p{
     margin-bottom: 20px;
     text-align: center;
-    font-size: 70%;
+    font-size: 0.8vw;
 }
 }

@@ -154,7 +154,7 @@ span{
 .escolheTipo{
     height: 9vh;
     width: 6.12vw;
-    z-index: 900;
+    
     display: none;
     position: absolute;  
     overflow: hidden;

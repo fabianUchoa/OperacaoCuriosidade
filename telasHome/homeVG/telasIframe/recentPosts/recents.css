@@ -82,7 +82,7 @@ body{
     font-size: 1.8vw;
 }
 
-.status{
+.status, .statusI{
     height: 3.2vh;
     width: 6vw;
     
@@ -93,6 +93,12 @@ body{
     text-align: center;
     border-radius: 20px;
     font-size: 1.4vw;
+}
+
+.statusI{
+    background-color: rgba(239, 174, 174, 0.382);
+    border: 1px solid rgba(162, 7, 7, 0.425);
+    color: rgb(162, 7, 7);
 }
 
 .userID{

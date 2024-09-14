@@ -128,9 +128,10 @@ hr{
 
 .iconOpc{
     position: absolute;
-    left: 1vw;
-    top: 1.5vh;
+    left: 10%;
+    top: 50%;
     width: 1.5vw;
+    transform: translate(-50%,-50%);
 }
 
 main{

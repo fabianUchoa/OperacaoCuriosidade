@@ -77,20 +77,17 @@ function abreModal(modal, card){
     window.parent.document.querySelector('.overlay').style.display = 'block'
     window.parent.modalOp = modal
     window.parent.cardOp = card
-    console.log(cardOp)
-    console.log(modalOp)
+ 
 }
 
 function fechaModal(){
-    console.log(modalOp)
-    console.log(cardOp)
+
     document.querySelector(modalOp).style.display ='none'
     document.querySelector('.overlay').style.display = 'none'
 }
 
 function deletaOperacao(){
-    console.log(cardOp)
-    console.log(modalOp)
+
     let iframe = document.getElementById('iframe')
     iframe.contentWindow.document.querySelector(cardOp).style.display ='none'
     fechaModal()
@@ -111,6 +108,15 @@ function destacaOp(num){
     
 }
 
-function trocaDados(){
+function verificaAbaNot(op, opPai){
     
+    let notification = document.querySelector(op)
+    if(notification.style.display !== 'flex'){
+        abreModal(op)
+        document.querySelector(opPai).style.zIndex = '2000'}
+    else{
+        document.querySelector(opPai).style.zIndex = '0'
+        fechaModal()}
 }
+
+

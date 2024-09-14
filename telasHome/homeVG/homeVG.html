@@ -12,7 +12,8 @@
             <img src="/Imgs//GeralIcons/onionLogo.svg" alt="">
          </div>
          <div id="opcsBar">
-            <div class="opcs" id="visaoGeral"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
+            <div class="opcs" id="visaoGeral"><a href="#" class="txtOpcBar">
+                <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt=""> <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
                 Visão Geral</a></div>
             <hr>
             <div class="opcs"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
@@ -32,14 +33,14 @@
         </div>
         <div id="icons">
             <div id="toggleBt"><a href="" id="toggle"><img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt=""></a></div>
-            <div id="notBox"><a href="" id="notification"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></a></div>
+            <div id="notBox" onclick="verificaAbaNot('#notAba', '#notBox')"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></div>
         </div>
         <div class="perfilUser">
-            
-            <div class="topPerfil">
+    
+            <div class="topPerfil" id="topPerfil">
                 <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
                 <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
-                <a href=""><img src="/Imgs/homeIcons/expandIcon.svg" width="22vw"></a>
+                <img id="expandPerfil" src="/Imgs/homeIcons/expandIcon.svg" width="22vw" onclick="verificaAbaNot('#contentAbaPerfil', '.topPerfil')">
             
             </div>
             <div id="modal">
@@ -235,6 +236,9 @@
             </div>
         </div>
     </div>
+
+    <!--Modal de editar cadastro-->
+
     <div class="userEdit">
         <div class="conteudoEdit">
             <div class="editHeader">
@@ -310,6 +314,96 @@
             </div>
         </div>
     </div>
+
+    <!--Modal aba de Notificações !-->
+    <div class="notAba" id="notAba">
+        <div class="notHeader">
+            Notificações
+            <span>5</span>
+        </div>
+        <div class="notMain">
+            <div class="notification">
+                <img src="/Imgs/FotosPerfil/Rosangela.jpg" alt="">
+                <div class="notInfos">
+                    @rose.pereira
+                    <p>
+                        compartilhou 3 operações com você
+                    </p>
+                </div>
+                <div class="sideTime">
+                    2h
+                </div>
+            </div>
+            <div class="notification">
+                <img src="/Imgs/FotosPerfil/babidi.jpg" alt="">
+                <div class="notInfos">
+                    @babidi
+                    <p>
+                        compartilhou 2 operações com você
+                    </p>
+                </div>
+                <div class="sideTime">
+                    4h
+                </div>
+            </div>
+            <div class="notification">
+                <img src="/Imgs/FotosPerfil/x-bacon-aberto.jpg" alt="">
+                <div class="notInfos">
+                    @xTudo.silva
+                    <p>
+                        compartilhou 1 operação com você
+                    </p>
+                </div>
+                <div class="sideTime">
+                    1d
+                </div>
+            </div>
+            <div class="notification">
+                <img src="/Imgs/FotosPerfil/george lucas.jpg" alt="">
+                <div class="notInfos">
+                    @JLucas
+                    <p>
+                        compartilhou 2 operações com você
+                    </p>
+                </div>
+                <div class="sideTime">
+                    4d
+                </div>
+            </div>
+            <div class="notification">
+                <img src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+                <div class="notInfos">
+                    @salabi
+                    <p>
+                        compartilhou 5 operações com você
+                    </p>
+                </div>
+                <div class="sideTime">
+                    4d
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal aba Perfil-->
+
+    <div class="contentAbaPerfil" id="contentAbaPerfil">
+        <div class="opcsAbaPerfil"><a href="/telasHome/homeConfiguracoes/configuracoes.html">
+            <img src="/Imgs/homeIcons/perfilFoto.jpg" alt="" class="perfilIcon">
+            Perfil</a>
+        </div>
+        <hr>
+        <div class="opcsAbaPerfil">
+            <img src="/Imgs/homeIcons/settingsIon.svg" alt="" class="imgIcons" >
+            Configurações
+        </div>
+        <hr>
+        <div class="opcsAbaPerfil">
+            <img src="/Imgs/Complementos/logoutIcon.svg" alt="" class="imgIcons">
+            Sair
+        </div>
+    </div>
+
     <script src="onFocus.js"></script>
 </body>
 </html>

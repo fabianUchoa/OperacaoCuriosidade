@@ -132,10 +132,10 @@
                     <div class="statusColumn">
                         <p class="ativo">Ativo</p>
                     </div>
-                    <a href="#" class="detailBtt">
+                    <div class="detailBtt" id="detailBtt" onclick="verificaAbaNot('.modalDetalhes', '#detailBtt')">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
                             Detalhes
-                    </a>
+                    </div>
                 </div>
                 <div class="cadastro">
                     <div class="codColumn">
@@ -387,6 +387,24 @@
         </div>
     </div>
 
+    <div class="modalDetalhes">
+        <div class="opcAlt">
+            Alterar
+            <img src="/Imgs/Complementos/editIcon.svg" alt="">
+        </div>
+        <div class="opcComp">
+            Compartilhar
+            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="" onclick="verificaAbaNot('.userComp','.modalDetalhes')">
+        </div>
+        <div class="userComp">
+            <img src="/Imgs/homeIcons/seactIcon.svg" alt="">
+            <input type="text" placeholder="Username ou o Nome">
+        </div>
+        <div class="opcRem">
+            Remover
+            <img src="/Imgs/shareIcons/deleteWhite.svg" alt="">
+        </div>
+    </div>
 
     <script src="/telasHome/homeVG/onFocus.js"></script>
 </body>

@@ -74,6 +74,7 @@ var cardOp
 
 function abreModal(modal, card){
     window.parent.document.querySelector(modal).style.display = 'flex'
+    window.parent.document.querySelector(modal).style.zIndex = '1000'
     window.parent.document.querySelector('.overlay').style.display = 'block'
     window.parent.modalOp = modal
     window.parent.cardOp = card
@@ -81,9 +82,12 @@ function abreModal(modal, card){
 }
 
 function fechaModal(){
-
-    document.querySelector(modalOp).style.display ='none'
-    document.querySelector('.overlay').style.display = 'none'
+    if(modalOp!='.userComp'){
+        document.querySelector(modalOp).style.display ='none'
+        document.querySelector('.overlay').style.display = 'none'
+    }else{
+        document.querySelector(modalOp).style.display ='none'
+    }
 }
 
 function deletaOperacao(){
@@ -115,11 +119,16 @@ function verificaAbaNot(op, opPai){
 
     let notification = document.querySelector(op)
     if(notification.style.display !== 'flex'){
+        console.log('!=flex')
         abreModal(op)
         document.querySelector(opPai).style.zIndex = '2000'}
-    else{
+    else if(op=='.userComp'){
+        fechaModal()
+    }else{
+        console.log('==flex')
         document.querySelector(opPai).style.zIndex = '0'
-        fechaModal()}
+        fechaModal()
+    }
 }
 
 

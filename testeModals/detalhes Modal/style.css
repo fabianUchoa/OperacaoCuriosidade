@@ -1,34 +1,98 @@
-.bttEdit{
-    background-color: #6b1bc6;
-    color: white;
-    
-    margin-bottom: 0.5vh;
-    width: 6.12vw;
-    height: 4.0vh;
-    letter-spacing: 0.05vw;
-    padding: 0.6vh 0.5vw 0.6vh 0.8vw;
-    border-radius: 8px;
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 0.8vw;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    outline: none;
+}
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.592);
+}
+
+.modalDetalhes{
+    background-color: white;
+    width: 10vw;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5vh 0.5vw;
+    border-radius: 8px;
+}
+
+.opcAlt, .opcComp, .userComp, .opcRem{
+    width: 95%;
+    height: 4vh;
+    border-radius: 8px;
+}
+
+.opcAlt, .opcComp, .opcRem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5vw;
+    font-size: 0.8vw;
+    margin-top: 0.5vh;
     font-weight: normal;
     font-family: 'Poppins';
-    cursor: pointer;
 }
 
-.bttVisualizar{
-    background-color: #ffffff;
+.opcAlt{
+    background-color: #6b1bc6;
+    color: white;
+}
+
+.opcAlt img, .userComp img, .opcComp img, .opcRem img{
+    width: 1.2vw;
+   
+}
+
+.opcComp{
+    border: 1px solid #6b1bc6;
     color: #6b1bc6;
-    height: 4vh;
-    width: 6.12vw;
-    border: 1.5px solid #6b1bc6;
-    padding: 0.5vh 0.5vw 0.5vh 0.8vw;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    
 }
 
-.opcUser img{
-    width: 1vw;
+.opcRem{
+    background-color: red;
+    color: white;
+}
+
+.userComp{
+    border: 1.5px solid lightgray;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    
+    justify-content: space-around;
+}
+
+
+.userComp input{
+    width: 80%;
+    border: none;
+    font-size: 0.7vw;
+}
+
+.userComp input::placeholder{
+    font-size: 0.65vw;
 }

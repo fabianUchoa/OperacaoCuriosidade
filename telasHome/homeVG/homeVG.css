@@ -256,6 +256,7 @@ main{
 
 #expandPerfil{
     cursor: pointer;
+    width: 1vw;
 }
 
 #fotoPerfil{
@@ -976,14 +977,14 @@ h1 img{
 }
 
 .notification{
-display: flex;
-flex-flow: column wrap;
-height: 19.5%;
-width: 100%;
-justify-content: center;
-align-content: space-around;
-border: 1px solid lightgray;
-border-radius: 8px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 19.5%;
+    width: 100%;
+    justify-content: center;
+    align-content: space-around;
+    border: 1px solid lightgray;
+    border-radius: 8px;
 }
 
 .notification img{
@@ -1025,6 +1026,7 @@ border-radius: 8px;
     position: fixed;
     top: 11%;
     left: 79.5%;
+    
     width: 14.9vw;
     height: 20vh;
     background-color: white;

@@ -110,6 +110,9 @@ function destacaOp(num){
 
 function verificaAbaNot(op, opPai){
     
+    console.log(op)
+    console.log(opPai)
+
     let notification = document.querySelector(op)
     if(notification.style.display !== 'flex'){
         abreModal(op)

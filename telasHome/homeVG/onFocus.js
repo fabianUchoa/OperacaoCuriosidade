@@ -81,12 +81,18 @@ function abreModal(modal, card){
  
 }
 
-function fechaModal(){
-    if(modalOp!='.userComp'){
+function fechaModal(op){
+    console.log(op)
+    if(modalOp == '.userComp'){
         document.querySelector(modalOp).style.display ='none'
-        document.querySelector('.overlay').style.display = 'none'
-    }else{
-        document.querySelector(modalOp).style.display ='none'
+        console.log('!=modal')
+    }else if(op=='.modalDetalhes'){
+        console.log('modaD')
+        document.querySelector(op).style.display ='none'}
+        else{
+            document.querySelector(modalOp).style.display ='none'
+            document.querySelector('.overlay').style.display = 'none'
+
     }
 }
 
@@ -116,19 +122,22 @@ function verificaAbaNot(op, opPai){
     
     console.log(op)
     console.log(opPai)
-
+    console.log(modalOp)
     let notification = document.querySelector(op)
-    if(notification.style.display !== 'flex'){
+    if(notification.style.display != 'flex'){
         console.log('!=flex')
         abreModal(op)
         document.querySelector(opPai).style.zIndex = '2000'}
     else if(op=='.userComp'){
         fechaModal()
-    }else{
-        console.log('==flex')
-        document.querySelector(opPai).style.zIndex = '0'
-        fechaModal()
-    }
+        console.log('==userComp')
+    }else if(modalOp=='.userComp'){
+        console.log('modal==userCMP')
+        fechaModal(op)}
+        else{
+            document.querySelector(opPai).style.zIndex = '0'
+            fechaModal(op)
+        }
 }
 
 

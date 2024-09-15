@@ -238,7 +238,7 @@ main{
 .topPerfil{
     background-color: #7227c8;
     width: 15vw;
-    height:max-content ;
+    height:8vh ;
     display: flex;
     border-radius: 10px;
     flex-flow: row;

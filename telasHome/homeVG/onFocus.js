@@ -188,3 +188,5 @@ function minimizaIframe(){
     conteudoConfig.style.width = '52vw'
     document.querySelector('.logoFotter').style.margin = ' 0 5vw 0 0'
 }
+
+

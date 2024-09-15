@@ -288,11 +288,11 @@ header{
 }
 
 .conteudoHeader{
-    width: 52vw;
+    width: 40vw;
     height: 4vh;
     display: flex;
     flex-flow: column wrap;
-    align-content: space-around;
+    align-content: space-between;
     justify-self: flex-end; 
 }
 
@@ -318,6 +318,11 @@ header{
 
 .opc:hover{
     background-color: #6b1bc637;
+    transform: scale(1.1);
+}
+
+#opc1{
+    background-color: rgb(107, 27, 198, 0.216);
     transform: scale(1.1);
 }
 

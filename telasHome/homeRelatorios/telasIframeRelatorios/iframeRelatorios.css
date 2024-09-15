@@ -109,17 +109,19 @@ select{
 }
 
 .posBtt{
-    height: 10vh;
+    height: 8vh;
     width: 34vw;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items:flex-end ;
     
 }
 
 .bttEstilo{
-    padding: 0.5vw 2.5vw;
+    
+    height: 5vh;
+    padding: 0.5vh 2.5vw;
     border: 1px solid #6b1bc6;
     border-radius: 6px;
     font-family: 'Poppins';

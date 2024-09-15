@@ -83,12 +83,17 @@ function abreModal(modal, card){
 
 function fechaModal(op){
     console.log(op)
-    if(modalOp == '.userComp'){
+    if(modalOp == '.userComp' && op != '.modalDetalhes'){
         document.querySelector(modalOp).style.display ='none'
+        console.log(modalOp)
         console.log('!=modal')
     }else if(op=='.modalDetalhes'){
         console.log('modaD')
-        document.querySelector(op).style.display ='none'}
+        document.querySelector(op).style.display ='none'
+        document.querySelector('.overlay').style.display = 'none'}
+        else if(op == '.userEdit'){
+            document.querySelector(op).style.display ='none'
+        }
         else{
             document.querySelector(modalOp).style.display ='none'
             document.querySelector('.overlay').style.display = 'none'
@@ -96,10 +101,17 @@ function fechaModal(op){
     }
 }
 
-function deletaOperacao(){
 
+function deletaOperacao(cad){
+    console.log(cad)
     let iframe = document.getElementById('iframe')
-    iframe.contentWindow.document.querySelector(cardOp).style.display ='none'
+    if(iframe != null)
+        iframe.contentWindow.document.querySelector(cardOp).style.display ='none'
+    else{
+        console.log('entrou')
+        document.querySelector(cad).style.display = 'none'
+        fechaModal('.modalDetalhes')
+    }
     fechaModal()
     alert('Excluído com sucesso!')
 }
@@ -133,11 +145,46 @@ function verificaAbaNot(op, opPai){
         console.log('==userComp')
     }else if(modalOp=='.userComp'){
         console.log('modal==userCMP')
-        fechaModal(op)}
+        fechaModal(op)
+        document.querySelector(opPai).style.zIndex = '0'}
         else{
             document.querySelector(opPai).style.zIndex = '0'
             fechaModal(op)
         }
 }
 
+/*Script tela de relatórios*/
 
+var conteudo = document.querySelector('.conteudo')
+var iframe = document.querySelector('iframe')
+
+function abreIframe(){
+    conteudo.style.display = 'none'
+    iframe.style.display = 'block'
+
+}
+
+function fechaIframe(){
+    conteudo.style.display = 'flex'
+    iframe.style.display = 'none'
+}
+
+/*Script tela de configurações*/
+
+function expandeIframe(){
+    let dadosLateral = document.querySelector('.dadosLateral')
+    let conteudoConfig = document.querySelector('.conteudo')
+
+    dadosLateral.style.display = 'none'
+    conteudoConfig.style.width = '70vw'
+    document.querySelector('.logoFotter').style.margin = '0'
+}
+
+function minimizaIframe(){
+    let dadosLateral = document.querySelector('.dadosLateral')
+    let conteudoConfig = document.querySelector('.conteudo')
+
+    dadosLateral.style.display = 'flex'
+    conteudoConfig.style.width = '52vw'
+    document.querySelector('.logoFotter').style.margin = ' 0 5vw 0 0'
+}

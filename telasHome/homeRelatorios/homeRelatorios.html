@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homeRelatorios.css">
     
-    <title>Document</title>
+    <title>Relatórios</title>
 </head>
 <body>
     <div id="sideBar">
@@ -34,13 +34,13 @@
         </div>
         <div id="icons">
             <div id="toggleBt"><a href="" id="toggle"><img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt=""></a></div>
-            <div id="notBox"><a href="" id="notification"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></a></div>
+            <div id="notBox" onclick="verificaAbaNot('#notAba', '#notBox')"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></div>
         </div>
-        <div class="topPerfil">
+        <div class="topPerfil" id="topPerfil">
             <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
             <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
-            <img src="/Imgs/homeIcons/expandIcon.svg" width="8%">
-            
+            <img id="expandPerfil" src="/Imgs/homeIcons/expandIcon.svg" onclick="verificaAbaNot('#contentAbaPerfil', '#topPerfil')">
+        
         </div>
     </main>
     <div class="conteiner">
@@ -259,6 +259,98 @@
         </div>
     </div>
     
-    <script src="./homeRelatiorios.js"></script>
+        <!--Modal aba de Notificações !-->
+        <div class="notAba" id="notAba">
+            <div class="notHeader">
+                Notificações
+                <span>5</span>
+            </div>
+            <div class="notMain">
+                <div class="notification">
+                    <img src="/Imgs/FotosPerfil/Rosangela.jpg" alt="">
+                    <div class="notInfos">
+                        @rose.pereira
+                        <p>
+                            compartilhou 3 operações com você
+                        </p>
+                    </div>
+                    <div class="sideTime">
+                        2h
+                    </div>
+                </div>
+                <div class="notification">
+                    <img src="/Imgs/FotosPerfil/babidi.jpg" alt="">
+                    <div class="notInfos">
+                        @babidi
+                        <p>
+                            compartilhou 2 operações com você
+                        </p>
+                    </div>
+                    <div class="sideTime">
+                        4h
+                    </div>
+                </div>
+                <div class="notification">
+                    <img src="/Imgs/FotosPerfil/x-bacon-aberto.jpg" alt="">
+                    <div class="notInfos">
+                        @xTudo.silva
+                        <p>
+                            compartilhou 1 operação com você
+                        </p>
+                    </div>
+                    <div class="sideTime">
+                        1d
+                    </div>
+                </div>
+                <div class="notification">
+                    <img src="/Imgs/FotosPerfil/george lucas.jpg" alt="">
+                    <div class="notInfos">
+                        @JLucas
+                        <p>
+                            compartilhou 2 operações com você
+                        </p>
+                    </div>
+                    <div class="sideTime">
+                        4d
+                    </div>
+                </div>
+                <div class="notification">
+                    <img src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+                    <div class="notInfos">
+                        @salabi
+                        <p>
+                            compartilhou 5 operações com você
+                        </p>
+                    </div>
+                    <div class="sideTime">
+                        4d
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="overlay"></div>
+
+           <!--Modal aba Perfil-->
+
+    <div class="contentAbaPerfil" id="contentAbaPerfil">
+        <div class="opcsAbaPerfil"><a href="/telasHome/homeConfiguracoes/configuracoes.html">
+            <img src="/Imgs/homeIcons/perfilFoto.jpg" alt="" class="perfilIcon">
+            Perfil</a>
+        </div>
+        <hr>
+        <a href="/telasHome/homeConfiguracoes/configuracoes.html">
+            <div class="opcsAbaPerfil">
+                <img src="/Imgs/homeIcons/settingsIon.svg" alt="" class="imgIcons" >
+                Configurações
+            </div>
+        </a>
+        <hr>
+        <div class="opcsAbaPerfil">
+            <img src="/Imgs/Complementos/logoutIcon.svg" alt="" class="imgIcons">
+            Sair
+        </div>
+    </div>
+
+    <script src="/telasHome/homeVG/onFocus.js"></script>
 </body>
 </html>

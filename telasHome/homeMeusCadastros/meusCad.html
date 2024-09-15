@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="listagem">
-                <div class="cadastro">
+                <div class="cadastro" id="cad1">
                     <div class="codColumn">
                         24-00016
                     </div>
@@ -132,7 +132,7 @@
                     <div class="statusColumn">
                         <p class="ativo">Ativo</p>
                     </div>
-                    <div class="detailBtt" id="detailBtt" onclick="verificaAbaNot('.modalDetalhes', '#detailBtt')">
+                    <div class="detailBtt" id="detailBtt1" onclick="verificaAbaNot('.modalDetalhes', '#detailBtt1')">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
                             Detalhes
                     </div>
@@ -156,10 +156,10 @@
                     <div class="statusColumn">
                         <p class="inativo">Inativo</p>
                     </div>
-                    <a href="#" class="detailBtt">
+                    <div class="detailBtt" id="detailBtt2" onclick="verificaAbaNot('.modalDetalhes', '#detailBtt2')">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
                             Detalhes
-                    </a>
+                    </div>
                 </div>
                 <div class="cadastro">
                     <div class="codColumn">
@@ -376,10 +376,12 @@
             Perfil</a>
         </div>
         <hr>
-        <div class="opcsAbaPerfil">
-            <img src="/Imgs/homeIcons/settingsIon.svg" alt="" class="imgIcons" >
-            Configurações
-        </div>
+        <a href="/telasHome/homeConfiguracoes/configuracoes.html">
+            <div class="opcsAbaPerfil">
+                <img src="/Imgs/homeIcons/settingsIon.svg" alt="" class="imgIcons" >
+                Configurações
+            </div>
+        </a>
         <hr>
         <div class="opcsAbaPerfil">
             <img src="/Imgs/Complementos/logoutIcon.svg" alt="" class="imgIcons">
@@ -387,8 +389,10 @@
         </div>
     </div>
 
+    <!--Modal de opções de Detalhes-->
+
     <div class="modalDetalhes">
-        <div class="opcAlt">
+        <div class="opcAlt" onclick="abreModal('.userEdit')">
             Alterar
             <img src="/Imgs/Complementos/editIcon.svg" alt="">
         </div>
@@ -402,7 +406,109 @@
         </div>
         <div class="opcRem">
             Remover
-            <img src="/Imgs/shareIcons/deleteWhite.svg" alt="">
+            <img src="/Imgs/shareIcons/deleteWhite.svg" alt="" onclick="abreModal('.confirmDelete')">
+        </div>
+    </div>
+
+    <!--Modal de confirmação-->
+
+    <div class="confirmDelete">
+        <div class="confirmContent">
+            <div class="confirmHeader">
+                Remover o cadastro de Operação Curiosidade
+            </div>
+            
+            <div class="confirmMain">
+                Deseja realmente <span class="purpleStrong">remover</span> está operação do sistema?
+                Após remover este cadastro <span class="colorPurple">não será possível recuperar</span> os dados do mesmo!
+            </div>
+            <div class="confirmFotter">
+                <div class="cancelBtt" onclick="fechaModal()">
+                    Cancelar
+                </div>
+                <div class="confirmBtt" onclick="deletaOperacao('#cad1')">
+                    Remover
+                    <img src="/Imgs/shareIcons/deleteRed.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal de editar cadastro-->
+
+    <div class="userEdit">
+        <div class="conteudoEdit">
+            <div class="editHeader">
+                Editar cadastro de usuário
+            </div>
+            <div class="editMain">
+                <h2>Sua foto</h2>
+                <div class="dadosHead">
+                <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
+                    Atualize sua imagem
+                </a>
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
+                    Remover Imagem
+                </a></div>
+                
+                <h1><img src="/Imgs/Complementos/idCard.svg" alt=""> Fatos e Dados</h1>
+                <div class="inputArea">
+                    <label for="nome" class="inputLabel">Nome</label>
+                    <input type="text" name="nome" id="inputNome" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="idade" class="inputLabel">Idade</label>
+                    <input type="number" name="idade" id="inputIdade" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="mail" class="inputLabel">E-mail</label>
+                    <input type="text" name="mail" id="inputMail" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="userName" class="inputLabel">Nome de Usuário</label>
+                    <input type="text" name="userName" id="userName" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="nascimento" class="inputLabel">Data de nascimento</label>
+                    <input type="date" name="nascimento" id="nasc" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="estadoCivil" class="inputLabel">Estado Civil</label>
+                    <input type="text" name="estadoCivil" id="estadoCivil" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="Endereço" class="inputLabel">Endereço</label>
+                    <input type="text" name="Endereço" id="end" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="tel" class="inputLabel">Telefone</label>
+                    <input type="tel" name="tel" id="tel" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="cargo" class="inputLabel">Ocupação/Profissão</label>
+                    <input type="text" name="cargo" id="cargo" class="inputBox">
+                </div>
+                <h2>Atualizar senha</h2>
+                <div class="dadosMain">
+                    <label for="senhaAtual" class="labelDados">Senha Atual</label>
+                    <input type="password" name="senhaAtual" class="senhaBox">
+                    <label for="senhaNova" class="labelDados">Nova Senha</label>
+                    <input type="password" name="senhaNova" class="senhaBox">
+                </div>
+                <div class="dadosFotter">
+                    <input type="checkbox" name="cargo" id="checkboxAdmin"> <label for="cargo" id="labelCheckbox">Administrador</label>
+                </div>
+            </div>
+            
+            
+            <div class="editFotter">
+                <div id="saveBtt" onclick="fechaModal('.userEdit')">
+                    <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
+                </div>
+            </div>
         </div>
     </div>
 

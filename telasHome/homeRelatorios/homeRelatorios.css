@@ -138,12 +138,13 @@ hr{
 }
 
 main{
-    width: 78.5vw;
+    width: 76vw;
     height: 15vh;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
+    align-self: center;
 }
 
 #search{
@@ -209,7 +210,13 @@ main{
     
 }
 #notBox{
+    display: flex;
     align-self: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 0.3vh 0.2vw;
 }
 
 #notification{
@@ -227,17 +234,17 @@ main{
     margin: auto;
 }
 
-.topPerfil{
+#topPerfil{
     background-color: #7227c8;
-    width: 22%;
-    height:max-content ;
+    width: 15vw;
+    height: 8vh;
     display: flex;
     border-radius: 10px;
     flex-flow: row;
-    
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.39);
     justify-content: space-evenly;
     align-content: center;
-    margin-right: 20px;
+    align-items: center;
 }
 
 #fotoPerfil{
@@ -253,10 +260,15 @@ main{
     font-size: 0.8vw;
 }
 
+#expandPerfil{
+    cursor: pointer;
+    width: 1vw;
+}
+
 /*Conteúdo principal da pag*/
 
 .conteiner{
-    width: 77vw;
+    width: 80vw;
     height: 80vh;
     display: flex;
     flex-flow: column wrap;
@@ -483,5 +495,158 @@ iframe{
     width: 15vw;
 }
 
+/* Modal aba Perfil */ 
+
+#contentAbaPerfil{
+    display: none;
+    flex-flow: row wrap;
+    position: fixed;
+    top: 11%;
+    left: 83%;
+    z-index: 0;
+    width: 14.9vw;
+    height: 20vh;
+    background-color: white;
+    border: 1.5px solid lightgray;
+    border-radius:0 0 8px 8px ;
+    padding: 1vh 0.5vw;
+}
+
+.opcsAbaPerfil, .opcsAbaPerfil a{
+    font-size: 0.8vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    color: #6b1bc6;
+    width:90%;
+    height: 6vh;
+}
+
+.opcsAbaPerfil a{
+    width:100%;
+}
+
+.contentAbaPerfil hr{
+    width: 70% ;
+    margin: auto;
+}
+
+.opcsAbaPerfil img{
+
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+.perfilIcon{
+    width: 2vw;
+    height: 4vh;
+}
+
+.imgIcons{
+    width: 1.5vw;
+    height: 3vh;
+}
+
+/*Modal aba notificações*/
+
+#notAba{
+    position: fixed;
+    top: 11%;
+    left: 58%;
+    background-color: white;
+    padding: 0.5vh 0.3vw;
+    width: 18vw;
+    height: 39vh;
+    border-radius: 8px;
+    border: 1.5px solid lightgray;
+    display: none;
+    flex-flow: row wrap;
+    align-content: space-between;
+    
+}
+
+.notHeader{
+    width: 100%;
+    height: 3vh;
+    border-bottom: 1.5px solid lightgray;
+    font-size: 0.8vw;
+    font-family: 'Poppins-bold';
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+.notHeader span{
+    background-color: #6b1bc6;
+    border-radius: 50%;
+    font-size: 0.6vw;
+    color: white;
+    font-weight: normal;
+    font-family: 'Poppins';
+    width: 1.2vw;
+    padding: 0.1vh 0.4vw;
+    margin-left: 0.5vw;
+    
+}
+
+.notMain{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 90%;
+    width: 100%;
+}
+
+.notification{
+    display: flex;
+    flex-flow: column wrap;
+    height: 19.5%;
+    width: 100%;
+    justify-content: center;
+    align-content: space-around;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.notification img{
+    width: 2.5vw;
+    height: 5vh;
+    border-radius: 8px;
+}
+
+.notInfos{
+    font-size: 0.6vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 4.5vh;
+    width: 10vw;
+    color: #a05eeb;
+    
+}
+
+.notInfos p{
+    font-size: 0.52vw;
+    color: rgb(181, 181, 181);
+    font-family: 'Poppins';
+    font-weight: normal;
+}
+
+.sideTime{
+    font-size: 0.5vw;
+    width: 1vw;
+    height: 5vh;
+    color: #6b1bc6;
+}
 
 
+.overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none;
+    z-index: 0; 
+}

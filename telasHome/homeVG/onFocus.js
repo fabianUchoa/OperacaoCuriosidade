@@ -83,13 +83,12 @@ function abreModal(modal, card){
 }
 
 function fechaModal(op){
-    console.log(modalOp)
+    
     if(modalOp == '.modal' && op != '.modalDetalhes' && op != 1){
         document.querySelector(modalOp).style.display ='none'
-        console.log(modalOp)
-        console.log('!=modal')
+       
     }else if(op=='.modalDetalhes'){
-        console.log('modaD')
+        
         document.querySelector(op).style.display ='none'
         document.querySelector('.overlay').style.display = 'none'}
         else if(op == '.userEdit'){
@@ -105,12 +104,12 @@ function fechaModal(op){
 
 
 function deletaOperacao(cad){
-    console.log(cad)
+    
     let iframe = document.getElementById('iframe')
     if(iframe != null)
         iframe.contentWindow.document.querySelector(cardOp).style.display ='none'
     else{
-        console.log('entrou')
+
         document.querySelector(cad).style.display = 'none'
         fechaModal('.modalDetalhes')
     }
@@ -135,22 +134,18 @@ function destacaOp(num){
 
 function verificaAbaNot(op, opPai){
     
-    console.log(op)
-    console.log(opPai)
-    console.log(modalOp)
-    
-    console.log(iframe)
+
     let notification = window.parent.document.querySelector(op)
     if(notification.style.display != 'flex'){
-        console.log('!=flex')
+        
         abreModal(op)
         document.querySelector(op).style.zIndex = '2000'
         document.querySelector(opPai).style.zIndex = '100'}
     else if(op=='.modal'){
         fechaModal()
-        console.log('==userComp')
+        
     }else if(modalOp=='.modal'){
-        console.log('modal==userCMP')
+        
         fechaModal(op)
         document.querySelector(opPai).style.zIndex = '0'}
         else{
@@ -199,21 +194,21 @@ function minimizaIframe(){
 /* script modal cadastrar curiosidade*/
 
 function trocaStatus(op, opname){
-    console.log(op)
+    
     let status = document.querySelector(op)
     let labelStatus = document.querySelector(opname)
 
-    console.log(window.getComputedStyle(status).backgroundColor)
+    
     
     if(window.getComputedStyle(status).backgroundColor !='rgb(27, 150, 23)'){
-        console.log('entrou op1')
+        
         status.style.backgroundColor = '#1b9617'
         labelStatus.innerHTML = 'Ativo'
         document.querySelector('#toggleBtSit').style.justifyContent ='flex-end'
         document.querySelector('#toggleBtSit').style.backgroundColor = '#1b9617'
         document.querySelector('#statusIcon').src = '/Imgs/Complementos/checkIcon.svg'
     }else{
-        console.log('entrou op2')
+        
         status.style.backgroundColor = '#961717'
         labelStatus.innerHTML = 'Inativo'
         document.querySelector('#toggleBtSit').style.justifyContent ='flex-start'
@@ -263,29 +258,29 @@ function apagaCuriosidade(id){
 
 
 function alteraStatus(st, opc){
-    console.log(st)
+    
     let iframe = document.getElementById('iframe')
     let doc = iframe.contentWindow.document
     let status = doc.querySelector(st)
-    console.log(status)
+    
 
     if(opc == 1){
-        console.log('ativo')
+
         status.className = 'inativo'
         status.innerHTML ='Inativo'
         
-        console.log(status)
+        
     }else{
-        console.log('repetiu')
+        
         status.className = 'ativo'
         status.innerHTML ='Ativo'
-        console.log(status)
+        
     }
 
 }
 
 function controlaDisplayStatus(){
-    console.log('controlaDisplay')
+    
 
     let status = document.querySelector('#st1')
 
@@ -298,7 +293,7 @@ function controlaDisplayStatus(){
 }
 
 function fechaModalConfirm(num, cl){
-    console.log(cl)
+
     let modal = document.querySelector(cl)
 
     if(num == 'cancel'){

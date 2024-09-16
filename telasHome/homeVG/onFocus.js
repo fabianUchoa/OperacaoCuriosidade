@@ -96,6 +96,7 @@ function fechaModal(op){
             document.querySelector(op).style.display ='none'
         }
         else{
+            
             document.querySelector(modalOp).style.display ='none'
             document.querySelector('.overlay').style.display = 'none'
             window.parent.querySelector('.overlay').style.display = 'none'
@@ -273,19 +274,45 @@ function alteraStatus(st, opc){
         status.className = 'inativo'
         status.innerHTML ='Inativo'
         
-        modalOp = '.confirmDesactive'
-        fechaModal()
-        status.onclick = abreModal('.confirmActive')
         console.log(status)
     }else{
         console.log('repetiu')
         status.className = 'ativo'
         status.innerHTML ='Ativo'
-        
-        modalOp = '.confirmActive'
-        fechaModal('.confirmActive')
-        status.onclick = abreModal('.confirmDesactive')
         console.log(status)
     }
 
+}
+
+function controlaDisplayStatus(){
+    console.log('controlaDisplay')
+
+    let status = document.querySelector('#st1')
+
+    if(status.className == 'inativo'){
+        window.parent.document.querySelector('.opcAltStatusAtivar').style.display = 'flex'
+    }else{
+        window.parent.document.querySelector('.opcAltStatusInativar').style.display = 'flex'
+    }
+
+}
+
+function fechaModalConfirm(num, cl){
+    console.log(cl)
+    let modal = document.querySelector(cl)
+
+    if(num == 'cancel'){
+        modal.style.display = 'none'
+        return
+    }
+
+    if(num==1){
+        modal.style.display = 'none'
+        window.parent.document.querySelector('.opcAltStatusAtivar').style.display = 'none'
+        window.parent.document.querySelector('.opcAltStatusInativar').style.display = 'flex'
+    }else{
+        modal.style.display = 'none'
+        window.parent.document.querySelector('.opcAltStatusAtivar').style.display = 'flex'
+        window.parent.document.querySelector('.opcAltStatusInativar').style.display = 'none'
+    }
 }

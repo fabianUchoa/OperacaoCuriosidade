@@ -162,13 +162,17 @@ body{
 
 #loginFooter{
     margin: auto;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
 }
 
 #logBtt{
     padding: 0.7vw;
-    border: none;
+    text-decoration: none;
     border-radius: 8px;
-    width: 13vw;
+    width: 12vw;
+    height: 5vh;
     font-family: 'Poppins-Regular';
     background-color: #8348c8;
     color: whitesmoke;
@@ -176,6 +180,9 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.133);
     transition: 300ms linear;
     font-size: 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #logBtt:hover{

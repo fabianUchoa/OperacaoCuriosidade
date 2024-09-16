@@ -1227,14 +1227,14 @@ h1 img{
     border-radius: 8px;
 }
 
-.opcAlt, .opcComp, .userComp, .opcRem, .opcAltStatus{
+.opcAlt, .opcComp, .userComp, .opcRem,  .opcAltStatusInativar, .opcAltStatusAtivar{
     width: 95%;
     height: 4vh;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.opcAlt, .opcComp, .opcRem, .opcAltStatus{
+.opcAlt, .opcComp, .opcRem,  .opcAltStatusInativar, .opcAltStatusAtivar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1259,13 +1259,6 @@ h1 img{
     border: 1px solid #6b1bc6;
     color: #6b1bc6;
     
-}
-
-.opcAltStatus{
-    border: 1px solid rgb(98, 184, 98);
-    background-color: #1b961750;
-    color: rgb(39, 141, 39);
-    display: none;
 }
 
 .opcRem{
@@ -1586,19 +1579,24 @@ h1 img{
     justify-content: center;
 }
 
+.opcAltStatusAtivar, .opcAltStatusInativar{
+    display: none;
+}
+
+
 .cancelBtt{
     color: white;
     background-color: #6b1bc6;
     margin-right: 1vw;
 }
 
-.confirmBttInativar{
+.confirmBttInativar,.opcAltStatusInativar {
     border: 1.5px solid red;
     color: red;
     background-color: rgba(255, 0, 0, 0.164);
 }
 
-.confirmBttAtivar{
+.confirmBttAtivar, .opcAltStatusAtivar{
     border: 1.5px solid green;
     color: green;
     background-color: rgba(0, 128, 0, 0.171);

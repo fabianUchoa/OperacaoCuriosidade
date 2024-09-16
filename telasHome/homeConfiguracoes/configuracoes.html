@@ -333,7 +333,7 @@
         <hr>
         <div class="opcsAbaPerfil">
             <img src="/Imgs/Complementos/logoutIcon.svg" alt="" class="imgIcons">
-            Sair
+            <a href="/telaLogin/login.html">Sair</a>
         </div>
     </div>
 
@@ -504,9 +504,13 @@
             Compartilhar
             <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="" onclick="abreModal('.modal')">
         </div>
-        <div class="opcAltStatus">
+        <div class="opcAltStatusAtivar" onclick="abreModal('.confirmActive')">
             Reativar
             <img src="/Imgs/Complementos/activeUser.svg" alt="">
+        </div>
+        <div class="opcAltStatusInativar" onclick="abreModal('.confirmDesactive')">
+            Inativar
+            <img src="/Imgs/Complementos/inactiveUser.svg" alt="">
         </div>
     </div>
 
@@ -629,10 +633,10 @@
             Após inativar este usuário, seus dados permanecerão armazenados <span class="colorPurple">mas o usuário não terá mais acesso liberado ao seu login!</span>
         </div>
         <div class="confirmFotter">
-            <div class="cancelBtt" onclick="fechaModal()">
+            <div class="cancelBtt" onclick="fechaModalConfirm('cancel', '.confirmDesactive')">
                 Cancelar
             </div>
-            <div class="confirmBttInativar" onclick="alteraStatus('#st1', 1)">
+            <div class="confirmBttInativar" onclick="alteraStatus('#st1', 1),fechaModalConfirm(0, '.confirmDesactive')">
                 Inativar
                 <img src="/Imgs/Complementos/inactiveUser.svg" alt="">
             </div>
@@ -651,10 +655,10 @@
             Após esta ação o usuário retornará a listagem e seus dados serão recuperados!
         </div>
         <div class="confirmFotter">
-            <div class="cancelBtt" onclick="fechaModal()">
+            <div class="cancelBtt" onclick="fechaModalConfirm('cancel', '.confirmActive')">
                 Cancelar
             </div>
-            <div class="confirmBttAtivar" onclick="alteraStatus('#st1')">
+            <div class="confirmBttAtivar" onclick="alteraStatus('#st1'),fechaModalConfirm(1, '.confirmActive')">
                 Reativar
                 <img src="/Imgs/Complementos/activeUser.svg" alt="">
             </div>

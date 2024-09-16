@@ -150,6 +150,9 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.133);
         transition: 300ms linear;
         font-size: 3vw;
+        text-decoration: none;
+        width: 8vw;
+        height: 5vh;
     }
     
     #logBtt:hover{

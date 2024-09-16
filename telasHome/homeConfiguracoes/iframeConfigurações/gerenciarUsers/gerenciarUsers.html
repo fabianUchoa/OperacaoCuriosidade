@@ -51,7 +51,7 @@
             <div class="posBtt">
                 <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar">
                 <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar">
-                <input type="submit" class="bttEstilo" id="criarUser" value="Criar Usuário">
+                <input type="submit" class="bttEstilo" id="criarUser" value="Criar Usuário" onclick="abreModal('.userCad')">
             </div>
         </div>
         <div class="conteudo">
@@ -101,15 +101,15 @@
                         
                     </div>
                     <div class="statusColumn">
-                        <p class="ativo">Ativo</p>
+                        <p class="ativo" id="st1" onclick="abreModal('.confirmDesactive')">Ativo</p>
                     </div>
                     <div class="tipoColumn">
                         <p class="operador">Operador</p>
                     </div>
-                    <a href="#" class="detailBtt">
+                    <div class="detailBtt" id="#detailBtt1" onclick="verificaAbaNot('.modalDetalhes', '#detailBtt1')">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
                             Detalhes
-                    </a>
+                    </div>
                 </div>
                 <div class="cadastro"> 
                     <input type="checkbox" name="select" id="select" class="checkColumn">
@@ -263,5 +263,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="/telasHome/homeVG/onFocus.js"></script>
 </body>
 </html>

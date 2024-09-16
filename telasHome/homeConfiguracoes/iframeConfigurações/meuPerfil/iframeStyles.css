@@ -123,4 +123,26 @@ h1{
     vertical-align: top;
     resize: none;
     padding: 1vh 1vw;
+    display: flex;
+
+}
+
+.dadoCuriosidade{
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 1.4vw;
+    background-color: #6b1bc649;
+    display: flex;
+    color: #6b1bc6;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 1vw;
+    border-radius: 30px;
+    margin-right: 1vw;
+}
+
+.dadoCuriosidade img{
+    width: 1.5vw;
+    margin-left: 0.3vw;
+    cursor: pointer;
 }

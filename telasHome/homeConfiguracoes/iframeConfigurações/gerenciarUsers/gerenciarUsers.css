@@ -131,6 +131,7 @@ select{
     font-weight: normal;
     font-size: 1em;
     transition: 200ms linear;
+    cursor: pointer;
 }
 
 .bttEstilo:hover{
@@ -259,6 +260,7 @@ select{
     font-weight: normal;
     padding: 0vh 0.5vw;
     border-radius:20px;
+    cursor: pointer;
 }
 
 .inativo{
@@ -271,6 +273,7 @@ select{
     font-weight: normal;
     padding: 0vh 0.5vw;
     border-radius:20px;
+    cursor: pointer;
 }
 
 .operador{
@@ -291,6 +294,10 @@ select{
     border-radius:20px;
 }
 
+#detailBtt1{
+
+}
+
 .detailBtt{
     background-color: #6b1bc6;
     display: flex;
@@ -307,6 +314,7 @@ select{
     font-family: 'Poppins';
     font-size: 1.2vw;
     font-weight: normal;
+    cursor: pointer;
 }
 
 .moreVertical{

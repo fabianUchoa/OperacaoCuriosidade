@@ -76,14 +76,15 @@ function abreModal(modal, card){
     window.parent.document.querySelector(modal).style.display = 'flex'
     window.parent.document.querySelector(modal).style.zIndex = '1000'
     window.parent.document.querySelector('.overlay').style.display = 'block'
+    window.parent.document.querySelector('.overlay').style.zIndex = '1'
     window.parent.modalOp = modal
     window.parent.cardOp = card
  
 }
 
 function fechaModal(op){
-    console.log(op)
-    if(modalOp == '.userComp' && op != '.modalDetalhes'){
+    console.log(modalOp)
+    if(modalOp == '.modal' && op != '.modalDetalhes' && op != 1){
         document.querySelector(modalOp).style.display ='none'
         console.log(modalOp)
         console.log('!=modal')
@@ -97,7 +98,7 @@ function fechaModal(op){
         else{
             document.querySelector(modalOp).style.display ='none'
             document.querySelector('.overlay').style.display = 'none'
-
+            window.parent.querySelector('.overlay').style.display = 'none'
     }
 }
 
@@ -130,20 +131,24 @@ function destacaOp(num){
     
 }
 
+
 function verificaAbaNot(op, opPai){
     
     console.log(op)
     console.log(opPai)
     console.log(modalOp)
-    let notification = document.querySelector(op)
+    
+    console.log(iframe)
+    let notification = window.parent.document.querySelector(op)
     if(notification.style.display != 'flex'){
         console.log('!=flex')
         abreModal(op)
-        document.querySelector(opPai).style.zIndex = '2000'}
-    else if(op=='.userComp'){
+        document.querySelector(op).style.zIndex = '2000'
+        document.querySelector(opPai).style.zIndex = '100'}
+    else if(op=='.modal'){
         fechaModal()
         console.log('==userComp')
-    }else if(modalOp=='.userComp'){
+    }else if(modalOp=='.modal'){
         console.log('modal==userCMP')
         fechaModal(op)
         document.querySelector(opPai).style.zIndex = '0'}
@@ -190,3 +195,97 @@ function minimizaIframe(){
 }
 
 
+/* script modal cadastrar curiosidade*/
+
+function trocaStatus(op, opname){
+    console.log(op)
+    let status = document.querySelector(op)
+    let labelStatus = document.querySelector(opname)
+
+    console.log(window.getComputedStyle(status).backgroundColor)
+    
+    if(window.getComputedStyle(status).backgroundColor !='rgb(27, 150, 23)'){
+        console.log('entrou op1')
+        status.style.backgroundColor = '#1b9617'
+        labelStatus.innerHTML = 'Ativo'
+        document.querySelector('#toggleBtSit').style.justifyContent ='flex-end'
+        document.querySelector('#toggleBtSit').style.backgroundColor = '#1b9617'
+        document.querySelector('#statusIcon').src = '/Imgs/Complementos/checkIcon.svg'
+    }else{
+        console.log('entrou op2')
+        status.style.backgroundColor = '#961717'
+        labelStatus.innerHTML = 'Inativo'
+        document.querySelector('#toggleBtSit').style.justifyContent ='flex-start'
+        document.querySelector('#toggleBtSit').style.backgroundColor = '#961717'
+        document.querySelector('#statusIcon').src = '/Imgs/Complementos/recuseIcon.svg'
+    }
+}
+
+let contCard1 = 1
+let contCard2 = 1
+let contCard3 = 1
+function adicionaCadastro(id, contValor){
+    let cont
+    let novaDiv = document.createElement('div')
+    novaDiv.className = 'conteudoCuriosidades'
+    let divPai = document.querySelector(id)
+    
+    if(id == '#cardsCuriosidades1'){
+        contCard1++
+        cont = contCard1
+    
+    }else if(id == '#cardsCuriosidades2'){
+        contCard2++
+        cont = contCard2
+    }else{
+        contCard3++
+        cont = contCard3
+    }
+    novaDiv.innerHTML = `<div class="idCuriosidade">
+                            <span class="idCuriosidadeStyle">${cont}</span>
+                        </div>
+                        <div class="tipoCuriosidade">
+                            <span class="idCuriosidadeStyle">Curiosidade</span>
+                        </div>`
+    divPai.appendChild(novaDiv)
+    
+    document.querySelector(contValor).innerHTML = `${cont}`
+
+}
+
+function apagaCuriosidade(id){
+    document.querySelector(id).style.display = 'none'
+}
+
+/*Funcao para alterar status*/
+
+
+
+function alteraStatus(st, opc){
+    console.log(st)
+    let iframe = document.getElementById('iframe')
+    let doc = iframe.contentWindow.document
+    let status = doc.querySelector(st)
+    console.log(status)
+
+    if(opc == 1){
+        console.log('ativo')
+        status.className = 'inativo'
+        status.innerHTML ='Inativo'
+        
+        modalOp = '.confirmDesactive'
+        fechaModal()
+        status.onclick = abreModal('.confirmActive')
+        console.log(status)
+    }else{
+        console.log('repetiu')
+        status.className = 'ativo'
+        status.innerHTML ='Ativo'
+        
+        modalOp = '.confirmActive'
+        fechaModal('.confirmActive')
+        status.onclick = abreModal('.confirmDesactive')
+        console.log(status)
+    }
+
+}

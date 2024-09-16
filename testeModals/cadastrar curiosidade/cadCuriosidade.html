@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conteinerCadastra">
+        <div class="conteudoCadastra">
+            <div class="cadHeader">
+                Cadastro de Operação Curiosidade
+            </div>
+            <div class="cadMain">
+                <div class="dadosHead">
+                <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
+                    Atualize sua imagem
+                </a>
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
+                    Remover Imagem
+                </a>
+            </div>
+            
+            <div id="togglePos">
+                <span id="toggleSit">Ativo</span>
+                <div id="toggleBt">
+                    <div id="toggle" onclick="trocaStatus('.conteinerCadastra', '#toggleSit')">
+                
+                        <img id="statusIcon" src="/Imgs/Complementos/checkIcon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+                
+                <div id="inputsCad">
+                    <h1 class="title"><div class="titleLeft"><img src="/Imgs/Complementos/idCard White.svg" alt=""> Fatos e Dados</div></h1>
+                    <div class="inputArea">
+                        <label for="nome" class="inputLabel">Nome</label>
+                        <input type="text" name="nome" id="inputNome" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="idade" class="inputLabel">Idade</label>
+                        <input type="number" name="idade" id="inputIdade" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="mail" class="inputLabel">E-mail</label>
+                        <input type="text" name="mail" id="inputMail" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="userName" class="inputLabel">Nome de Usuário</label>
+                        <input type="text" name="userName" id="userName" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="nascimento" class="inputLabel">Data de nascimento</label>
+                        <input type="date" name="nascimento" id="nasc" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="estadoCivil" class="inputLabel">Estado Civil</label>
+                        <input type="text" name="estadoCivil" id="estadoCivil" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="Endereço" class="inputLabel">Endereço</label>
+                        <input type="text" name="Endereço" id="end" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="tel" class="inputLabel">Telefone</label>
+                        <input type="tel" name="tel" id="tel" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="cargo" class="inputLabel">Ocupação/Profissão</label>
+                        <input type="text" name="cargo" id="cargo" class="inputBox">
+                    </div>
+                </div>
+                <div class="cardsCuriosidades">
+                    <div class="titleCards">
+                        <div class="titleLeft">
+                            <img src="/Imgs/shareIcons/schoolIcon White.svg" alt="">
+                            Interesses
+                        </div>
+
+                        <div class="titleRight">
+                            <span class="nCuriosidades"><span class="fontBold">1</span> Interesses</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" id="addBox1">
+                        </div>
+                    </div>
+                    <div class="conteudoCuriosidades">
+                        <div class="idCuriosidade">
+                            <span class="idCuriosidadeStyle">1</span>
+                        </div>
+                        <div class="tipoCuriosidade">
+                            <span class="idCuriosidadeStyle">Curiosidade</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardsCuriosidades">
+                    <div class="titleCards">
+                        <div class="titleLeft">
+                            <img src="/Imgs/shareIcons/plantIcon White.svg" alt="">
+                            Valores
+                        </div>
+
+                        <div class="titleRight">
+                            <span class="nCuriosidades"><span class="fontBold">1</span> Valores</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" id="addBox1">
+                        </div>
+                    </div>
+                    <div class="conteudoCuriosidades">
+                        <div class="idCuriosidade">
+                            <span class="idCuriosidadeStyle">1</span>
+                        </div>
+                        <div class="tipoCuriosidade">
+                            <span class="idCuriosidadeStyle">Curiosidade</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardsCuriosidades">
+                    <div class="titleCards">
+                        <div class="titleLeft">
+                            <img src="/Imgs/shareIcons/heartIcon White.svg" alt="">
+                            Sentimentos
+                        </div>
+
+                        <div class="titleRight">
+                            <span class="nCuriosidades"><span class="fontBold">1</span> Sentimentos</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" id="addBox1">
+                        </div>
+                    </div>
+                    <div class="conteudoCuriosidades">
+                        <div class="idCuriosidade">
+                            <span class="idCuriosidadeStyle">1</span>
+                        </div>
+                        <div class="tipoCuriosidade">
+                            <span class="idCuriosidadeStyle">Curiosidade</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            
+            <div class="cadFotter">
+                <a href="" id="saveBtt">
+                    <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="./cadCuriosidade.js"></script>
+</body>
+</html>

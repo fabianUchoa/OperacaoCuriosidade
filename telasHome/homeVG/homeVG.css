@@ -200,7 +200,7 @@ main{
     width: 35%;
     height: 50%;
     border-radius: 15px;
-    display: flex;
+    display: none;
     justify-content:flex-start;
     align-content: center;
     align-self: center;

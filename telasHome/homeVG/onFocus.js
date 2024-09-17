@@ -4,22 +4,22 @@ let op
 let  overlay
 
 
-function onFocus(id){
+function onFocus(modalEscolhaComp){
    
    overlay = document.querySelector('.overlayModal')
    overlay.style.display = 'block'
 
-   if(id == 'bttEdit1' || id == 'bttVisualizar1'){
+   if(modalEscolhaComp == 'bttEdit1' || modalEscolhaComp == 'bttVisualizar1'){
     let escolheTipo = document.getElementById('escolheTipo1')
     escolheTipo.style.display = 'block'
     escolheTipo.querySelector('.bttEdit').style.display = 'flex'
     escolheTipo.querySelector('.bttVisualizar').style.display = 'flex'
 
-    op = 'escolheTipo1'
+    Modal = 'escolheTipo1'
 
     document.getElementById('bttEdit1').style.display = 'flex'
     document.getElementById('bttVisualizar1').style.display = 'flex'
-    if(id !='bttEdit1'){
+    if(modalEscolhaComp !='bttEdit1'){
         bttNone = 'bttEdit1'
     }else{
         bttNone = 'bttVisualizar1'

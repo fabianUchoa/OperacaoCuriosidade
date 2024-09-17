@@ -73,6 +73,7 @@ var modalOp
 var cardOp
 
 function abreModal(modal, card){
+    
     window.parent.document.querySelector(modal).style.display = 'flex'
     window.parent.document.querySelector(modal).style.zIndex = '1000'
     window.parent.document.querySelector('.overlay').style.display = 'block'

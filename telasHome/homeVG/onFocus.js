@@ -79,7 +79,7 @@ function abreModal(modal, card){
     window.parent.document.querySelector('.overlay').style.zIndex = '1'
     window.parent.modalOp = modal
     window.parent.cardOp = card
- 
+
 }
 
 function fechaModal(op){

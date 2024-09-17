@@ -417,7 +417,7 @@ main{
     overflow: hidden;
 }
 
-#fechaModal{
+#closeModal{
     background-color: lightgray;
     color: gray;
     width: 1.5vw;

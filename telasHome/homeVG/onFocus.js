@@ -4,6 +4,9 @@ let op
 let  overlay
 
 
+
+
+
 function onFocus(modalEscolhaComp){
    
    overlay = document.querySelector('.overlayModal')

@@ -6,7 +6,7 @@ function onFocus(optionChose){
     
     overlay = document.querySelector('.overlayModal');
     overlay.style.display = 'block';
-    console.log(optionChose)
+    
     if (optionChose == 'bttEdit1' || optionChose == 'bttVisualizar1'){
 
         modalSelecionaOpcao = document.getElementById('escolheTipo1');
@@ -25,7 +25,7 @@ function onFocus(optionChose){
     }else if( optionChose =='bttEdit2' || optionChose == 'bttVisualizar2'){
 
         modalSelecionaOpcao = document.getElementById('escolheTipo2');        
-        console.log(modalSelecionaOpcao)
+       
         modalSelecionaOpcao.style.display = 'block';
 
         modalSelecionaOpcao.querySelector('.bttEdit').style.display = 'flex';
@@ -40,7 +40,7 @@ function onFocus(optionChose){
     }else{
 
         modalSelecionaOpcao = document.getElementById('escolheTipo3');        
-        console.log(modalSelecionaOpcao)
+       
         modalSelecionaOpcao.style.display = 'block';
 
         modalSelecionaOpcao.querySelector('.bttEdit').style.display = 'flex';
@@ -57,7 +57,7 @@ function onFocus(optionChose){
 }
 
 function outFocus(buttonID){
-    console.log(buttonID)
+   
     if(buttonID==noSelectBtt){
         document.getElementById(noSelectBtt).style.display = 'flex';
         document.getElementById(selectBtt).style.display = 'none';
@@ -70,6 +70,7 @@ function outFocus(buttonID){
 }
 
 function fechaModal(){
+
     window.parent.document.getElementById('iframeModais').style.display= 'none'
     window.parent.document.querySelector('.overlay').style.display = 'none'
 }

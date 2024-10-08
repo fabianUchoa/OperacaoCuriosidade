@@ -5,13 +5,12 @@ let  overlay = document.querySelector('.overlay');
 
 function openModal(chosenModal){
     let iframe = document.getElementById('iframeModais');
-    if(id == 'Register'){
+    if(chosenModal == 'Register'){
         iframe.style.display ='block';
         iframe.style.width = '100vw';
         iframe.style.height = '100vh';
+        iframe.src = 'Home Screens/modalsTelas/Operation Register/operationRegister.html'
         overlay.style.display = 'block';
-        console.log(iframe.style.height);
-        console.log(iframe.style.width);
     }
 }
 

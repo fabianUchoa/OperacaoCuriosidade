@@ -296,8 +296,7 @@ header{
 /*Conteudo Principal*/
 
 .conteudo{
-    
-    width: 52vw;
+    width: 50vw;
     height: 80vh;
     display: flex;
     flex-flow: column wrap;

@@ -1,0 +1,78 @@
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+
+#contentAbaPerfil{
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    top: 11%;
+    left: 79.7%;
+    
+    width: 14.9vw;
+    height: 20vh;
+    background-color: white;
+    border: 1.5px solid lightgray;
+    border-radius:0 0 8px 8px ;
+    padding: 1vh 0.5vw;
+}
+
+.opcsAbaPerfil, .opcsAbaPerfil a{
+    font-size: 0.8vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    color: #6b1bc6;
+    width:90%;
+    height: 6vh;
+}
+
+.opcsAbaPerfil a{
+    width:100%;
+}
+
+.contentAbaPerfil hr{
+    width: 70% ;
+    margin: auto;
+}
+
+.opcsAbaPerfil img{
+
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+.perfilIcon{
+    width: 2vw;
+    height: 4vh;
+}
+
+.imgIcons{
+    width: 1.5vw;
+    height: 3vh;
+}

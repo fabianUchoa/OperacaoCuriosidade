@@ -13,10 +13,10 @@
             <img src="/Imgs//GeralIcons/onionLogo.svg" alt="">
          </div>
          <div id="opcsBar">
-            <div class="opcs"><a href="/telasHome/homeVG/homeVG.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
+            <div class="opcs"><a href="/Home Screens/homeVG/homeVG.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
                 Visão Geral</a></div>
             <hr>
-            <div class="opcs"><div class="txtOpcBar" onclick="abreModal('.conteinerCadastra')"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
+            <div class="opcs"><div class="txtOpcBar" onclick=""><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
                 Cadastrar Curiosidade</div></div>
             <hr>
             <div class="opcs" id="opcMeusCad"><a href="#" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
@@ -35,13 +35,13 @@
         </div>
         <div id="icons">
             <div id="toggleBt"><a href="" id="toggle"><img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt=""></a></div>
-            <div id="notBox" onclick="expandeNotificacao()"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></div>
+            <div id="notBox" onclick="openNotification()"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></div>
         </div>
         
         <div class="topPerfil" id="topPerfil">
             <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
             <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
-            <img id="expandPerfil" src="/Imgs/homeIcons/expandIcon.svg"  onclick="verificaAbaNot('#contentAbaPerfil', '.topPerfil')">
+            <img id="expandPerfil" src="/Imgs/homeIcons/expandIcon.svg"  onclick="openPerfilBar()">
         
         </div>
     </main>
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="posBtt">
-                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar">
+                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar" onclick="clearFilter()">
                 <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar" onclick="getFilter()">
             </div>
         </div>

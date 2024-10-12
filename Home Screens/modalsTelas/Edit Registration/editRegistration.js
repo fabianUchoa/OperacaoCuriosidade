@@ -16,6 +16,7 @@ function pullInformations(users){
     if(Array.isArray(users)){
         users.forEach(user=>{
             if(user.userId == userId){
+                document.getElementById('altFoto').src = `${user.profileImgPath}`
                 document.getElementById('inputNome').value = user.fatos.nome
                 document.getElementById('inputIdade').value = user.fatos.idade
                 document.getElementById('inputMail').value = user.fatos.email
@@ -35,7 +36,9 @@ function pullInformations(users){
         });
 }}
 
-
+function removeImgProfile(){
+    
+}
 
 
 
@@ -127,7 +130,8 @@ function newPassword(userId, senha){
         });
 }
 
-//Update Profile Picture
+//update de imagem
+
 let imgAlterada = 0;
 const uploadButton = document.getElementById('updateImg');
 const fileInput = document.getElementById('inputImg');

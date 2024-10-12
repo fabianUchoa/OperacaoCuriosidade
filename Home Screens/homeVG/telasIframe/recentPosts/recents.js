@@ -1,13 +1,11 @@
 var operationCard;
-let user = window.parent.document.createElement('div');
-user.id = 'varId';
+
+
 
 
 function abreModal(optionSelect, cardOperation, userSelect){
     let iframe = window.parent.document.getElementById('iframeModais');
-    user.innerText = userSelect;
-    window.parent.document.getElementById('headerBar').appendChild(user);
-    console.log(user);
+    sessionStorage.setItem('user',`${userSelect}`);
 
     operationCard = cardOperation;
 
@@ -41,7 +39,7 @@ function closeModal(){
 function deleteOperation(){
     let iframe = window.parent.document.getElementById('iframe');
     operationCard = iframe.contentWindow.operationCard;
-    console.log(window.parent.document.getElementById('varId'))
+    
     iframe.contentWindow.document.getElementById(operationCard).style.display = 'none';
     closeModal();
 }
@@ -143,7 +141,7 @@ function showCards(operation){
 }
 
 function userDelete() {
-    let userId = window.parent.document.getElementById('varId').textContent
+    let userId = sessionStorage.getItem('user')
     console.log(userId)
     axios.delete(`https://localhost:7064/api/user/${userId}`)
         .then(response => {

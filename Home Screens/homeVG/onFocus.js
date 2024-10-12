@@ -3,14 +3,21 @@ let btt
 let op 
 let  overlay = document.querySelector('.overlay');
 
+
+
+
 function openModal(chosenModal){
     let iframe = document.getElementById('iframeModais');
-    if(chosenModal == 'Register'){
-        iframe.style.display ='block';
-        iframe.style.width = '100vw';
-        iframe.style.height = '100vh';
-        iframe.src = 'Home Screens/modalsTelas/Operation Register/operationRegister.html'
-        overlay.style.display = 'block';
+    overlay.style.display = 'block';
+    iframe.style.display ='block';
+
+    switch(chosenModal){
+        case 'Register':
+            iframe.src ='/Home Screens/modalsTelas/Operation Register/operationRegister.html'
+            break;
+        case 'Notification':
+            iframe.src = '/Home Screens/modalsTelas/Notification Aba/notificationAba.html'
+            break;
     }
 }
 
@@ -93,6 +100,19 @@ function destacaOp(num){
     
 }
 
+function expandeNotificacao(){
+    let iframe = document.getElementById('iframeModais');
+    if(iframe.style.display != 'block'){
+        iframe.style.display = 'block'
+        iframe.src = '/Home Screens/modalsTelas/Notification Aba/notificationAba.html'
+        document.getElementById('notBox').style.zIndex = '100'
+        overlay.style.display = 'block'
+    }else{
+        fechaIframe('iframeModais')
+        document.getElementById('notBox').style.zIndex = '0'
+        overlay.style.display = 'none'
+    }
+}
 
 function verificaAbaNot(op, opPai){
     
@@ -127,9 +147,8 @@ function abreIframe(){
 
 }
 
-function fechaIframe(){
-    conteudo.style.display = 'flex'
-    iframe.style.display = 'none'
+function fechaIframe(iframeNome){
+    document.getElementById(iframeNome).style.display = 'none'
 }
 
 /*Script tela de configurações*/

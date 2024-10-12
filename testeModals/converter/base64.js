@@ -9,14 +9,13 @@ function converter64(){
     if(image){
         convertImageToBase64(image)
     }
-
 }
 
 
 function convertImageToBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
-
+        reader.readAsDataURL(file);
         reader.onload = () => {
             resolve(reader.result);
             base64ToImage(reader.result);
@@ -30,13 +29,14 @@ function convertImageToBase64(file) {
         console.log(reader.readAsDataURL(file));
         console.log(file);
     });
-    
 }
+
 
 function base64ToImage(base64String){
     const img = document.getElementById('testeAlo')
     img.src = base64String;
 }
+
 
 function show64(string64){
     document.getElementById('exibir').textContent = string64

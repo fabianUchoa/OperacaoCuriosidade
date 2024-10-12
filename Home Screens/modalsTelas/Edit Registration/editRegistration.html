@@ -19,7 +19,8 @@
                     <h2>Sua foto</h2>
                     <div class="dadosHead">
                     <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
-                    <a href="#" class="opcsPerfil">
+                    <input type="file" accept="image/*" id="inputImg">
+                    <a href="#" id="updateImg" class="opcsPerfil">
                         <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
                         Atualize sua imagem
                     </a>
@@ -56,7 +57,7 @@
                 </div>
                 <div class="inputArea">
                     <label for="nascimento" class="inputLabel">Data de nascimento</label>
-                    <input type="date" name="nascimento" id="nasc" class="inputBox">
+                    <input type="text" name="nascimento" id="nasc" class="inputBox">
                 </div>
                 <div class="inputArea">
                     <label for="estadoCivil" class="inputLabel">Estado Civil</label>
@@ -79,7 +80,7 @@
                     <label for="senhaAtual" class="labelDados">Senha Atual</label>
                     <input type="password" name="senhaAtual" class="senhaBox">
                     <label for="senhaNova" class="labelDados">Nova Senha</label>
-                    <input type="password" name="senhaNova" class="senhaBox">
+                    <input type="password" name="senhaNova" class="senhaBox" id="newPassword">
                 </div>
                 <div class="dadosFotter">
                     <input type="checkbox" name="cargo" id="checkboxAdmin"> <label for="cargo" id="labelCheckbox">Administrador</label>
@@ -88,7 +89,7 @@
             
             
             <div class="editFotter">
-                <div id="saveBtt" onclick="closeModal()">
+                <div id="saveBtt" onclick="saveButton()">
                     <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
                 </div>
             </div>

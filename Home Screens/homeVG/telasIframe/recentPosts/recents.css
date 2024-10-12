@@ -47,6 +47,10 @@ body{
 
 }
 
+#varId{
+    display:  none;
+}
+
 .user{
     width: 60vw;
     height: 35vh;

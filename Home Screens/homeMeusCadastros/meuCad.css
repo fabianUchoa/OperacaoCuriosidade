@@ -267,6 +267,33 @@ main{
     width: 1vw;
 }
 
+#iframeConfirmModais{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+#iframeModais{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    top: 0;
+    left:  0;
+}
+
+#iframeDetails{
+    display: none;
+    position: fixed;
+    width: 12vw;
+    height: 18vh;
+    top: 30%;
+    left: 74%;
+    border: none;
+}
+
 /*Conteúdo principal da pag*/
 
 .conteiner{
@@ -296,12 +323,12 @@ main{
 
 #inputs{
     height: 9vh;
-    width: 45vw;
+    width: 35vw;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    margin-left: 0.5vw;
 }
 
 #date{
@@ -313,6 +340,14 @@ main{
 #dataIn, #dataOut{
     border: none;
     
+}
+
+.inputName{
+    display: none;
+}
+
+#id{
+    width: 8vw;
 }
 
 .estiloSelect{
@@ -341,7 +376,6 @@ select{
     flex-flow: row;
     justify-content: space-around;
     align-items: flex-end;
-    
 }
 
 .bttEstilo{
@@ -350,6 +384,7 @@ select{
     border-radius: 6px;
     font-family: 'Poppins';
     font-weight: normal;
+    cursor: pointer;
 }
 
 #bttFiltrar{
@@ -396,7 +431,7 @@ select{
 }
 
 .nomeColumn{
-    width: 15vw;
+    width: 17vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -452,7 +487,7 @@ select{
     margin-bottom: 0.1vh;
 }
 
-.ativo{
+.Ativo{
     background-color: rgba(174, 239, 174, 0.382);
     font-size: 0.8vw;
     color: rgb(7, 162, 7);
@@ -460,9 +495,10 @@ select{
     font-weight: normal;
     padding: 0vh 0.5vw;
     border-radius:20px;
+    cursor: pointer;
 }
 
-.inativo{
+.Inativo{
     background-color: rgba(239, 174, 174, 0.382);
     font-size: 0.8vw;
     color: rgb(162, 7, 7);
@@ -470,6 +506,7 @@ select{
     font-weight: normal;
     padding: 0vh 0.5vw;
     border-radius:20px;
+    cursor: pointer;
 }
 
 .detailBtt{
@@ -1010,6 +1047,7 @@ h1 img{
     font-size: 0.9vw;
     
 }
+
 
 #inputNome, #inputMail, #fAcademica{
     width: 20vw;

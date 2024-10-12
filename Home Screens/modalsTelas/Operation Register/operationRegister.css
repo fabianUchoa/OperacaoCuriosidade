@@ -346,3 +346,7 @@ h2{
     font-weight: normal;
     cursor: pointer;
 }
+
+#inputImg{
+    display: none;
+}

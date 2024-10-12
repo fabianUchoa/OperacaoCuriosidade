@@ -24,21 +24,14 @@
                         <label for="tipo">Tipo</label><br>
                         <select name="tipo" class="estiloSelect" id="tipo">
                             <option value="null">-</option>
-                            <option value="admin">Administrador</option>
-                            <option value="operador">Operador</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Operador">Operador</option>
                         </select>
                     </div>
                     <div class="inputId">
                         <label for="id">Código ou Nome</label><br>
-                        <select name="id" id="id" class="estiloSelect" >
-                            <option value="null">-</option>
-                            <option value="id1">24-00016</option>
-                            <option value="id2">24-00015</option>
-                            <option value="id3">24-00014</option>
-                            <option value="id4">24-00013</option>
-                            <option value="nome1">Pablinto Salabin</option>
-                            <option value="nome2">Rosangela Maria Pereira</option>
-                        </select>
+                        <input type="text" name="id" id="id" maxlength="8" class="estiloSelect" >
+                            
                     </div>
                     <div class="inputDate">
                         <label for="data">Periodo</label><br>
@@ -50,8 +43,8 @@
                 </div>
             </div>
             <div class="posBtt">
-                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar">
-                <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar">
+                <input type="reset" class="bttEstilo" id="bttLimpar" value="Limpar" onclick="clearFilter()">
+                <input type="submit" class="bttEstilo" id="bttFiltrar" value="Filtrar" onclick="getFilter()">
                 <input type="submit" class="bttEstilo" id="criarUser" value="Criar Usuário" onclick="abreModal('.userCad')">
             </div>
         </div>
@@ -105,7 +98,7 @@
                         <p class="ativo" id="st1" onclick="abreModal('.confirmDesactive')">Ativo</p>
                     </div>
                     <div class="tipoColumn">
-                        <p class="operador">Operador</p>
+                        <p class="Operador">Operador</p>
                     </div>
                     <div class="detailBtt" id="#detailBtt1" onclick=" controlaDisplayStatus(), verificaAbaNot('.modalDetalhes', '#detailBtt1')">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
@@ -133,7 +126,7 @@
                         <p class="inativo">Inativo</p>
                     </div>
                     <div class="tipoColumn">
-                        <p class="operador">Operador</p>
+                        <p class="Operador">Operador</p>
                     </div>
                     <a href="#" class="detailBtt">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
@@ -162,7 +155,7 @@
                         <p class="ativo">Ativo</p>
                     </div>
                     <div class="tipoColumn">
-                        <p class="operador">Operador</p>
+                        <p class="Operador">Operador</p>
                     </div>
                     <a href="#" class="detailBtt">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
@@ -190,7 +183,7 @@
                         <p class="inativo">Inativo</p>
                     </div>
                     <div class="tipoColumn">
-                        <p class="admin">Administrador</p>
+                        <p class="Administrador">Administrador</p>
                     </div>
                     <a href="#" class="detailBtt">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
@@ -218,7 +211,7 @@
                         <p class="ativo">Ativo</p>
                     </div>
                     <div class="tipoColumn">
-                        <p class="operador">Operador</p>
+                        <p class="Operador">Operador</p>
                     </div>
                     <a href="#" class="detailBtt">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
@@ -246,7 +239,7 @@
                         <p class="ativo">Ativo</p>
                     </div>
                     <div class="tipoColumn">
-                        <p class="admin">Administrador</p>
+                        <p class="Administrador">Administrador</p>
                     </div>
                     <a href="#" class="detailBtt">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">

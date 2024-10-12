@@ -4,7 +4,7 @@ axios.get('https://localhost:7064/api/user')
     .then(response =>{
         console.log('Usuários Recebidos: ',response.data);
         showUsers(response.data);
-        sessionStorage.setItem('users', `${response.data}`)
+        
     })
     .catch(error =>{
         console.error('Erro ao fazer requisição GET: ',error);
@@ -144,32 +144,44 @@ function clearFilter(){
 
 function getFilter(){
     let inputStatus
+    let inputType;
     let inputCod = document.getElementById('id').value;
+    const regex = /^\d{2}-\d{5}$/
+    if(!regex.test(inputCod))
+        inputCod = null
+
     if(document.getElementById('status').value=='ativo'){
         inputStatus = true;
     }else if(document.getElementById('status').value=='inativo'){
         inputStatus = false
     }else inputStatus = null
+
+    if(document.getElementById('tipo')){
+        if(document.getElementById('tipo').value == 'admin'){
+            inputType = true;
+        }else if(document.getElementById('tipo').value == 'operador'){
+            inputType = false
+        }else{
+            inputType = null
+        }
+    }
+
     let inputDateIn = document.getElementById('dataIn').value;
     let inputDateOut = document.getElementById('dataOut').value;
     console.log(inputStatus)
-    applyFilter(inputCod,inputStatus,inputDateIn,inputDateOut)
+    applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut)
 
 }
 
-function applyFilter(inputCod,inputStatus,inputDateIn,inputDateOut){
+function applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut){
     axios.get('https://localhost:7064/api/user/filtros',{
         params: {
             userCode : inputCod,
             status : inputStatus,
-            tipo: null,
+            tipo: inputType,
             dataIn: inputDateIn,
             dataOut: inputDateOut
-        }
-        
-        
-        })
-
+        }})
         .then(response =>{
             console.log('Usuários Recebidos: ',response.data);
             showUsers(response.data)

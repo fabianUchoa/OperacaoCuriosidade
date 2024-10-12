@@ -250,7 +250,7 @@ select{
     margin-bottom: 0.3vh;
 }
 
-.ativo{
+.Ativo{
     background-color: rgba(174, 239, 174, 0.382);
     width: 6vw;
     height: 4vh;
@@ -263,7 +263,7 @@ select{
     cursor: pointer;
 }
 
-.inativo{
+.Inativo{
     background-color: rgba(239, 174, 174, 0.382);
     width: 6vw;
     height: 4vh;
@@ -276,7 +276,7 @@ select{
     cursor: pointer;
 }
 
-.operador{
+.Operador{
     background-color: #6b1bc696;
     color: #ffffff;
     
@@ -285,7 +285,7 @@ select{
     border-radius:20px;
 }
 
-.admin{
+.Administrador{
     background-color: #6b1bc6;
     color: rgb(255, 255, 255);
     

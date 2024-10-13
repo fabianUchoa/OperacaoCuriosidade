@@ -1,17 +1,20 @@
+let usersData;
+
 axios.get('https://localhost:7064/api/user')
     .then(response =>{
         console.log('Usuários Recebidos: ',response.data);
         pullInformations(response.data);
-        
+        usersData = response.data
     })
     .catch(error =>{
         console.error('Erro ao fazer requisição GET: ',error);
 
     });
 
+
 function pullInformations(users){
     let iframe = window.parent.document.getElementById('iframe');
-    let userId = window.parent.document.getElementById('varId').textContent;
+    let userId = sessionStorage.getItem('user');
 
     if(Array.isArray(users)){
         users.forEach(user=>{
@@ -37,11 +40,16 @@ function pullInformations(users){
 }}
 
 function removeImgProfile(){
-    
+    let userId = sessionStorage.getItem('user')
+
+    if(Array.isArray(usersData)){
+        usersData.forEach(user=>{
+            if(user.userId == userId){
+                user.profileImgPath = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSIyNHB4IiBmaWxsPSIjNmIxYmM2Ij48cGF0aCBkPSJNNDgwLTQ4MHEtNjYgMC0xMTMtNDd0LTQ3LTExM3EwLTY2IDQ3LTExM3QxMTMtNDdxNjYgMCAxMTMgNDd0NDcgMTEzcTAgNjYtNDcgMTEzdC0xMTMgNDdaTTE2MC0yNDB2LTMycTAtMzQgMTcuNS02Mi41VDIyNC0zNzhxNjItMzEgMTI2LTQ2LjVUNDgwLTQ0MHE2NiAwIDEzMCAxNS41VDczNi0zNzhxMjkgMTUgNDYuNSA0My41VDgwMC0yNzJ2MzJxMCAzMy0yMy41IDU2LjVUNzIwLTE2MEgyNDBxLTMzIDAtNTYuNS0yMy41VDE2MC0yNDBabTgwIDBoNDgwdi0zMnEwLTExLTUuNS0yMFQ3MDAtMzA2cS01NC0yNy0xMDktNDAuNVQ0ODAtMzYwcS01NiAwLTExMSAxMy41VDI2MC0zMDZxLTkgNS0xNC41IDE0dC01LjUgMjB2MzJabTI0MC0zMjBxMzMgMCA1Ni41LTIzLjVUNTYwLTY0MHEwLTMzLTIzLjUtNTYuNVQ0ODAtNzIwcS0zMyAwLTU2LjUgMjMuNVQ0MDAtNjQwcTAgMzMgMjMuNSA1Ni41VDQ4MC01NjBabTAtODBabTAgNDAwWiIvPjwvc3ZnPg=='
+            }})
+        }
+        document.getElementById('altFoto').src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSIyNHB4IiBmaWxsPSIjNmIxYmM2Ij48cGF0aCBkPSJNNDgwLTQ4MHEtNjYgMC0xMTMtNDd0LTQ3LTExM3EwLTY2IDQ3LTExM3QxMTMtNDdxNjYgMCAxMTMgNDd0NDcgMTEzcTAgNjYtNDcgMTEzdC0xMTMgNDdaTTE2MC0yNDB2LTMycTAtMzQgMTcuNS02Mi41VDIyNC0zNzhxNjItMzEgMTI2LTQ2LjVUNDgwLTQ0MHE2NiAwIDEzMCAxNS41VDczNi0zNzhxMjkgMTUgNDYuNSA0My41VDgwMC0yNzJ2MzJxMCAzMy0yMy41IDU2LjVUNzIwLTE2MEgyNDBxLTMzIDAtNTYuNS0yMy41VDE2MC0yNDBabTgwIDBoNDgwdi0zMnEwLTExLTUuNS0yMFQ3MDAtMzA2cS01NC0yNy0xMDktNDAuNVQ0ODAtMzYwcS01NiAwLTExMSAxMy41VDI2MC0zMDZxLTkgNS0xNC41IDE0dC01LjUgMjB2MzJabTI0MC0zMjBxMzMgMCA1Ni41LTIzLjVUNTYwLTY0MHEwLTMzLTIzLjUtNTYuNVQ0ODAtNzIwcS0zMyAwLTU2LjUgMjMuNVQ0MDAtNjQwcTAgMzMgMjMuNSA1Ni41VDQ4MC01NjBabTAtODBabTAgNDAwWiIvPjwvc3ZnPg=='
 }
-
-
-
 
 
 function trocaStatus(backgroundStatusColor, statusSituation){
@@ -89,12 +97,12 @@ function saveButton(){
     let inputSenha = document.getElementById('newPassword');
     let updateSenha;
 
-    let userId = window.parent.document.getElementById('varId').textContent;
+    let userId = sessionStorage.getItem('user');
     userUpdate(updateData, userId);
-    if(inputSenha.value !=null){
+    if(inputSenha.value != ''){
         updateSenha = `${document.getElementById('newPassword').value}`
-        console.log(updateSenha)
         newPassword(userId, updateSenha)
+        console.log(updateSenha)
     }
     if(imgAlterada==1){
         newImg(userId);

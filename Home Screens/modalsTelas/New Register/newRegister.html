@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./newRegister.css">
+    <link rel="stylesheet" href="../Edit Registration/editRegistration.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -57,18 +58,18 @@
                 </div>
                 <div class="inputArea">
                     <label for="tel" class="inputLabel">Telefone</label>
-                    <input type="tel" name="tel" id="tel" class="inputBox">
+                    <input type="tel" name="tel" id="tel" maxlength="16" class="inputBox" oninput="maskPhone(this)">
                 </div>
                 <div class="inputArea">
                     <label for="cargo" class="inputLabel">Ocupação/Profissão</label>
                     <input type="text" name="cargo" id="cargo" class="inputBox">
                 </div>
-                <h2>Atualizar senha</h2>
+                <h2>Criar senha</h2>
                 <div class="dadosMain">
-                    <label for="senhaAtual" class="labelDados">Senha Atual</label>
+                    <label for="senhaAtual" class="labelDados">Informe a senha</label>
                     <input type="password" name="senhaAtual" class="senhaBox">
-                    <label for="senhaNova" class="labelDados">Nova Senha</label>
-                    <input type="password" name="senhaNova" class="senhaBox">
+                    <label for="senhaNova" class="labelDados">Confirme a senha</label>
+                    <input type="password" name="senhaNova" class="senhaBox" id="senhaNova">
                 </div>
                 <div class="dadosFotter">
                     <input type="checkbox" name="cargo" id="checkboxAdmin"> <label for="cargo" id="labelCheckbox">Administrador</label>
@@ -77,12 +78,16 @@
             
             
             <div class="editFotter">
-                <div id="saveBtt" onclick="fechaModal(1)">
+                <div id="saveBtt" onclick="registerNewUser()">
                     <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
                 </div>
+                
             </div>
         </div>
     </div>
+
+
+    <script src="./newRegister.js"></script>
 
 </body>
 </html>

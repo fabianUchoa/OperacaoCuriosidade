@@ -140,3 +140,13 @@ axios.get('https://localhost:7064/api/user')
     
             });
     }
+
+    function openRegisterModal(modalName){
+        let iframe = window.parent.document.getElementById('iframeModais')
+        iframe.style.display = 'block';
+        if(modalName =='Edit'){
+            iframe.scr = '/Home Screens/modalsTelas/Edit Registration/editRegistration.html'
+        }else if(modalName == 'Create'){
+            iframe.src = ''
+        }
+    }

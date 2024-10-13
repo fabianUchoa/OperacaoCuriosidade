@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./newRegister.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="userCad">
+        <div class="conteudoEdit">
+            <div class="editHeader">
+                Cadastrar usuário
+            </div>
+            <div class="editMain">
+                <h2>Sua foto</h2>
+                <div class="dadosHead">
+                <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
+                    Atualize sua imagem
+                </a>
+                <a href="#" class="opcsPerfil">
+                    <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
+                    Remover Imagem
+                </a></div>
+                
+                <h1><img src="/Imgs/Complementos/idCard.svg" alt=""> Fatos e Dados</h1>
+                <div class="inputArea">
+                    <label for="nome" class="inputLabel">Nome</label>
+                    <input type="text" name="nome" id="inputNome" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="idade" class="inputLabel">Idade</label>
+                    <input type="number" name="idade" id="inputIdade" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="mail" class="inputLabel">E-mail</label>
+                    <input type="text" name="mail" id="inputMail" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="userName" class="inputLabel">Nome de Usuário</label>
+                    <input type="text" name="userName" id="userName" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="nascimento" class="inputLabel">Data de nascimento</label>
+                    <input type="date" name="nascimento" id="nasc" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="estadoCivil" class="inputLabel">Estado Civil</label>
+                    <input type="text" name="estadoCivil" id="estadoCivil" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="Endereço" class="inputLabel">Endereço</label>
+                    <input type="text" name="Endereço" id="end" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="tel" class="inputLabel">Telefone</label>
+                    <input type="tel" name="tel" id="tel" class="inputBox">
+                </div>
+                <div class="inputArea">
+                    <label for="cargo" class="inputLabel">Ocupação/Profissão</label>
+                    <input type="text" name="cargo" id="cargo" class="inputBox">
+                </div>
+                <h2>Atualizar senha</h2>
+                <div class="dadosMain">
+                    <label for="senhaAtual" class="labelDados">Senha Atual</label>
+                    <input type="password" name="senhaAtual" class="senhaBox">
+                    <label for="senhaNova" class="labelDados">Nova Senha</label>
+                    <input type="password" name="senhaNova" class="senhaBox">
+                </div>
+                <div class="dadosFotter">
+                    <input type="checkbox" name="cargo" id="checkboxAdmin"> <label for="cargo" id="labelCheckbox">Administrador</label>
+                </div>
+            </div>
+            
+            
+            <div class="editFotter">
+                <div id="saveBtt" onclick="fechaModal(1)">
+                    <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

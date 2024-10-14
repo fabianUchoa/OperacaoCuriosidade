@@ -1,6 +1,7 @@
 let usersData;
+let userDetailId = sessionStorage.getItem('user')
 
-axios.get('https://localhost:7064/api/user')
+axios.get(`https://localhost:7064/api/user/${userDetailId}`)
     .then(response =>{
         console.log('Usuários Recebidos: ',response.data);
         pullInformations(response.data);
@@ -12,32 +13,25 @@ axios.get('https://localhost:7064/api/user')
     });
 
 
-function pullInformations(users){
-    let iframe = window.parent.document.getElementById('iframe');
-    let userId = sessionStorage.getItem('user');
-
-    if(Array.isArray(users)){
-        users.forEach(user=>{
-            if(user.userId == userId){
-                document.getElementById('altFoto').src = `${user.profileImgPath}`
-                document.getElementById('inputNome').value = user.fatos.nome
-                document.getElementById('inputIdade').value = user.fatos.idade
-                document.getElementById('inputMail').value = user.fatos.email
-                document.getElementById('userName').value = user.fatos.userName
-                document.getElementById('nasc').value = user.fatos.nasc
-                document.getElementById('estadoCivil').value = user.fatos.estadoCivil
-                document.getElementById('end').value = user.fatos.endereco
-                document.getElementById('tel').value = user.fatos.tel
-                document.getElementById('cargo').value = user.fatos.profissao
-                if(user.status==false){
-                    document.querySelector('.userEdit').style.backgroundColor = 'rgb(215, 35, 35)'
-                    document.querySelector('#toggleSit').innerHTML = 'Inativo'
-                    document.querySelector('#toggleBtSit').style.backgroundColor = 'rgb(215, 35, 35)'
-                    document.querySelector('#statusIcon').src = '/Imgs/Complementos/recuseIcon.svg'
-                    document.querySelector('#toggleBtSit').style.justifyContent ='flex-start'}
-            }
-        });
-}}
+function pullInformations(user){
+    
+    document.getElementById('altFoto').src = `${user.profileImgPath}`
+    document.getElementById('inputNome').value = user.fatos.nome
+    document.getElementById('inputIdade').value = user.fatos.idade
+    document.getElementById('inputMail').value = user.fatos.email
+    document.getElementById('userName').value = user.fatos.userName
+    document.getElementById('nasc').value = user.fatos.nasc
+    document.getElementById('estadoCivil').value = user.fatos.estadoCivil
+    document.getElementById('end').value = user.fatos.endereco
+    document.getElementById('tel').value = user.fatos.tel
+    document.getElementById('cargo').value = user.fatos.profissao
+    if(user.status==false){
+        document.querySelector('.userEdit').style.backgroundColor = 'rgb(215, 35, 35)'
+        document.querySelector('#toggleSit').innerHTML = 'Inativo'
+        document.querySelector('#toggleBtSit').style.backgroundColor = 'rgb(215, 35, 35)'
+        document.querySelector('#statusIcon').src = '/Imgs/Complementos/recuseIcon.svg'
+        document.querySelector('#toggleBtSit').style.justifyContent ='flex-start'}
+}
 
 function removeImgProfile(){
     let userId = sessionStorage.getItem('user')

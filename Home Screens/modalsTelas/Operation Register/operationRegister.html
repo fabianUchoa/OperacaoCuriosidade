@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="operationRegister.css">
 </head>
 <body>
@@ -11,19 +12,13 @@
         <div class="conteudoCadastra">
             <div class="cadHeader">
                 Cadastro de Operação Curiosidade
+                <span id="closeBtt" onclick="closeModal()">&times;</span>
             </div>
             <div class="cadMain">
                 <div class="dadosHead">
-                <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
-                <input type="file" accept="image/*" id="inputImg">
-                <a href="#" class="opcsPerfil" id="updateImg">
-                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
-                    Atualize sua imagem
-                </a>
-                <a href="#" class="opcsPerfil">
-                    <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
-                    Remover Imagem
-                </a>
+                Código do usuário:
+                <input type="text" name="" oninput="maskCode(this)" id="inputUserCode" maxlength="8" class="inputBox">
+                <input type="button" value="Buscar Usuário" class="bttSearch" onclick="getUser()">
             </div>
             
                 
@@ -74,17 +69,12 @@
                         </div>
 
                         <div class="titleRight">
-                            <span class="nCuriosidades"><span class="fontBold" id="contInteresses">1</span> Interesses</span>
-                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="adicionaCadastro('#cardsCuriosidades1', '#contInteresses')">
+                            <span class="nCuriosidades"><span class="fontBold" id="contInteresses">0</span> Interesses</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="addInteresses()">
                         </div>
                     </div>
-                    <div class="conteudoCuriosidades">
-                        <div class="idCuriosidade">
-                            <span class="idCuriosidadeStyle">1</span>
-                        </div>
-                        <div class="tipoCuriosidade">
-                            <span class="idCuriosidadeStyle">Curiosidade</span>
-                        </div>
+                    <div id="divInteresse">
+                        
                     </div>
                 </div>
                 <div class="cardsCuriosidades" id="cardsCuriosidades2">
@@ -95,17 +85,12 @@
                         </div>
 
                         <div class="titleRight">
-                            <span class="nCuriosidades"><span class="fontBold" id="contValores">1</span> Valores</span>
-                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="adicionaCadastro('#cardsCuriosidades2', '#contValores')">
+                            <span class="nCuriosidades"><span class="fontBold" id="contValores">0</span> Valores</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="addValores()">
                         </div>
                     </div>
-                    <div class="conteudoCuriosidades">
-                        <div class="idCuriosidade">
-                            <span class="idCuriosidadeStyle">1</span>
-                        </div>
-                        <div class="tipoCuriosidade">
-                            <span class="idCuriosidadeStyle">Curiosidade</span>
-                        </div>
+                    <div id="divValor">
+                        
                     </div>
                 </div>
                 <div class="cardsCuriosidades" id="cardsCuriosidades3">
@@ -116,17 +101,13 @@
                         </div>
 
                         <div class="titleRight">
-                            <span class="nCuriosidades"><span class="fontBold" id="contSentimentos">1</span> Sentimentos</span>
-                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="adicionaCadastro('#cardsCuriosidades3', '#contSentimentos')">
+                            <span class="nCuriosidades"><span class="fontBold" id="contSentimentos">0</span> Sentimentos</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="addSentimentos()">
                         </div>
                     </div>
-                    <div class="conteudoCuriosidades" id="conteudoCuriosidades3">
-                        <div class="idCuriosidade">
-                            <span class="idCuriosidadeStyle">1</span>
-                        </div>
-                        <div class="tipoCuriosidade">
-                            <span class="idCuriosidadeStyle">Curiosidade</span>
-                        </div>
+                    <div id="divSentimentos">
+                        
+                    
                     </div>
 
                 </div>
@@ -137,7 +118,7 @@
             
             
             <div class="cadFotter">
-                <div id="saveBtt" onclick="fechaModal()">
+                <div id="saveBtt" onclick="closeModal()">
                     <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
                 </div>
             </div>

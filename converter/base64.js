@@ -41,3 +41,7 @@ function base64ToImage(base64String){
 function show64(string64){
     document.getElementById('exibir').textContent = string64
 }
+
+const date = new Date().toISOString().slice(0,10)
+console.log(date)
+alert('alo')

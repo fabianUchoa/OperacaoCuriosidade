@@ -3,7 +3,7 @@ var operationCard;
 
 
 
-function abreModal(optionSelect, cardOperation, userSelect){
+function openCardOptionsModal(optionSelect, cardOperation, userSelect){
     let iframe = window.parent.document.getElementById('iframeModais');
     sessionStorage.setItem('user',`${userSelect}`);
 
@@ -47,7 +47,7 @@ function deleteOperation(){
 
 // GERACAO DE CARDS PELA API
 
-axios.get('https://localhost:7064/api/user')
+axios.get('https://localhost:7064/api/user/operacao-cadastrada')
     .then(response =>{
         console.log('Usuários Recebidos: ',response.data);
         showCards(response.data);
@@ -60,17 +60,35 @@ axios.get('https://localhost:7064/api/user')
 function showCards(operation){
     
     const cardDiv = document.getElementById('card');
-    cardDiv.innerHTML = ''
+    cardDiv.innerHTML = ' '
     let status;
     let cont=0;
+    let contInteresses;
+    let contSentimentos;
+    let contValores;
     if(Array.isArray(operation)){
         operation.forEach(user=>{
-            let contInteresses = user.operacao.interesses.length;
-            let contSentimentos = user.operacao.sentimentos.length;
-            let contValores = user.operacao.valores.length
+            if(user.operacao != null){
+                if(user.operacao.interesses != null)
+                    contInteresses = user.operacao.interesses.length;
+                else contInteresses = 0;
+
+                if(user.operacao.sentimentos != null)
+                    contSentimentos = user.operacao.sentimentos.length;
+                else contSentimentos = 0;
+
+                if(user.operacao.valores != null)
+                    contValores = user.operacao.valores.length;
+                else contValores = 0;
+            }else{
+                contInteresses = 0
+                contValores = 0
+                contSentimentos = 0
+            }
+            
             cont++;
             const operationElement = document.createElement('div');
-            
+            console.log(user)     
             cardDiv.appendChild(operationElement);
             operationElement.innerHTML =`<div class="card" id="card${cont}">
                 <div class="user">
@@ -122,10 +140,10 @@ function showCards(operation){
                         ${user.userCode}
                     </div>
                     <div class="cardOpcs">
-                            <img src="/Imgs/shareIcons/reply.svg" alt="" onclick="abreModal('share', 'card${cont}', '${user.userId}')">
+                            <img src="/Imgs/shareIcons/reply.svg" alt="" onclick="openCardOptionsModal('share', 'card${cont}', '${user.userId}')">
                     </a>
-                        <img src="/Imgs/shareIcons/delete.svg" alt="" onclick="abreModal('delete','card${cont}','${user.userId}')">
-                        <img src="/Imgs/shareIcons/edit.svg" alt="" onclick="abreModal('edit', 'card${cont}', '${user.userId}')">
+                        <img src="/Imgs/shareIcons/delete.svg" alt="" onclick="openCardOptionsModal('delete','card${cont}','${user.userId}')">
+                        <img src="/Imgs/shareIcons/edit.svg" alt="" onclick="openCardOptionsModal('edit', 'card${cont}', '${user.userId}')">
                     </div>
                 </div>
             </div>`;
@@ -140,10 +158,10 @@ function showCards(operation){
     
 }
 
-function userDelete() {
+function operationDelete() {
     let userId = sessionStorage.getItem('user')
     console.log(userId)
-    axios.delete(`https://localhost:7064/api/user/${userId}`)
+    axios.delete(`https://localhost:7064/api/user/operacao/${userId}`)
         .then(response => {
             console.log('Usuário atualizado com sucesso:', response.data);
             console.log(userId)

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="modalDetalhes">
-        <div class="opcAlt" onclick="abreModal('.userEdit')">
+        <div class="opcAlt" onclick="openModalDetailsOptions('edit')">
             Alterar
             <img src="/Imgs/Complementos/editIcon.svg" alt="">
         </div>
@@ -19,14 +19,15 @@
             Inativar
             <img src="/Imgs/Complementos/inactiveUser.svg" alt="">
         </div>
-        <div class="opcComp">
+        <div class="opcComp" onclick="openModalDetailsOptions('share')">
             Compartilhar
-            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="" onclick="abreModal('.modal')">
+            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="" >
         </div>
-        <div class="opcRem">
+        <div class="opcRem" onclick="openModalDetailsOptions('delete')">
             Remover
             <img src="/Imgs/shareIcons/deleteWhite.svg" alt="" onclick="abreModal('.confirmDelete')">
         </div>
     </div>
+    <script src="./detailOptions.js"></script>
 </body>
 </html>

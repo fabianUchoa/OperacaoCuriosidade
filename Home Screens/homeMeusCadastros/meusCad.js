@@ -1,4 +1,31 @@
 const overlay = document.querySelector('.overlay')
+let userLoginId = sessionStorage.getItem('userLoginId')
+
+//Carrega perfil do usuário
+
+axios.get(`https://localhost:7064/api/user/${userLoginId}`)
+    .then(response =>{
+        console.log('Usuários Recebidos: ',response.data);
+        loadUserProfile(response.data)
+        
+    })
+    .catch(error =>{
+        console.error('Erro ao fazer requisição GET: ',error);
+
+    });
+
+function loadUserProfile(user){
+    let tipoUser
+    if(user.tipo == true){
+        tipoUser = "Administrador"
+    }else
+        tipoUser = "Operador"
+
+    document.getElementById('fotoPerfil').src = `${user.profileImgPath}`
+    document.getElementById('infoPerfil').innerHTML = `${(user.fatos.nome).split(' ').slice(0,2).join(' ')}<br>[${tipoUser}]`
+}
+
+//Carrega Cards
 
 axios.get('https://localhost:7064/api/user')
     .then(response =>{
@@ -12,10 +39,15 @@ axios.get('https://localhost:7064/api/user')
     });
 
 
-function openModalDetails(bttAtivador){
+function openModalDetails(bttAtivador, userId){
     let iframe = document.getElementById('iframeDetails');
+    sessionStorage.setItem('user',userId);
     document.querySelector('.overlay').style.display = 'block';
     iframe.style.display='block'
+    
+    
+    
+    sessionStorage.setItem('cardNumber',bttAtivador);
     if(bttAtivador==1){
         iframe.style.top = '30%'
         
@@ -61,7 +93,7 @@ function showUsers(users){
                     <div class="statusColumn" onclick="alteraStatus(${user.status},${user.userId})">
                         <p class="${status}">${status}</p>
                     </div>
-                    <div class="detailBtt" id="detailBtt1" onclick="openModalDetails(${cont})">
+                    <div class="detailBtt" id="detailBtt1" onclick="openModalDetails(${cont}, ${user.userId})">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
                             Detalhes
                     </div>
@@ -85,11 +117,13 @@ function verifyStatus(status){
 function alteraStatus(status,userId){
     let iframe = document.getElementById('iframeConfirmModais')
     document.querySelector('.overlay').style.display ='block'
-    console.log(userId)
+    
+    iframe.style.zIndex = '10'
     sessionStorage.setItem('userId', `${userId}`)
     if(status == false){
         iframe.src = '/Home Screens/modalsTelas/Status Change/Activation Modal/activationModal.html'
         iframe.style.display ='block'
+        
     }else{
         iframe.src = '/Home Screens/modalsTelas/Status Change/Desactivation Modal/desactivationModal.html'
         iframe.style.display ='block'
@@ -192,3 +226,6 @@ function applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut){
 
         });
 }
+
+
+//abre modais de detalhes

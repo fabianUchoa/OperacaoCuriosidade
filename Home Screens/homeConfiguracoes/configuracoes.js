@@ -21,3 +21,7 @@ function optionHighlight(num){
     document.getElementById(`op${num}`).style.transform = 'scale(1.1)'
     
 }
+
+function openReport(){
+    
+}

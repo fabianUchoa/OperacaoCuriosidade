@@ -13,16 +13,18 @@
         <div class="conteudoEdit">
             <div class="editHeader">
                 Cadastrar usuário
+                <span id="closeBtt" onclick="closeModal()">&times;</span>
             </div>
             <div class="editMain">
                 <h2>Sua foto</h2>
                 <div class="dadosHead">
+                <input type="file" accept="image/*" id="inputImg">
                 <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
-                <a href="#" class="opcsPerfil">
+                <a href="#" class="opcsPerfil" id="updateImg">
                     <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
                     Atualize sua imagem
                 </a>
-                <a href="#" class="opcsPerfil">
+                <a href="#" class="opcsPerfil" id="removeImg" onclick="removeImgProfile()">
                     <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
                     Remover Imagem
                 </a></div>
@@ -67,7 +69,7 @@
                 <h2>Criar senha</h2>
                 <div class="dadosMain">
                     <label for="senhaAtual" class="labelDados">Informe a senha</label>
-                    <input type="password" name="senhaAtual" class="senhaBox">
+                    <input type="password" name="senhaAtual" class="senhaBox" id="senhaAtual">
                     <label for="senhaNova" class="labelDados">Confirme a senha</label>
                     <input type="password" name="senhaNova" class="senhaBox" id="senhaNova">
                 </div>

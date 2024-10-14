@@ -74,11 +74,25 @@ body, html{
     padding: 1vh 1vw;
 }
 
+
 .editHeader{
     height: 5vh;
     font-size: 1.5vw;
     border-bottom: 1.5px solid lightgray;
     margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#closeBtt{
+    box-sizing: content-box;
+    padding: 0.5vh 0.5vw;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-right: 1.5vw;
+    height: 2.8vh;
+    cursor: pointer;
 }
 
 .editMain{

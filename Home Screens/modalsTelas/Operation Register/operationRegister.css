@@ -58,6 +58,20 @@ a{
     font-size: 1.5vw;
     border-bottom: 1.5px solid lightgray;
     margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#closeBtt{
+    box-sizing: content-box;
+    padding: 0.5vh 0.5vw;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-right: 1.5vw;
+    height: 2.8vh;
+    cursor: pointer;
 }
 
 .cadMain{
@@ -70,13 +84,47 @@ a{
 
 
 .dadosHead{
-    height: 12vh;
-    width: 17vw;
+    height: fit-content;
+    width: 22vw;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    margin-bottom: 2vh;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5vh;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
+    font-size: 0.9vw;
+    color: #6b1bc6;
+    
 }
+
+#inputUserCode{
+    margin-bottom: 0;
+    margin-left: 1vw;
+    width: 6vw;
+}
+
+.bttSearch{
+    margin-top: 4vh;
+    width: 6vw;
+    font-size: 0.8vw;
+    background-color: #6b1bc6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: content-box;
+    padding: 0.5vh 0.5vw;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.bttSearch:hover{
+    transform: scale(1.1);
+}
+
+
+
 h2{
     color: #6b1bc6;
     width: 100%;
@@ -135,6 +183,11 @@ h2{
     height: 5vh;
     align-items: center;
     justify-content: space-between;
+}
+
+.titleCards{
+    margin-top: 4vh;
+    border-radius: 8px 8px 0 0;
 }
 
 .title{
@@ -299,6 +352,38 @@ h2{
     border-radius: 8px;
 }
 
+#options img{
+    width: 1.5vw;
+    margin-left: 1vw;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#options img:hover{
+    transform: scale(1.3);
+}
+
+#options{
+    margin-right: 2vw;
+}
+
+#conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+
+.inputConteudoCuriosidade{
+    border-radius: 8px;
+    border: 1.7px solid rgb(183, 183, 183);
+    width: 15vw;
+    
+}
+
 .idCuriosidade{
     width: 4vw;
     border-right: 1px solid lightgray;
@@ -308,6 +393,7 @@ h2{
     justify-content: center;
 }
 
+
 .idCuriosidadeStyle{
     background-color: #811ff1;
     color: white;
@@ -315,12 +401,29 @@ h2{
     border-radius: 20px;
     font-family: 'Poppins';
     font-weight: normal;
+    text-align: center;
 }
 
+.conteudoCuriosidadeStyle{
+    background-color: #811ff1;
+    color: white;
+    padding: 0vh 0.8vw;
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-weight: normal;
+    width: 10vw;
+    text-align: center;
+}
 .tipoCuriosidade{
     display: flex;
     align-items: center;
+    
     padding: 1vh 1vw;
+}
+
+#insertBtt{
+    margin-top: 0;
+    margin-left: 2vw;
 }
 
 .cadFotter{

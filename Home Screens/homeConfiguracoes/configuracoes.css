@@ -363,11 +363,12 @@ header{
 }
 
 .dadosHead{
-    height: 11vh;
+    height: 10vh;
     width: 17vw;
     display: flex;
     flex-flow: column wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    justify-items: center;
     
 }
 .dadosLateral>h2{
@@ -381,7 +382,7 @@ header{
 #altFoto{
     background-color: #6b1bc61f;
     width: 4.5vw;
-    padding: 1.1vw;
+    
     border-radius: 8px;
     border: 1px solid lightgray;
 }
@@ -390,14 +391,15 @@ header{
     display: flex;
     flex-flow: row;
     align-items: center;
-    width: fit-content;
+    width: 10.8vw;
     height: 3vh;
     border: 1px solid lightgray;
     color: black;
     font-size: 0.8vw;
-    margin-top: 1.7vh;
+    margin: 0.5vh;
     border-radius: 5px;
     padding: 0 0.5vw;
+    
 }
 
 .opcsIcons{
@@ -456,6 +458,7 @@ header{
     border-radius: 8px;
     font-family: 'Poppins-regular';
     margin-top: 4vh;
+    cursor: pointer;
 }
 
 #saveBtt> img{
@@ -480,6 +483,33 @@ header{
     width: 12vw;
 }
 
-#iframeModaisConfirmacao{
+#iframeConfirmModais{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 2;
+}
+
+#iframeModais{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 2;
+}
+
+#iframeDetails{
+    display: none;
+    position: fixed;
+    width: 12vw;
+    height: 18vh;
+    top: 37%;
+    left: 74%;
+    border: none;
+    z-index: 2;
+}
+
+#inputImg{
     display: none;
 }

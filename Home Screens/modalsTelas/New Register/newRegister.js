@@ -1,5 +1,6 @@
 function closeModal(){
     window.parent.document.getElementById('iframeModais').style.display = 'none';
+    window.parent.document.querySelector('.overlay').style.display = 'none'
 }
 
 function maskPhone(inputTel) {

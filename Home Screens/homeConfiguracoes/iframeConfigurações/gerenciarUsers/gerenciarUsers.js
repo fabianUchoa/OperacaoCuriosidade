@@ -1,14 +1,21 @@
-axios.get('https://localhost:7064/api/user')
-    .then(response =>{
-        console.log('Usuários Recebidos: ',response.data);
-        showUsers(response.data);
-        
-    })
-    .catch(error =>{
-        console.error('Erro ao fazer requisição GET: ',error);
+window.onload = function(){
+    getUsers()
+}
 
-    });
 
+
+function getUsers(){
+    axios.get('https://localhost:7064/api/user')
+        .then(response =>{
+            console.log('Usuários Recebidos: ',response.data);
+            showUsers(response.data);
+            
+        })
+        .catch(error =>{
+            console.error('Erro ao fazer requisição GET: ',error);
+
+        });
+    }
 
 
     function showUsers(users){
@@ -42,12 +49,12 @@ axios.get('https://localhost:7064/api/user')
                         
                     </div>
                     <div class="statusColumn">
-                        <p class="${status}" onclick="abreModal('.confirmDesactive')">${status}</p>
+                        <p class="${status}" onclick="openModalStatus('${status}', ${user.userId})">${status}</p>
                     </div>
                     <div class="tipoColumn">
                         <p class="${type}">${type}</p>
                     </div>
-                    <div class="detailBtt" id="#detailBtt1" onclick="">
+                    <div class="detailBtt" onclick="openModalDetails(${cont}, ${user.userId})">
                         <img src="/Imgs/MeusCadIcons/moreVerticalIcon.svg" alt="" class="moreVertical">
                             Detalhes
                     </div>
@@ -76,9 +83,27 @@ axios.get('https://localhost:7064/api/user')
 
 
 
+    function openModalDetails(bttAtivador, userId){
+        let iframe = window.parent.document.getElementById('iframeDetails');
+        sessionStorage.setItem('user',userId);
+        sessionStorage.setItem('window', 'users')
+        window.parent.document.querySelector('.overlay').style.display = 'block';
+        iframe.style.display='block'
+        
+        
+        
+        sessionStorage.setItem('cardNumber',bttAtivador);
+        if(bttAtivador==1){
+            iframe.style.top = '37%'
+            
+        }else{
+            iframe.style.top = `${37-7+(bttAtivador*7)}%`
+        }
+        console.log(30-7+(bttAtivador*7))
+    }
 
 
-
+    
 
 
     //Filtros Functions
@@ -141,12 +166,30 @@ axios.get('https://localhost:7064/api/user')
             });
     }
 
-    function openRegisterModal(modalName){
+    function openRegisterModal(){
         let iframe = window.parent.document.getElementById('iframeModais')
         iframe.style.display = 'block';
-        if(modalName =='Edit'){
-            iframe.scr = '/Home Screens/modalsTelas/Edit Registration/editRegistration.html'
-        }else if(modalName == 'Create'){
-            iframe.src = ''
-        }
+        iframe.style.width = '100vw'
+        iframe.style.height = '100vh'
+        iframe.src = '/Home Screens/modalsTelas/New Register/newRegister.html'
+        window.parent.document.querySelector('.overlay').style.display = 'block'
     }
+
+
+function openModalStatus(status,userId){
+    let iframe = window.parent.document.getElementById('iframeConfirmModais')
+        iframe.style.display = 'block';
+        sessionStorage.setItem('userId', userId);
+        if(status =='Ativo')
+            iframe.src = '/Home Screens/modalsTelas/Status Change/Desactivation Modal/desactivationModal.html'
+        else
+            iframe.src = '/Home Screens/modalsTelas/Status Change/Activation Modal/activationModal.html'
+        window.parent.document.querySelector('.overlay').style.display = 'block'
+}
+
+function openModalDelete(){
+    let iframe = window.parent.document.getElementById('iframeConfirmModais')
+    iframe.style.display = 'block';
+    window.parent.document.querySelector('.overlay').style.display = 'block'
+    iframe.src = '/Home Screens/modalsTelas/User Delete/operationDelete.html'
+}

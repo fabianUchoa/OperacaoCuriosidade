@@ -32,7 +32,7 @@ function closeModal(){
 
     window.parent.document.getElementById('iframeModais').style.display = 'none';
     window.parent.document.querySelector('.overlay').style.display = 'none';
-    console.log(operationCard)
+    
 }
 
 
@@ -47,19 +47,29 @@ function deleteOperation(){
 
 // GERACAO DE CARDS PELA API
 
-axios.get('https://localhost:7064/api/user/operacao-cadastrada')
-    .then(response =>{
-        console.log('Usuários Recebidos: ',response.data);
-        showCards(response.data);
-    })
-    .catch(error =>{
-        console.error('Erro ao fazer requisição GET: ',error);
+window.onload = function(){
+    getUsers()
+}
 
-    });
+function getUsers(){
+
+    axios.get('https://localhost:7064/api/user/operacao-cadastrada')
+        .then(response =>{
+            console.log('Usuários Recebidos: ',response.data);
+            showCards(response.data);
+        })
+        .catch(error =>{
+            console.error('Erro ao fazer requisição GET: ',error);
+
+        });
+    }
+
 
 function showCards(operation){
     
     const cardDiv = document.getElementById('card');
+    if(cardDiv == null)
+        return;
     cardDiv.innerHTML = ' '
     let status;
     let cont=0;
@@ -163,12 +173,11 @@ function operationDelete() {
     console.log(userId)
     axios.delete(`https://localhost:7064/api/user/operacao/${userId}`)
         .then(response => {
-            console.log('Usuário atualizado com sucesso:', response.data);
-            console.log(userId)
             deleteOperation()
+           
         })
         .catch(error => {
-            console.error('Erro ao atualizar usuário:', error.response.data);
+            console.error('Erro ao deletar o usuário:', error.response.data);
         });
 }
 

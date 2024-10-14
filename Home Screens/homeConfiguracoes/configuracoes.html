@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="configuracoes.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="overlay" onclick="fechaModal('.modalDetalhes')"></div>
+    <div class="overlay" onclick="closeModal('iframeDetails')"></div>
     <div id="sideBar">
          <div id="headerBar">
             <img src="/Imgs/GeralIcons/onionLogo.svg" alt="">
@@ -71,11 +72,12 @@
             <h2>Sua foto</h2>
             <div class="dadosHead">
                 <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
-                <a href="#" class="opcsPerfil">
-                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons">
+                <a href="#" class="opcsPerfil" id="updateImg">
+                    <input type="file" accept="image/*" id="inputImg">
+                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons" >
                     Atualize sua imagem
                 </a>
-                <a href="#" class="opcsPerfil">
+                <a href="#" class="opcsPerfil" onclick="removeImgProfile()">
                     <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
                     Remover Imagem
                 </a>
@@ -83,15 +85,15 @@
             <h2>Altere sua senha</h2>
             <div class="dadosMainPerfil">
                 <label for="senhaAtual" class="labelDados">Senha Atual</label>
-                <input type="password" name="senhaAtual" class="senhaBoxPerfil">
+                <input type="password" name="senhaAtual" id="senhaAtual" class="senhaBoxPerfil">
                 <label for="senhaNova" class="labelDados">Nova Senha</label>
-                <input type="password" name="senhaNova" class="senhaBoxPerfil">
+                <input type="password" name="senhaNova" class="senhaBoxPerfil" id="senhaNova">
             </div>
             <div class="dadosFotter">
                 
-                <a href="" id="saveBttPerfil">
+                <div id="saveBttPerfil" onclick="saveUpdateData()">
                     <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
-                </a>
+                </div>
             </div>
         </div>
             <div class="logoFotter">
@@ -100,8 +102,9 @@
         
     </div>
 
-    <iframe src="" id="iframeModaisConfirmacao" frameborder="0"></iframe>
-    <iframe src="/Home Screens/modalsTelas/Edit Registration/editRegistration.html" id="iframeModais" frameborder="0"></iframe>
+    <iframe src="" id="iframeConfirmModais" frameborder="0"></iframe>
+    <iframe src="" id="iframeModais" frameborder="0"></iframe>
+    <iframe src="/Home Screens/modalsTelas/Detail Options/detailOptions.html" id="iframeDetails" frameborder="0"></iframe>
  
 
     <script src="./configuracoes.js"></script>

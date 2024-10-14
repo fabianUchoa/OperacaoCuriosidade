@@ -1,6 +1,7 @@
 function closeModal(){
     window.parent.document.getElementById('iframeModais').style.display= 'none'
     window.parent.document.querySelector('.overlay').style.display = 'none'
+    window.parent.reloadPag()
 }
 
 function maskCode(inputCode) {
@@ -138,6 +139,7 @@ function listInteresses(user){
 //CRUD itens curiosidade
 
 function addValores(){
+    postOperacao()
     let divValores = document.getElementById('divValor')
     divValores.innerHTML += `<div class="conteudoCuriosidades" id="inputValores">
                             <div class="idCuriosidade">
@@ -159,6 +161,7 @@ function addValores(){
 }
 
 function addSentimentos(){
+    postOperacao()
     let divSentimentos = document.getElementById('divSentimentos')
     divSentimentos.innerHTML += `<div class="conteudoCuriosidades" id="inputSentimentos">
                             <div class="idCuriosidade">
@@ -180,6 +183,7 @@ function addSentimentos(){
 }
 
 function addInteresses(){
+    postOperacao()
     let divInteresses = document.getElementById('divInteresse')
     divInteresses.innerHTML += `<div class="conteudoCuriosidades" id="inputInteresses">
                             <div class="idCuriosidade">
@@ -210,8 +214,7 @@ function postSentimentos(){
         alert('O campo não pode estar vazio!')
         return;
     }
-    if(user.operacao==null)
-        postOperacao()
+    
     inputConteudo = {
         conteudo: inputConteudo
     }
@@ -240,8 +243,7 @@ function postInteresses(){
         alert('O campo não pode estar vazio!')
         return;
     }
-    if(user.operacao==null)
-        postOperacao()
+    
     inputConteudo = {
         conteudo: inputConteudo
     }
@@ -270,8 +272,7 @@ function postValores(){
         alert('O campo não pode estar vazio!')
         return;
     }
-    if(user.operacao==null)
-        postOperacao()
+    
     inputConteudo = {
         conteudo: inputConteudo
     }

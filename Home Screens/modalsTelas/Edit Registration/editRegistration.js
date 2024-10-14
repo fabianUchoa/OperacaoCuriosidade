@@ -186,6 +186,9 @@ function base64ToImage(imgString){
 }
 
 
+
+
+
 //Func para atulizar IMG
 
 function newImg(id){

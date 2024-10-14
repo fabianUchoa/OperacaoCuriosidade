@@ -5,7 +5,6 @@ let userLoginId = sessionStorage.getItem('userLoginId')
 
 axios.get(`https://localhost:7064/api/user/${userLoginId}`)
     .then(response =>{
-        console.log('Usuários Recebidos: ',response.data);
         loadUserProfile(response.data)
         
     })
@@ -27,21 +26,30 @@ function loadUserProfile(user){
 
 //Carrega Cards
 
-axios.get('https://localhost:7064/api/user')
-    .then(response =>{
-        console.log('Usuários Recebidos: ',response.data);
-        showUsers(response.data);
-        
-    })
-    .catch(error =>{
-        console.error('Erro ao fazer requisição GET: ',error);
+function reloadPag(){
+    getUsers()
+}
 
-    });
+window.onload = function(){
+    getUsers()
+}
 
+function getUsers(){
+    axios.get(`https://localhost:7064/api/user/cadastrados-por-mim/${userLoginId}`)
+        .then(response =>{
+            showUsers(response.data);
+            
+        })
+        .catch(error =>{
+            console.error('Erro ao fazer requisição GET: ',error);
+
+        });
+    }
 
 function openModalDetails(bttAtivador, userId){
     let iframe = document.getElementById('iframeDetails');
     sessionStorage.setItem('user',userId);
+    sessionStorage.setItem('window', 'operation')
     document.querySelector('.overlay').style.display = 'block';
     iframe.style.display='block'
     
@@ -54,7 +62,7 @@ function openModalDetails(bttAtivador, userId){
     }else{
         iframe.style.top = `${30-7+(bttAtivador*7)}%`
     }
-    console.log(30-7+(bttAtivador*7))
+   
 }
 
 function closeModal(iframeIdName){
@@ -101,7 +109,7 @@ function showUsers(users){
                 cont++;
     });
     
-    console.log(cont)
+    
     }else{
         console.error("A resposta não é uma array de objetos.")
     }
@@ -202,7 +210,7 @@ function getFilter(){
 
     let inputDateIn = document.getElementById('dataIn').value;
     let inputDateOut = document.getElementById('dataOut').value;
-    console.log(inputStatus)
+    
     applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut)
 
 }
@@ -217,9 +225,9 @@ function applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut){
             dataOut: inputDateOut
         }})
         .then(response =>{
-            console.log('Usuários Recebidos: ',response.data);
+            
             showUsers(response.data)
-            console.log(response.data)
+            
         })
         .catch(error =>{
             console.error('Erro ao fazer requisição GET: ',error);

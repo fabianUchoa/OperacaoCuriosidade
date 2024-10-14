@@ -171,7 +171,6 @@ function updateSenha(senhaNova){
         }
     })
     .then(response =>{
-        loadUserProfile(response.data)
         
     })
     .catch(error =>{

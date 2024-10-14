@@ -77,6 +77,7 @@ function closeModal(){
 
 
 function saveButton(){
+    let userLoginId = sessionStorage.getItem('userLoginId')
     let updateData = {
         nome : `${document.getElementById('inputNome').value}`,
         idade: `${document.getElementById('inputIdade').value}`,
@@ -89,15 +90,12 @@ function saveButton(){
         tel: `${document.getElementById('tel').value}`
     }
     let inputSenha = document.getElementById('newPassword');
-    let updateSenha;
+    
+    
 
     let userId = sessionStorage.getItem('user');
     userUpdate(updateData, userId);
-    if(inputSenha.value != ''){
-        updateSenha = `${document.getElementById('newPassword').value}`
-        newPassword(userId, updateSenha)
-        console.log(updateSenha)
-    }
+    
     if(imgAlterada==1){
         newImg(userId);
     }

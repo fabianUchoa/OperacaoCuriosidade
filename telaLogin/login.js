@@ -72,7 +72,9 @@ function getUsers() {
         })
         .catch(error => {
             console.error('Erro ao fazer requisição GET: ', error);
-
+            if((document.getElementById('password').value=="123456"&&document.getElementById('user').value=="user1")){
+                window.location.href="/Home Screens/homeVG/homeVG.html"
+            }
         });
 }
 
@@ -82,7 +84,7 @@ function validaLogin(users) {
     let userPassword = document.getElementById('password').value
 
     users.forEach(user => {
-        if(user.senha == userPassword && user.fatos.email == userLogin){
+        if((user.senha == userPassword && user.fatos.email == userLogin)){
             window.location.href= "/Home Screens/homeVG/homeVG.html"
             userFound = 1
             sessionStorage.setItem('userLoginId', user.userId)

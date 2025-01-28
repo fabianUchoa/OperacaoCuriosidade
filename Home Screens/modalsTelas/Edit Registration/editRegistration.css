@@ -60,7 +60,7 @@ body, html{
     display: flex;
     justify-content: right;
     border-radius: 15px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -271,7 +271,7 @@ h1 img{
     width: 2.8vw; 
 }
 
-.dadosMain{
+.dadosSenha{
     display: flex;
     flex-flow: column wrap;
     width: 44vw;
@@ -283,7 +283,7 @@ h1 img{
 
 }   
 
-.labelDados{
+.labelSenha{
     color: #6b1bc6;
     font-size: 0.9vw;
     width: 20vw;
@@ -296,7 +296,7 @@ h1 img{
     height: 4vh;
     border: 1.7px solid rgb(183, 183, 183);
     border-radius: 5px;
-    padding: 0.5vh 1vw;
+    padding: 0.5vh 0.5vw;
     
 }
 
@@ -305,7 +305,7 @@ h1 img{
     flex-flow: row wrap;
     align-items: center;
     height: 10vh;
-
+    
 }
 
 #checkboxAdmin{
@@ -314,10 +314,11 @@ h1 img{
 }
 
 .editFotter{
-    height: 10vh;
+    height: 13vh;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    width: 45vw;
 }
 
 #saveBtt{

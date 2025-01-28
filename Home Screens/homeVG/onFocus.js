@@ -48,7 +48,7 @@ function openModal(chosenModal){
     let iframe = document.getElementById('iframeModais');
     overlay.style.display = 'block';
     
-    console.log('entrou')
+    
     switch(chosenModal){
         case 'Register':
             iframe.style.display ='block';

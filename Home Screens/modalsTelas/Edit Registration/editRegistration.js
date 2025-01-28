@@ -89,8 +89,12 @@ function saveButton(){
         profissao: `${document.getElementById('cargo').value}`,
         tel: `${document.getElementById('tel').value}`
     }
-    let inputSenha = document.getElementById('newPassword');
     
+    let userStatus = document.querySelector(statusSituation);
+
+    if(userStatus=="inativo"){
+        
+    }
     
 
     let userId = sessionStorage.getItem('user');

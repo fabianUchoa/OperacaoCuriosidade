@@ -1,0 +1,609 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+/*Configs Gerais*/
+
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+hr{
+    width: 12.5vw;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+#sideBar{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.196);
+}
+
+#headerBar{
+    background-color: #6b1bc6;
+    border-radius: 0 0 10px 0;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#headerBar >img{
+    width: 80%;
+    height: 100%;
+    
+
+}
+
+#opcsBar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+
+.txtOpcBar{
+    font-size: 0.9vw;
+    transition: 200ms linear;
+    color: #6b1bc6;
+}
+
+.opcs{
+    width: 15vw;
+    padding:0.8vw 0vw 0.8vw 3vw;
+    border-radius: 10px;
+    margin: 0.5vw 0;
+    text-align: justify;
+    position: relative;
+    transition: 200ms linear;
+    cursor: pointer;
+}
+
+#opcMeusCad{
+    background-color: #6b1bc6;
+    transform: scale(1.05);
+}
+
+#opcMeusCad .txtOpcBar{
+    color: white;
+}
+
+#opcMeusCad #imgWhite{
+    z-index: 2;
+}
+
+#imgWhite{
+    z-index: -1;
+    transition: 200ms linear;
+}
+.opcs:hover{
+    background-color: #6b1bc6;
+    transform: scale(1.05);
+}
+
+.opcs:hover #imgWhite{
+    z-index: 2;
+}
+
+.opcs:hover .txtOpcBar{
+    color: whitesmoke;
+}
+
+.iconOpc{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 1.5vw;
+    transform: translate(-50%,-50%);
+}
+
+main{
+    width: 75.5vw;
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+   
+}
+
+#search{
+    position: relative;
+    width: 45vw;
+    height: fit-content;
+    align-self: center;
+    z-index: -1;
+}
+
+#pesq{
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 45vw;
+    height: 3vw;
+    padding: 1vw 3vw;
+    outline: none;
+    z-index: 1;
+}
+
+#inputIcon{
+    width: 1.5vw;
+}
+
+#inputTxt{
+    position: absolute;
+    left: 0.5vw;
+    top: 0.7vw;
+}
+
+#pesq::placeholder{
+    font-family: 'Poppins-light';
+    font-size: 0.9vw;
+}
+
+#icons{
+   
+    width: 7vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-self: center;
+}
+
+#toggleBt{
+    background-color: rgb(180, 179, 179);
+    width: 35%;
+    height: 50%;
+    border-radius: 15px;
+    display: none;
+    justify-content:flex-start;
+    align-content: center;
+    align-self: center;
+}
+
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 65%;
+    border: 2px solid rgb(180, 179, 179);
+    display: flex;
+    
+}
+#notBox{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 1.8vw;
+    cursor: pointer;
+}
+
+#notification{
+    display: flex;
+    height: fit-content;
+    
+}
+
+#notIcon{
+    width: 1.5vw;
+}
+
+#paintIcon{
+    width: 100%;
+    margin: auto;
+}
+
+
+
+.topPerfil{
+    background-color: #7227c8;
+    width: 15vw;
+    height:8vh ;
+    display: flex;
+    border-radius: 10px;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-content: center;
+    
+}
+
+#fotoPerfil{
+    width: 22%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+#infoPerfil{
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+#expandPerfil{
+    cursor: pointer;
+    width: 1vw;
+}
+
+#iframeConfirmModais{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+#iframeModais{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    border: none;
+}
+
+#iframeDetails{
+    display: none;
+    position: fixed;
+    width: 12vw;
+    height: 18vh;
+    top: 30%;
+    left: 74%;
+    border: none;
+    z-index: 2;
+}
+
+/*Conteúdo principal da pag*/
+
+.conteiner{
+    width: 77vw;
+    height: 82vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-between;
+    
+}
+
+/*Parte de cabeça do conteudo*/
+
+.conteudoHeader{
+    background-color: rgb(247, 247, 247);
+    width: 75vw;
+    height: 10vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center ;
+    align-content: space-between;
+    border-radius: 8px;
+    border: 0.5px solid rgb(172, 172, 172);
+    
+}
+
+#inputs{
+    height: 9vh;
+    width: 35vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-between;
+    margin-left: 0.5vw;
+}
+
+#date{
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgb(172, 172, 172);
+}
+
+#dataIn, #dataOut{
+    border: none;
+    
+}
+
+.inputName{
+    display: none;
+}
+
+#id{
+    width: 8vw;
+}
+
+.estiloSelect{
+    border-radius: 8px;
+    border: 1px solid rgb(172, 172, 172);
+    padding: 0.2vw;
+}
+
+label{
+    font-size: 0.8vw;
+}
+
+input{
+    font-size: 0.8vw;
+}
+
+select{
+    font-size: 0.8vw;
+    
+}
+
+.posBtt{
+    height: 7.5vh;
+    width: 15vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.bttEstilo{
+    padding: 0.25vw 1.8vw;
+    border: 1px solid #6b1bc6;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    font-weight: normal;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.bttEstilo:hover{
+    transform: scale(1.1);
+}
+
+#bttFiltrar{
+    color: white;
+    background-color: #6b1bc6;
+}
+
+#bttLimpar{
+    background-color: white;
+    color: #6b1bc6;
+}
+
+.conteudo{
+    width: 76vw;
+    height: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;    
+}
+
+.cabecalho{
+    width: 75vw;
+    height: 5vh;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start ;
+    border: 0.5px solid rgb(172, 172, 172);
+    border-radius: 8px;
+    padding: 1vh 1vw;
+}
+
+.arrowDown{
+    width: 1.5vw;
+    height: 2.5vh;
+}
+
+.codColumn{
+    width: 10vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nomeColumn{
+    width: 17vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mailColumn{
+    width: 15vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.createDateColumn{
+    width: 15vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.statusColumn{
+    width:5vw ;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.listagem{
+    width: 75vw;
+    height: 49vh;
+    
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: flex-start ;
+    border-radius: 8px;
+}
+
+.cadastro{
+    width: 75vw;
+    height: 7vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start ;
+    border: 0.5px solid rgba(172, 172, 172, 0.514);
+    border-radius: 8px;
+    padding: 1vh 1vw;
+    margin-bottom: 0.1vh;
+}
+
+.Ativo{
+    background-color: rgba(174, 239, 174, 0.382);
+    font-size: 0.8vw;
+    color: rgb(7, 162, 7);
+    border: 1px solid rgba(7, 162, 7, 0.425);
+    font-weight: normal;
+    padding: 0vh 0.5vw;
+    border-radius:20px;
+    cursor: pointer;
+}
+
+.Inativo{
+    background-color: rgba(239, 174, 174, 0.382);
+    font-size: 0.8vw;
+    color: rgb(162, 7, 7);
+    border: 1px solid rgba(162, 7, 7, 0.425);
+    font-weight: normal;
+    padding: 0vh 0.5vw;
+    border-radius:20px;
+    cursor: pointer;
+}
+
+.detailBtt{
+    background-color: #6b1bc6;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    justify-content:space-between;
+    margin-left: 2vw;
+    border-radius: 5px;
+    height: 4vh;
+    width: 7vw;
+    padding: 1.8vh 1.3vw 1.8vh 0.8vw;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 0.9vw;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.moreVertical{
+    width: 1.3vw;
+    height: 2.7vh;
+}
+
+.paginacao{
+    border: 0.5px solid rgb(172, 172, 172);
+    border-radius: 8px;
+    width: 75vw;
+    height: 4vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    margin-top: 0.5vh;
+}
+
+.pag{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 15vw;
+    font-size: 0.7vw;
+    margin-right: 1vw;
+}
+
+#adjustXDirection{
+    transform: scaleX(-1);
+    background: none;
+    border: 1px solid lightgray;
+}
+
+.pagBtt{
+    background-color: #6b1bc6;
+    border-radius: 6px;
+    width: 1.3vw;
+    padding: 0.2vw;
+}
+
+.conteudoFotter{
+    
+    width: 20.1vw;
+    height: 10vh;
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    font-size: 0.8vw;
+    margin-right: 1vw;
+}
+
+#logoForlogic{
+    width: 15vw;
+}
+
+.overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none;
+    z-index: 2; 
+}
+

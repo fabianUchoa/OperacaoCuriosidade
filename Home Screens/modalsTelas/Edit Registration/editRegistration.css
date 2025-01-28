@@ -1,0 +1,347 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+
+body, html{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+
+.userCad{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 49vw;
+    height: 90vh;
+    background-color: #6b1bc6;
+    display: flex;
+    justify-content: right;
+    border-radius: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.userEdit{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 49vw;
+    height: 90vh;
+    background-color: rgb(38, 198, 35);
+    display: flex;
+    justify-content: right;
+    border-radius: 15px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.conteudoEdit{
+    width: 46vw;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 1vh 1vw;
+}
+
+
+.editHeader{
+    height: 5vh;
+    font-size: 1.5vw;
+    border-bottom: 1.5px solid lightgray;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#closeBtt{
+    box-sizing: content-box;
+    padding: 0.5vh 0.5vw;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-right: 1.5vw;
+    height: 2.8vh;
+    cursor: pointer;
+}
+
+.editMain{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 45vw;
+    border-bottom: 1.5px solid lightgray;
+}
+
+#contentHead{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 92%;
+}
+
+
+#togglePos{
+    display: flex;
+    flex-flow: column;
+    width: 5vw;
+    align-items: center;
+}
+
+#toggleSit{
+    font-size: 0.8vw;
+    width: fit-content;
+}
+
+#toggleBtSit{
+    background-color: rgb(38, 198, 35);
+    width: 2.5vw;
+    height: 3vh;
+    border-radius: 15px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding: 0.1vh 0.1vw;
+}
+
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 1.5vw;
+    height: 2.7vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#statusIcon{
+    width: 1vw;
+    height: 2vh;
+}
+
+.dadosHead{
+    height: 12vh;
+    width: 17vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    
+}
+h2{
+    color: #6b1bc6;
+    width: 100%;
+    font-family: 'Poppins-bold';
+    font-size: 1.3vw;
+    margin-bottom: 1.5vh;
+}
+
+#altFoto{
+    background-color: #6b1bc61f;
+    width: 4.5vw;
+    height: 10vh;
+    
+    border-radius: 8px;
+    border: 1px solid lightgray;
+}
+
+.opcsPerfil{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: fit-content;
+    height: 3vh;
+    border: 1px solid lightgray;
+    color: black;
+    font-size: 0.8vw;
+    
+    border-radius: 5px;
+    padding: 0 0.5vw;
+}
+
+.opcsIcons{
+    width: 1vw;
+    margin-right: 0.3vw;
+}
+
+#labelCheckbox{
+    font-size: 0.8vw;
+}
+
+
+
+h1{
+    width: 100%;
+    display: flex;
+    height: 4vh;
+    align-items: center;
+    font-size: 1.3vw;
+    color: #6b1bc6;
+    font-family: 'Poppins-bold';
+    margin: 2vh 0;
+}
+
+h1 img{
+    width: 2vw;
+    margin-right: 0.5vw;
+}
+
+.inputArea{
+    display: flex;
+    flex-flow: column;
+    margin-right: 0.5vw;
+}
+
+.inputBox{
+    border: 1.7px solid rgb(183, 183, 183);
+    height: 4vh;
+    border-radius: 5px;
+    margin-bottom: 3vh;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 0.8vw;
+    padding-left: 0.5vw;
+}
+
+.inputLabel{
+    color: #6b1bc6;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+    font-size: 0.9vw;
+    
+}
+
+#inputNome, #inputMail, #fAcademica{
+    width: 20vw;
+}
+
+#nasc, #estadoCivil{
+    width: 15.9vw;
+}
+
+#userName{
+    width: 11vw;
+}
+
+#end{
+    width: 27vw;
+}
+
+#tel{
+    width: 16.3vw;
+}
+
+#cargo{
+    width: 24vw;
+}
+
+#inputIdade{
+    width: 2.8vw; 
+}
+
+.dadosSenha{
+    display: flex;
+    flex-flow: column wrap;
+    width: 44vw;
+    height: 8vh;
+    justify-content: flex-start;
+    align-content: space-between;
+    
+    
+
+}   
+
+.labelSenha{
+    color: #6b1bc6;
+    font-size: 0.9vw;
+    width: 20vw;
+    height: 3vh;
+    margin-bottom: 0.5vh;
+}
+
+.senhaBox{
+    width: 21vw;
+    height: 4vh;
+    border: 1.7px solid rgb(183, 183, 183);
+    border-radius: 5px;
+    padding: 0.5vh 0.5vw;
+    
+}
+
+.dadosFotter{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 10vh;
+    
+}
+
+#checkboxAdmin{
+    height: 2vh;
+    width: 2vw;
+}
+
+.editFotter{
+    height: 13vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 45vw;
+}
+
+#saveBtt{
+    background-color: #6b1bc6;
+    padding: 0.5vh 0.5vw;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 5vh;
+    font-size: 1vw;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#saveBtt img{
+    margin-right: 0.5vw;
+}
+
+#inputImg{
+    display: none;
+}

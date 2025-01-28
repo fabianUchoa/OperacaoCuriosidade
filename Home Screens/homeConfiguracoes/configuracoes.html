@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="configuracoes.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="overlay" onclick="closeModal('iframeDetails')"></div>
+    <div id="sideBar">
+         <div id="headerBar">
+            <img src="/Imgs/GeralIcons/onionLogo.svg" alt="">
+         </div>
+         <div id="opcsBar">
+            <div class="opcs" id="visaoGeral"><a href="/Home Screens/homeVG/homeVG.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt="" > <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
+                Visão Geral</a></div>
+            <hr>
+            <div class="opcs"><div class="txtOpcBar" onclick="abreModal('.conteinerCadastra')"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
+                Cadastrar Curiosidade</div></div>
+            <hr>
+            <div class="opcs"><a href="/Home Screens/homeMeusCadastros/meusCad.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Meus Cadastros</a></div>
+            <div class="opcs"><a href="/Home Screens/homeRelatorios/homeRelatorios.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/insert-char.svg" alt="" > <img src="/Imgs/homeIcons/insert-char-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Relatórios</a></div>
+            <hr>
+            <div class="opcs" id="config"><a href="#" class="txtOpcBar">
+                <img src="/Imgs/homeIcons/settingsIon.svg" alt="" class="iconOpc">
+                <img src="/Imgs/homeIcons/settingsIon-White.svg" alt="" class="iconOpc" id="imgWhite">
+                Configurações
+            </a></div>
+         </div>
+    </div>
+    <header>
+        <div id="search">
+            <input type="text" name="pesq" placeholder="Pesquise aqui" id="pesq">
+            <label for="pesq" id="inputTxt"><img id="inputIcon" src="/Imgs/homeIcons/seactIcon.svg" alt=""></label>
+        </div>
+        <div id="icons">
+            <div id="toggleBt"><a href="" id="toggle"><img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt=""></a></div>
+            <div id="notBox" onclick="verificaAbaNot('#notAba', '#notBox')">
+                    <img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon">
+                </div>
+        </div>
+        <div class="topPerfil">
+            <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+            <div id="infoPerfil">Pablinto Salabi<br>[Administrador]</div>
+            <img src="/Imgs/homeIcons/expandIcon.svg" id="expandPerfil" onclick="verificaAbaNot('#contentAbaPerfil', '.topPerfil')">
+        </div>
+    </header>
+    <div class="conteiner">
+        <div class="conteudo">
+            <div class="conteudoHeader">
+                <a href="./iframeConfigurações/meuPerfil/meuPerfilConfig.html" target="frame" class="opc" onclick="minimizeIframe(), optionHighlight(1)" id="op1">
+                        <img src="/Imgs/ConfiguraçõesIcon/accountCircleIcon.svg" alt="" class="opcImg" >
+                        Meu Perfil
+                </a>
+                <a href="./iframeConfigurações/gerenciarUsers/gerenciarUsers.html" target="frame" class="opc" onclick="expandeIframe(), optionHighlight(2)" id="op2">
+                        <img src="/Imgs/ConfiguraçõesIcon/manageAccountIcon.svg" alt="" class="opcImg" >
+                        Gerenciar Usuários
+                </a>
+                <a href="./iframeConfigurações/trilhaAuditoria/trilhaAuditoria.html" target="frame" class="opc" onclick="expandeIframe(), optionHighlight(3)" id="op3" >
+                        <img src="/Imgs/ConfiguraçõesIcon/searchFrameIcon.svg" alt="" class="opcImg">
+                        Trilha de Auditoria
+                </a>
+            </div>
+            <iframe id="iframe" name="frame" src="./iframeConfigurações/meuPerfil/meuPerfilConfig.html" frameborder="0">
+            </iframe>
+        </div>
+        <div class="dadosLateral">
+            <h2>Sua foto</h2>
+            <div class="dadosHead">
+                <img src="/Imgs/ConfiguraçõesIcon/userIcon.svg" alt="" id="altFoto">
+                <a href="#" class="opcsPerfil" id="updateImg">
+                    <input type="file" accept="image/*" id="inputImg">
+                    <img src="/Imgs/ConfiguraçõesIcon/syncIcon.svg" alt="" class="opcsIcons" >
+                    Atualize sua imagem
+                </a>
+                <a href="#" class="opcsPerfil" onclick="removeImgProfile()">
+                    <img src="/Imgs/shareIcons/delete.svg" alt="" class="opcsIcons">
+                    Remover Imagem
+                </a>
+            </div>
+            <h2>Altere sua senha</h2>
+            <div class="dadosMainPerfil">
+                <label for="senhaAtual" class="labelDados">Senha Atual</label>
+                <input type="password" name="senhaAtual" id="senhaAtual" class="senhaBoxPerfil">
+                <label for="senhaNova" class="labelDados">Nova Senha</label>
+                <input type="password" name="senhaNova" class="senhaBoxPerfil" id="senhaNova">
+            </div>
+            <div class="dadosFotter">
+                
+                <div id="saveBttPerfil" onclick="saveUpdateData()">
+                    <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
+                </div>
+            </div>
+        </div>
+            <div class="logoFotter">
+                Powered by <img id="logoForlogic" src="/Imgs/GeralIcons/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="Forlogic Logo">
+        </div>
+        
+    </div>
+
+    <iframe src="" id="iframeConfirmModais" frameborder="0"></iframe>
+    <iframe src="" id="iframeModais" frameborder="0"></iframe>
+    <iframe src="/Home Screens/modalsTelas/Detail Options/detailOptions.html" id="iframeDetails" frameborder="0"></iframe>
+ 
+
+    <script src="./configuracoes.js"></script>
+</body>
+</html>

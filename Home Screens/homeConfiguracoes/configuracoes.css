@@ -1,0 +1,515 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('/Fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+/*Configs Gerais*/
+
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+hr{
+    width: 12.5vw;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none;
+    z-index: 1; 
+}
+
+#sideBar{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.196);
+}
+
+#headerBar{
+    background-color: #6b1bc6;
+    border-radius: 0 0 10px 0;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#headerBar >img{
+    width: 80%;
+    height: 100%;
+    
+
+}
+
+#opcsBar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+
+.txtOpcBar{
+    font-size: 0.9vw;
+    transition: 200ms linear;
+    color: #6b1bc6;
+}
+
+.opcs{
+    width: 15vw;
+    padding:0.8vw 0vw 0.8vw 3vw;
+    border-radius: 10px;
+    margin: 0.5vw 0;
+    text-align: justify;
+    position: relative;
+    transition: 200ms linear;
+    cursor: pointer;
+}
+
+#config{
+    background-color: #6b1bc6;
+    transform: scale(1.05);
+}
+
+#config .txtOpcBar{
+    color: white;
+}
+
+#config #imgWhite{
+    z-index: 2;
+}
+
+#imgWhite{
+    z-index: -1;
+    transition: 200ms linear;
+}
+.opcs:hover{
+    background-color: #6b1bc6;
+    transform: scale(1.05);
+}
+
+.opcs:hover #imgWhite{
+    z-index: 2;
+}
+
+.opcs:hover .txtOpcBar{
+    color: whitesmoke;
+}
+
+.iconOpc{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 1.5vw;
+    transform: translate(-50%,-50%);
+}
+
+header{
+    width: 76vw;
+    height: 15vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    
+}
+
+#search{
+    position: relative;
+    width: 45vw;
+    height: fit-content;
+    align-self: center;
+    
+}
+
+#pesq{
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 45vw;
+    height: 3vw;
+    padding: 1vw 3vw;
+    outline: none;
+    
+}
+
+#inputIcon{
+    width: 1.5vw;
+}
+
+#inputTxt{
+    position: absolute;
+    left: 0.5vw;
+    top: 0.7vw;
+}
+
+#pesq::placeholder{
+    font-family: 'Poppins-light';
+    font-size: 0.9vw;
+}
+
+#icons{
+   
+    width: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-self: center;
+}
+
+#toggleBt{
+    background-color: rgb(180, 179, 179);
+    width: 35%;
+    height: 50%;
+    border-radius: 15px;
+    display: none;
+    justify-content:flex-start;
+    align-content: center;
+    align-self: center;
+}
+
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 65%;
+    border: 2px solid rgb(180, 179, 179);
+    display: flex;
+    
+}
+#notBox{
+    display: flex;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 0.2vh 0.2vw;
+}
+
+#notIcon{
+    width: 1.5vw;
+}
+
+#paintIcon{
+    width: 100%;
+    margin: auto;
+}
+
+.topPerfil{
+    background-color: #7227c8;
+    width: 15vw;
+    height: 9vh;
+    
+    display: flex;
+    border-radius: 10px;
+    flex-flow: row;
+    
+    justify-content: space-evenly;
+    align-content: center;
+    margin-right: 20px;
+}
+
+#expandPerfil{
+    cursor: pointer;
+    width: 1vw;
+}
+
+#fotoPerfil{
+    width: 22%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+#infoPerfil{
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 0.8vw;
+    display: flex;
+    align-items: center;
+}
+
+/*Conteúdo principal da pag*/
+
+.conteiner{
+    width: 77.5vw;
+    height: 85vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: space-between;
+
+}
+
+/*Conteudo Principal*/
+
+.conteudo{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.conteudoHeader{
+    width: 40vw;
+    height: 4vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-self: flex-end; 
+}
+
+.opcImg{
+    width: 1.5vw;
+    height: 2.3vh;
+}
+
+.opc{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: normal;
+    padding: 0 0.5vw 0 0.2vw;
+    height:3vh;
+    color: #6b1bc6;
+    position: relative;
+    border-radius: 15px;
+    font-size: 0.85vw;
+    transition: 200ms linear;
+}
+
+.opc:hover{
+    background-color: #6b1bc637;
+    transform: scale(1.1);
+}
+
+#opc1{
+    background-color: rgb(107, 27, 198, 0.216);
+    transform: scale(1.1);
+}
+
+#iframe{
+    width: 100%;
+    height: 74vh;
+    
+}
+
+
+
+/*Barra lateral Direita*/
+
+.dadosLateral{
+    width: 24vw;
+    height: 65vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.dadosHead{
+    height: 10vh;
+    width: 17vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.dadosLateral>h2{
+    color: #6b1bc6;
+    width: 20vw;
+    font-family: 'Poppins-bold';
+    font-size: 1.15vw;
+    margin-bottom: 1.5vh;
+}
+
+#altFoto{
+    background-color: #6b1bc61f;
+    width: 4.5vw;
+    
+    border-radius: 8px;
+    border: 1px solid lightgray;
+}
+
+.opcsPerfil{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 10.8vw;
+    height: 3vh;
+    border: 1px solid lightgray;
+    color: black;
+    font-size: 0.8vw;
+    margin: 0.5vh;
+    border-radius: 5px;
+    padding: 0 0.5vw;
+    
+}
+
+.opcsIcons{
+    width: 1vw;
+    margin-right: 0.3vw;
+}
+
+
+.dadosMainPerfil{
+    display: flex;
+    flex-flow: row wrap;
+    width: 25vw;
+    justify-content: flex-start;
+    align-content: space-around;
+    height: 18vh;
+
+}   
+
+.labelDados{
+    color: #6b1bc6;
+    font-size: 0.8vw;
+    width: 20vw;
+}
+
+.senhaBoxPerfil{
+    width: 19vw;
+    border: 1.5px solid lightgray;
+    border-radius: 5px;
+    padding: 0.5vh 1vw;
+    margin-bottom: 2vh;
+}
+
+.dadosFotter{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 15vh;
+}
+
+
+#labelCheckbox{
+    font-size: 0.8vw;
+}
+
+#saveBttPerfil{
+    background-color: #6b1bc6;
+    padding: 1.4vh 1vw;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 19vw;
+    height: 6vh;
+    font-size: 1vw;
+    border-radius: 8px;
+    font-family: 'Poppins-regular';
+    margin-top: 4vh;
+    cursor: pointer;
+}
+
+#saveBtt> img{
+    margin-right: 0.8vw;
+}
+
+
+.logoFotter{
+    width: 19vw;
+    height: 4vh;
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-right: 5vw;
+    align-items: center;
+    font-size: 0.8vw;
+
+}
+
+#logoForlogic{
+    width: 12vw;
+}
+
+#iframeConfirmModais{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 2;
+}
+
+#iframeModais{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 2;
+}
+
+#iframeDetails{
+    display: none;
+    position: fixed;
+    width: 12vw;
+    height: 18vh;
+    top: 37%;
+    left: 74%;
+    border: none;
+    z-index: 2;
+}
+
+#inputImg{
+    display: none;
+}

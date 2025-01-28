@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.modalDetalhes{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3vh 0.5vw;
+    border-radius: 8px;
+}
+
+.opcAlt, .opcComp, .userComp, .opcRem, .opcAltStatus, .opcAltStatusInativo{
+    width: 95%;
+    height: 28vh;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.opcAlt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    font-size: 7vw;
+    font-weight: normal;
+    font-family: 'Poppins';
+}
+
+.opcComp, .opcRem, .opcAltStatus, .opcAltStatusInativo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    font-size: 7vw;
+    margin-top: 1vh;
+    font-weight: normal;
+    font-family: 'Poppins';
+}
+
+.opcAlt{
+    background-color: #6b1bc6;
+    color: white;
+}
+
+.opcAlt img, .userComp img, .opcComp img, .opcRem img, .opcAltStatus img, .opcAltStatusInativo img{
+    width: 10vw;
+   
+}
+
+.opcComp{
+    border: 1px solid #6b1bc6;
+    color: #6b1bc6;
+    
+}
+
+.opcAltStatus{
+    border: 1px solid rgb(98, 184, 98);
+    background-color: #1b961750;
+    color: rgb(39, 141, 39);
+    display: none;
+}
+
+.opcAltStatusInativo{
+    border: 1px solid rgb(184, 98, 98);
+    background-color: #e216165e;
+    color: rgb(194, 11, 11);
+    display: none;
+}
+
+.opcRem{
+    background-color: red;
+    color: white;
+}
+
+.userComp{
+    border: 1.5px solid lightgray;
+    display: none;
+    flex-flow: row;
+    align-items: center;
+    
+    justify-content: space-around;
+}
+
+.opcComp img{
+    cursor: pointer;
+}
+
+
+.userComp input{
+    width: 80%;
+    border: none;
+    font-size: 0.7vw;
+}
+
+.userComp input::placeholder{
+    font-size: 0.65vw;
+}

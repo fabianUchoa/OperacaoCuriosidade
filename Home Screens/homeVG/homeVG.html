@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeVG.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="sideBar">
+         <div id="headerBar">
+            <img src="/Imgs/GeralIcons/onionLogo.svg" alt="">
+         </div>
+         <div id="opcsBar">
+            <div class="opcs" id="visaoGeral"><a href="#" class="txtOpcBar">
+                <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard.svg" alt=""> <img class="iconOpc" src="/Imgs/homeIcons/grid-dashboard-white.svg" id="imgWhite" alt="">
+                Visão Geral</a></div>
+            <hr>
+            <div class="opcs"><a href="/Home Screens/modalsTelas/Operation Register/operationRegister.html" target="iframeModais" class="txtOpcBar" onclick="openModal('Register')"><img class="iconOpc" src="/Imgs/homeIcons/add-box.svg" alt="" > <img src="/Imgs/homeIcons/add-box-white.svg" class="iconOpc"  id="imgWhite" alt="">
+                Cadastrar Curiosidade</a></div>
+            <hr>
+            <div class="opcs"><a href="/Home Screens/homeMeusCadastros/meusCad.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/char-list.svg" alt=""> <img src="/Imgs/homeIcons/char-list-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Meus Cadastros</a></div>
+            <div class="opcs"><a href="/Home Screens/homeRelatorios/homeRelatorios.html" class="txtOpcBar"><img class="iconOpc" src="/Imgs/homeIcons/insert-char.svg" alt="" > <img src="/Imgs/homeIcons/insert-char-white.svg" class="iconOpc" alt=""  id="imgWhite">
+                Relatórios</a></div>
+            <hr>
+         </div>
+    </div>
+    <main>
+        <div id="search">
+            <input type="text" name="pesq" placeholder="Pesquise aqui" id="pesq">
+            <label for="pesq" id="inputTxt"><img id="inputIcon" src="/Imgs/homeIcons/seactIcon.svg" alt=""></label>
+        </div>
+        <div id="icons">
+            <div id="toggleBt">
+                <div id="toggle">
+                    <img id="paintIcon" src="/Imgs/homeIcons/paintIcon.svg" alt="">
+                </div>
+            </div>
+            <div id="notBox" onclick="openModal('Notification')"><img src="/Imgs/homeIcons/notificationIcon.svg" alt="" id="notIcon"></div>
+        </div>
+        <div class="perfilUser">
+    
+            <div class="topPerfil" id="topPerfil">
+                <img id="fotoPerfil" src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+                <p id="infoPerfil">Pablinto Salabi<br>[Administrador]</p>
+                <img id="expandPerfil" src="/Imgs/homeIcons/expandIcon.svg" onclick="openModal('Perfil')">
+            
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="conteiner">
+        <div class="conteudo">
+            <div class="conteudoHeader">
+                <p class="opc" id="op1"><a href="./telasIframe/recentPosts/recents.html" target="frame" onclick="destacaOp(1)">
+                        <img src="/Imgs/homeIcons/ConteudoIcons/recentIcon.svg" alt="" class="opcImg">
+                        Últimos cadastrados
+                </a>
+                </p>
+                <p class="opc" id="op2" >
+                    <a href="./telasIframe/shareByMe/shareBM.html" target="frame" onclick="destacaOp(2)">
+                        <img src="/Imgs/homeIcons/ConteudoIcons/shareIcon.svg" alt="" class="opcImg">
+                        Compartilhados por mim
+                </a>
+                </p>
+                <p class="opc" id="op3">
+                    <a href="./telasIframe/shareWithMe/shareWM.html" target="frame" onclick="destacaOp(3)">
+                        <img src="/Imgs/homeIcons/ConteudoIcons/diversityIcon.svg" alt="" class="opcImg">
+                        Compartilhados comigo
+                    </a>
+                </p>
+            </div>
+            <iframe id="iframe" name="frame" src="./telasIframe/recentPosts/recents.html" frameborder="0">
+
+            </iframe>
+        </div>
+        <div class="dadosLateral">
+            <div class="dados">
+                <div class="dadosHeader">
+                    Total Cadastrados
+                </div>
+                <div class="dado" id="allRegisters">
+                    26
+                </div>
+            </div>
+            <div class="dados">
+                <div class="dadosHeader">
+                    Cadastros Pendentes
+                </div>
+                <div class="dado" id="incompleteRegisters">
+                    2
+                </div>
+            </div>
+            <div class="dados">
+                <div class="dadosHeader">
+                    Cadastros Ativos
+                </div>
+                <div class="dado" id="completeRegisters">
+                    24
+                </div>
+            </div>
+            <div class="logoFotter">
+                Powered by <img id="logoForlogic" src="/Imgs/GeralIcons/FORLOGIC_LOGO+SIMBOLO_PRETO2.svg" alt="Forlogic Logo">
+        </div>
+        </div>
+    </div>
+    <div class="overlay" onclick="closeModals()"></div>
+
+
+
+    <iframe src="" frameborder="0" name="iframeModais" id="iframeModais"></iframe>
+    <script src="onFocus.js" ></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="operationRegister.css">
+</head>
+<body>
+    <div class="conteinerCadastra">
+        <div class="conteudoCadastra">
+            <div class="cadHeader">
+                Cadastro de Operação Curiosidade
+                <span id="closeBtt" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="cadMain">
+                <div class="dadosHead">
+                Código do usuário:
+                <input type="text" name="" oninput="maskCode(this)" id="inputUserCode" maxlength="8" class="inputBox">
+                <input type="button" value="Buscar Usuário" class="bttSearch" onclick="getUser()">
+            </div>
+            
+                
+                <div id="inputsCad">
+                    <div class="title"><div class="titleLeft"><img src="/Imgs/Complementos/idCard White.svg" alt=""> Fatos e Dados</div></div>
+                    <div class="inputArea">
+                        <label for="nome" class="inputLabel">Nome</label>
+                        <input type="text" name="nome" id="inputNome" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="idade" class="inputLabel">Idade</label>
+                        <input type="number" name="idade" id="inputIdade" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="mail" class="inputLabel">E-mail</label>
+                        <input type="text" name="mail" id="inputMail" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="userName" class="inputLabel">Nome de Usuário</label>
+                        <input type="text" name="userName" id="userName" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="nascimento" class="inputLabel">Data de nascimento</label>
+                        <input type="date" name="nascimento" id="nasc" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="estadoCivil" class="inputLabel">Estado Civil</label>
+                        <input type="text" name="estadoCivil" id="estadoCivil" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="Endereço" class="inputLabel">Endereço</label>
+                        <input type="text" name="Endereço" id="end" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="tel" class="inputLabel">Telefone</label>
+                        <input type="tel" name="tel" id="tel" class="inputBox">
+                    </div>
+                    <div class="inputArea">
+                        <label for="cargo" class="inputLabel">Ocupação/Profissão</label>
+                        <input type="text" name="cargo" id="cargo" class="inputBox">
+                    </div>
+                </div>
+                <div class="cardsCuriosidades" id="cardsCuriosidades1">
+                    <div class="titleCards">
+                        <div class="titleLeft">
+                            <img src="/Imgs/shareIcons/schoolIcon White.svg" alt="">
+                            Interesses
+                        </div>
+
+                        <div class="titleRight">
+                            <span class="nCuriosidades"><span class="fontBold" id="contInteresses">0</span> Interesses</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="addInteresses()">
+                        </div>
+                    </div>
+                    <div id="divInteresse">
+                        
+                    </div>
+                </div>
+                <div class="cardsCuriosidades" id="cardsCuriosidades2">
+                    <div class="titleCards">
+                        <div class="titleLeft">
+                            <img src="/Imgs/shareIcons/plantIcon White.svg" alt="">
+                            Valores
+                        </div>
+
+                        <div class="titleRight">
+                            <span class="nCuriosidades"><span class="fontBold" id="contValores">0</span> Valores</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="addValores()">
+                        </div>
+                    </div>
+                    <div id="divValor">
+                        
+                    </div>
+                </div>
+                <div class="cardsCuriosidades" id="cardsCuriosidades3">
+                    <div class="titleCards">
+                        <div class="titleLeft">
+                            <img src="/Imgs/shareIcons/heartIcon White.svg" alt="">
+                            Sentimentos
+                        </div>
+
+                        <div class="titleRight">
+                            <span class="nCuriosidades"><span class="fontBold" id="contSentimentos">0</span> Sentimentos</span>
+                            <img src="/Imgs/Complementos/addBox Fill.svg" alt="" class="addBox" onclick="addSentimentos()">
+                        </div>
+                    </div>
+                    <div id="divSentimentos">
+                        
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            
+            
+            <div class="cadFotter">
+                <div id="saveBtt" onclick="closeModal()">
+                    <img src="/Imgs/ConfiguraçõesIcon/saveIcon.svg" alt=""> Salvar
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./operationRegister.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" media="all">
     <link rel="stylesheet" href="mobileStyle.css" >
-    <script src="teste.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -38,9 +38,9 @@
             
         </div>
         <div id="loginFooter">
-            <a href="/telasHome/homeVG/homeVG.html" id="logBtt">
+            <div id="logBtt" onclick="getUsers()">
                 ENTRAR
-            </a>
+            </div>
         </div>
     </section>
     <section id="onion">
@@ -61,5 +61,6 @@
             
         </div>
     </section>
+    <script src="teste.js"></script>
 </body>
 </html>

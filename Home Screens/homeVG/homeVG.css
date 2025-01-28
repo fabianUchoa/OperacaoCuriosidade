@@ -1,0 +1,567 @@
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('/Fonts/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('/Fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+
+*{
+    box-sizing: border-box;
+    font-size: 0.9vw;
+    font-family: 'Poppins-Light';
+    font-weight: bold;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #6b1bc6;
+}
+
+
+/*Configs Gerais*/
+
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+hr{
+    width: 12.5vw;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+#sideBar{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.196);
+}
+
+#headerBar{
+    background-color: #6b1bc6;
+    border-radius: 0 0 10px 0;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#headerBar >img{
+    width: 80%;
+    height: 100%;
+    
+
+}
+
+#opcsBar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+
+.txtOpcBar{
+    font-size: 0.9vw;
+    transition: 200ms linear;
+    color: #6b1bc6;
+}
+
+.opcs{
+    width: 15vw;
+    padding:0.8vw 0vw 0.8vw 3vw;
+    border-radius: 10px;
+    margin: 0.5vw 0;
+    text-align: justify;
+    position: relative;
+    transition: 200ms linear;
+    cursor: pointer;
+}
+
+#visaoGeral{
+    background-color: #6b1bc6;
+    transform: scale(1.05);
+}
+
+#visaoGeral .txtOpcBar{
+    color: white;
+}
+
+#visaoGeral #imgWhite{
+    z-index: 2;
+}
+
+#imgWhite{
+    z-index: -1;
+    transition: 200ms linear;
+}
+.opcs:hover{
+    background-color: #6b1bc6;
+    transform: scale(1.05);
+}
+
+.opcs:hover #imgWhite{
+    z-index: 2;
+}
+
+.opcs:hover .txtOpcBar{
+    color: whitesmoke;
+}
+
+.iconOpc{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 1.5vw;
+    transform: translate(-50%,-50%);
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 1;
+    position: fixed;
+    display: none;
+}
+
+main{
+    width: 75vw;
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
+}
+
+#search{
+    position: relative;
+    width: 45vw;
+    height: fit-content;
+    align-self: center;
+    
+}
+
+#pesq{
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 45vw;
+    height: 3vw;
+    padding: 1vw 3vw;
+    outline: none;
+    
+}
+
+#inputIcon{
+    width: 1.5vw;
+}
+
+#inputTxt{
+    position: absolute;
+    left: 0.5vw;
+    top: 0.7vw;
+}
+
+#pesq::placeholder{
+    font-family: 'Poppins-light';
+    font-size: 0.9vw;
+}
+
+#icons{
+   
+    width: 8vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-self: center;
+}
+
+#toggleBt{
+    background-color: rgb(180, 179, 179);
+    width: 35%;
+    height: 50%;
+    border-radius: 15px;
+    display: none;
+    justify-content:flex-start;
+    align-content: center;
+    align-self: center;
+}
+
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 65%;
+    border: 2px solid rgb(180, 179, 179);
+    display: flex;
+    
+}
+#notBox{
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 0.3vh 0.2vw;
+}
+
+#notIcon{
+    width: 1.5vw;
+}
+
+#paintIcon{
+    width: 100%;
+    margin: auto;
+}
+
+.perfilUser{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#topPerfil{
+    background-color: #7227c8;
+    width: 15vw;
+    height: 8vh;
+    display: flex;
+    border-radius: 10px;
+    flex-flow: row;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.39);
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    
+}
+
+#expandPerfil{
+    cursor: pointer;
+    width: 1vw;
+}
+
+#fotoPerfil{
+    width: 22%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+#infoPerfil{
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+/*Conteúdo principal da pag*/
+
+.conteiner{
+    width: 80vw;
+    height: 85vh;
+
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+/*Conteudo Principal*/
+
+.conteudo{
+    
+    width: 53vw;
+    height: 85vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.conteudoHeader{
+    width: 45vw;
+    height: 4vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+}
+
+.opcImg{
+    width: 1vw;
+    height: 2vh;
+    position: absolute;
+    left: 0.3vw;
+    top: 0.4vh;
+}
+
+
+
+.opc{
+    color: #6b1bc6;
+    position: relative;
+    padding:0.2vh 0.5vw 0.2vh 1.6vw;
+    border-radius: 15px;
+    font-size: 0.85vw;
+    transition: 200ms linear;
+}
+
+.opc:hover, #op1{
+    background-color: rgba(107, 27, 198, 0.216);
+    transform: scale(1.1);
+}
+
+
+
+#iframe{
+    width: 50vw;
+    height: 77vh;
+    
+    align-self: flex-start;
+}
+
+/*Barra lateral Direita*/
+
+.dadosLateral{
+    width: 25vw;
+    height: 85vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.dados{
+    width: 16vw;
+    height: 20vh;
+    background-color: rgb(255, 255, 255);
+    margin: 2vh 1vw;
+    border-radius: 23px ;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.188)  ;
+    border: 1px solid lightgray;
+}
+
+.dadosHeader{
+    width: 17vw;
+    height: 3.3vh;
+    background-color: #6b1bc6;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 0.9vw;
+    letter-spacing: 0.5px;
+    
+}
+
+.dado{
+    width: 10vw;
+    height: 15vh;
+    text-align: center;
+    color: #6b1bc6;
+    line-height: 15vh;
+    font-size: 4vw;
+    font-family: 'Poppins-light';
+    font-weight: bold;
+}
+
+.logoFotter{
+    width: 17vw;
+    height: 5vh;
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    align-items: center;
+    font-size: 0.8vw;
+    margin-right: 1vw;
+}
+
+#logoForlogic{
+    width: 12vw;
+}
+/*Modal aba notificações*/
+
+#notAba{
+    position: fixed;
+    top: 11%;
+    left: 58%;
+    background-color: white;
+    padding: 0.5vh 0.3vw;
+    width: 18vw;
+    height: 39vh;
+    border-radius: 8px;
+    border: 1.5px solid lightgray;
+    display: none;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.notHeader{
+    width: 100%;
+    height: 3vh;
+    border-bottom: 1.5px solid lightgray;
+    font-size: 0.8vw;
+    font-family: 'Poppins-bold';
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+.notHeader span{
+    background-color: #6b1bc6;
+    border-radius: 50%;
+    font-size: 0.6vw;
+    color: white;
+    font-weight: normal;
+    font-family: 'Poppins';
+    width: 1.2vw;
+    padding: 0.1vh 0.4vw;
+    margin-left: 0.5vw;
+    
+}
+
+.notMain{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 90%;
+    width: 100%;
+}
+
+.notification{
+    display: flex;
+    flex-flow: column wrap;
+    height: 19.5%;
+    width: 100%;
+    justify-content: center;
+    align-content: space-around;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.notification img{
+    width: 2.5vw;
+    height: 5vh;
+    border-radius: 8px;
+}
+
+.notInfos{
+    font-size: 0.6vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 4.5vh;
+    width: 10vw;
+    color: #a05eeb;
+    
+}
+
+.notInfos p{
+    font-size: 0.52vw;
+    color: rgb(181, 181, 181);
+    font-family: 'Poppins';
+    font-weight: normal;
+}
+
+.sideTime{
+    font-size: 0.5vw;
+    width: 1vw;
+    height: 5vh;
+    color: #6b1bc6;
+}
+
+/* Modal aba Perfil */ 
+
+#contentAbaPerfil{
+    display: none;
+    flex-flow: row wrap;
+    position: fixed;
+    top: 11%;
+    left: 79.7%;
+    
+    width: 14.9vw;
+    height: 20vh;
+    background-color: white;
+    border: 1.5px solid lightgray;
+    border-radius:0 0 8px 8px ;
+    padding: 1vh 0.5vw;
+}
+
+.opcsAbaPerfil, .opcsAbaPerfil a{
+    font-size: 0.8vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    color: #6b1bc6;
+    width:90%;
+    height: 6vh;
+}
+
+.opcsAbaPerfil a{
+    width:100%;
+}
+
+.contentAbaPerfil hr{
+    width: 70% ;
+    margin: auto;
+}
+
+.opcsAbaPerfil img{
+
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+.perfilIcon{
+    width: 2vw;
+    height: 4vh;
+}
+
+.imgIcons{
+    width: 1.5vw;
+    height: 3vh;
+}
+
+#iframeModais{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}

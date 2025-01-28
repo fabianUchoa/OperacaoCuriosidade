@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detailOptions.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modalDetalhes">
+        <div class="opcAlt" onclick="openModalDetailsOptions('edit')">
+            Alterar
+            <img src="/Imgs/Complementos/editIcon.svg" alt="">
+        </div>
+        <div class="opcAltStatus">
+            Reativar
+            <img src="/Imgs/Complementos/activeUser.svg" alt="">
+        </div><div class="opcAltStatusInativo">
+            Inativar
+            <img src="/Imgs/Complementos/inactiveUser.svg" alt="">
+        </div>
+        <div class="opcComp" onclick="openModalDetailsOptions('share')">
+            Compartilhar
+            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="" >
+        </div>
+        <div class="opcRem" onclick="openModalDetailsOptions('delete')">
+            Remover
+            <img src="/Imgs/shareIcons/deleteWhite.svg" alt="" onclick="abreModal('.confirmDelete')">
+        </div>
+    </div>
+    <script src="./detailOptions.js"></script>
+</body>
+</html>

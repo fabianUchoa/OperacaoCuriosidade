@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sharingModal.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="modal">
+        <div class="defCompartilhamento">
+            <div class="defHeader">
+                Definição de compartilhamento
+                <div id="closeModal" onclick="fechaModal()"><span>&times;</span></div>
+               
+            </div>
+            <div class="defMain">
+                <p>
+                Insira o nome do usuário que deseja incluir em sua lista 
+                de compartilhamento e pressione a tecla Enter.
+                </p>
+                <div id="pesqBox">
+                    <input type="text" name="" id="inputPesq" placeholder="Pesquise Aqui">
+                    <img src="/Imgs/homeIcons/seactIcon.svg" alt="">
+                </div>
+                <p>
+                    Selecione um usuário para definir o modo de compartilhamento de sua Operação Curiosidade. 
+                </p>
+            </div>
+            <div class="defUsers">
+                <div class="users">
+                    <img src="/Imgs/FotosPerfil/Rosangela.jpg" alt="">
+                    Rosangela Maria Pereira
+                </div>
+                <div class="opcUser">
+                    <div class="overlayModal"></div>
+                    <div class="bttEdit" id="bttEdit1" onclick="onFocus(this.id)">
+                        Editar
+                        <img src="/Imgs/MeusCadIcons/arrowDown - White.svg" alt="">
+                    </div>
+
+                    <div class="bttVisualizar" id="bttVisualizar1" onclick="onFocus(this.id)">
+                        Visualizar
+                        <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="">
+                    </div>
+
+                    <div class="escolheTipo" id="escolheTipo1" >
+                        <div class="bttEdit" id="bttEdit1" onclick="outFocus(this.id)">
+                            Editar
+                            <img src="/Imgs/MeusCadIcons/arrowDown - White.svg" alt="">
+                        </div>
+                        <div class="bttVisualizar" id="bttVisualizar1" onclick="outFocus(this.id)">
+                            Visualizar
+                            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="">
+                        </div>        
+                    </div>
+                    
+                    
+                </div>
+                <div class="users">
+                    <img src="/Imgs/FotosPerfil/babidi.jpg" alt="">
+                    Babidi da Silva
+                </div>
+                <div class="opcUser">
+                    <div class="bttVisualizar" id="bttVisualizar2" onclick="onFocus(this.id)">
+                        Visualizar
+                        <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="">
+                    </div>
+                    <div class="bttEdit" id="bttEdit2" onclick="onFocus(this.id)">
+                        Editar
+                        <img src="/Imgs/MeusCadIcons/arrowDown - White.svg" alt="">
+                    </div>
+                    
+                    <div class="escolheTipo" id="escolheTipo2">
+                        <div class="bttEdit" id="bttEdit2" onclick="outFocus(this.id)">
+                            Editar
+                            <img src="/Imgs/MeusCadIcons/arrowDown - White.svg" alt="">
+                        </div>
+                        <div class="bttVisualizar" id="bttVisualizar2" onclick="outFocus(this.id)">
+                            Visualizar
+                            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="">
+                        </div>  
+                    </div>
+                </div>
+                <div class="users">
+                    <img src="/Imgs/homeIcons/perfilFoto.jpg" alt="">
+                    Pablinto Salabi
+                </div>
+                <div class="opcUser">
+                    <div class="bttVisualizar" id="bttVisualizar3" onclick="onFocus(this.id)">
+                        Visualizar
+                        <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="">
+                    </div>
+                    <div class="bttEdit" id="bttEdit3" onclick="onFocus(this.id)">
+                        Editar
+                        <img src="/Imgs/MeusCadIcons/arrowDown - White.svg" alt="">
+                    </div>
+                    <div class="escolheTipo" id="escolheTipo3">
+                        <div class="bttEdit" id="bttEdit3" onclick="outFocus(this.id)">
+                            Editar
+                            <img src="/Imgs/MeusCadIcons/arrowDown - White.svg" alt="">
+                        </div>
+                        <div class="bttVisualizar" id="bttVisualizar3" onclick="outFocus(this.id)">
+                            Visualizar
+                            <img src="/Imgs/MeusCadIcons/arrowDown Purple.svg" alt="">
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./sharingModals.js"></script>
+</body>
+</html>

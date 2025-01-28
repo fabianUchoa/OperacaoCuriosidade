@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./operationDelete.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="confirmDelete">
+        <div class="confirmContent">
+            <div class="confirmHeader">
+                Remover o cadastro do usuário	
+            </div>
+            
+            <div class="confirmMain">
+                Deseja realmente <span class="purpleStrong">remover</span> está operação do sistema?
+                Após remover este cadastro <span class="colorPurple">não será possível recuperar</span> os dados do mesmo!
+            </div>
+            <div class="confirmFotter">
+                <div class="cancelBtt" onclick="closeModal()">
+                    Cancelar
+                </div>
+                <div class="confirmBtt" onclick="userDelete()">
+                    Remover
+                    <img src="/Imgs/shareIcons/deleteRed.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./operationDelete.js"></script>
+</body>
+</html>

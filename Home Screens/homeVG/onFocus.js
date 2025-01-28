@@ -74,7 +74,7 @@ function openNotification(){
         document.getElementById('notBox').style.zIndex = '100'
         document.querySelector('.overlay').style.display = 'block'
     }else{
-        fechaIframe('iframeModais')
+        closeModals('iframeModais')
         document.getElementById('notBox').style.zIndex = '0'
         document.querySelector('.overlay').style.display = 'none'
     }
@@ -89,12 +89,16 @@ function openPerfilBar(){
         document.querySelector('.overlay').style.display = 'block'
         document.getElementById('topPerfil').style.zIndex = '3'
     }else{
-        fechaIframe('iframeModais')
+        closeModals()
         document.querySelector('.overlay').style.display = 'none'
         document.getElementById('topPerfil').style.zIndex = '0'
     }
 }
 
+function closeModals(){
+    let iframe = document.getElementById('iframeModais');
+    iframe.style.display = 'none'
+}
 
 function outFocus(id){
 

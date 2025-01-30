@@ -23,3 +23,4 @@ function goToLogin(){
 function goToConfig(){
     window.parent.location.href = '/Home Screens/homeConfiguracoes/configuracoes.html'
 }
+

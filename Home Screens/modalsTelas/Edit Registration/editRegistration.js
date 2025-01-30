@@ -1,7 +1,7 @@
 let usersData;
-let userDetailId = sessionStorage.getItem('user')
+let userOperationId = sessionStorage.getItem('user')
 
-axios.get(`https://localhost:7064/api/user/${userDetailId}`)
+axios.get(`https://localhost:7064/api/user/${userOperationId}`)
     .then(response =>{
         console.log('Usuários Recebidos: ',response.data);
         pullInformations(response.data);
@@ -34,7 +34,7 @@ function pullInformations(user){
 }
 
 function removeImgProfile(){
-    let userId = sessionStorage.getItem('user')
+    let userId = userOperationId;
 
     if(Array.isArray(usersData)){
         usersData.forEach(user=>{
@@ -90,25 +90,29 @@ function saveButton(){
         tel: `${document.getElementById('tel').value}`
     }
     
-    let userStatus = document.querySelector(statusSituation);
+    
 
-    if(userStatus=="inativo"){
-        
+    
+    userUpdate(updateData);
+    if(verifyStatus(usersData.status)!=document.getElementById('toggleSit').textContent){
+        userUpdateStatus()
     }
-    
-
-    let userId = sessionStorage.getItem('user');
-    userUpdate(updateData, userId);
-    
     if(imgAlterada==1){
         newImg(userId);
     }
 }
 
+function verifyStatus(status){
+    if(status == true)
+        return 'Ativo';
+    else
+        return 'Inativo';
+}
 
-function userUpdate(dadosAtualizados, userId){
 
-        axios.put(`https://localhost:7064/api/user/${userId}`, dadosAtualizados)
+function userUpdate(dadosAtualizados){
+
+        axios.put(`https://localhost:7064/api/user/${userOperationId}`, dadosAtualizados)
             .then(response => {
                 console.log('Usuário atualizado com sucesso:', response.data);
                 closeModal()
@@ -117,6 +121,16 @@ function userUpdate(dadosAtualizados, userId){
                 console.error('Erro ao atualizar usuário:', error.response.data);
                 console.log(response.data)
             });
+}
+
+function userUpdateStatus(){
+    axios.put(`https://localhost:7064/api/user/altera-status/${userOperationId}`)
+        .then(
+            console.log('Status Atualizado!')
+        )
+        .catch(error=>{
+            console.error('Erro ao alterar o status:',error.response);
+        })
 }
 
 

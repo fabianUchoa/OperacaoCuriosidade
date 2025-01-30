@@ -86,23 +86,25 @@ body{
     font-size: 1.8vw;
 }
 
-.status, .statusI{
+.statusAtivo, .statusInativo{
     height: 3.2vh;
     width: 6vw;
-    
     justify-self: flex-end;
-    background-color: rgba(174, 239, 174, 0.382);
-    border: 1px solid rgba(7, 162, 7, 0.425);
-    color: rgb(7, 162, 7);
     text-align: center;
     border-radius: 20px;
     font-size: 1.4vw;
 }
 
-.statusI{
+.statusInativo{
     background-color: rgba(239, 174, 174, 0.382);
     border: 1px solid rgba(162, 7, 7, 0.425);
     color: rgb(162, 7, 7);
+}
+
+.statusAtivo{
+    background-color: rgba(174, 239, 174, 0.382);
+    border: 1px solid rgba(7, 162, 7, 0.425);
+    color: rgb(7, 162, 7);
 }
 
 .userID{

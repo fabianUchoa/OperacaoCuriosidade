@@ -11,7 +11,7 @@ function maskCode(inputCode) {
     inputCode.value = value
 }
 
-let usuario
+let usuario;
 
 function getUser(){
     let userCode = document.getElementById('inputUserCode').value
@@ -238,13 +238,14 @@ function postSentimentos(){
 function postInteresses(){
     let inputConteudo = document.getElementById('inputConteudoInteresses').value
     let user = usuario[0]
-    console.log('alo')
+    console.log(inputConteudo)
     if(inputConteudo == ''){
         alert('O campo não pode estar vazio!')
         return;
     }
     
     inputConteudo = {
+        interessesId: user.userId,
         conteudo: inputConteudo
     }
     axios.post(`https://localhost:7064/api/user/operacao/${user.userId}/interesses`,inputConteudo, {
@@ -312,9 +313,11 @@ function deleteItem(tipo,itemId ){
 
 function postOperacao(){
     let user = usuario[0]
+    console.log(user)
     let inputPostOperacao = {
         userId: 0,
-        operacaoId: 0
+        operacaoId: 0,
+        idCadastrador: sessionStorage.getItem('userLoginId')
     }
     axios.post(`https://localhost:7064/api/user/${user.userId}/operacao`,inputPostOperacao,{
         headers: {

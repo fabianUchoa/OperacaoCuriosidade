@@ -35,7 +35,8 @@ function closeModal(){
     
 }
 
-
+/*
+//função somente para os dados mockados
 function deleteOperation(){
     let iframe = window.parent.document.getElementById('iframe');
     operationCard = iframe.contentWindow.operationCard;
@@ -43,7 +44,7 @@ function deleteOperation(){
     iframe.contentWindow.document.getElementById(operationCard).style.display = 'none';
     closeModal();
 }
-
+*/
 
 // GERACAO DE CARDS PELA API
 
@@ -111,7 +112,7 @@ function showCards(operation){
                                     ${user.fatos.email}
                                 </p>
                             </p>
-                            <p class="status">
+                            <p class="status${status=verifyStatus(user.status)}">
                                 ${status=verifyStatus(user.status)}
                             </p>
                         </div>

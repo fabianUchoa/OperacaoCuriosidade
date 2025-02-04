@@ -8,7 +8,8 @@ function openCardOptionsModal(optionSelect, cardOperation, userSelect){
     sessionStorage.setItem('user',`${userSelect}`);
 
     operationCard = cardOperation;
-
+    iframe.style.width = '100vw'
+    iframe.style.height = '100vh'
     iframe.style.display = 'block';
     window.parent.document.querySelector('.overlay').style.display = 'flex';
 
@@ -21,8 +22,6 @@ function openCardOptionsModal(optionSelect, cardOperation, userSelect){
     }else if(optionSelect=='edit'){
         
         iframe.src = '/Home Screens/modalsTelas/Edit Registration/editRegistration.html'
-        iframe.style.width = '100vw'
-        iframe.style.height = '100vh'
     }
     
 }

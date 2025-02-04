@@ -93,13 +93,15 @@ function saveButton(){
     
 
     
-    userUpdate(updateData);
+    
     if(verifyStatus(usersData.status)!=document.getElementById('toggleSit').textContent){
         userUpdateStatus()
     }
     if(imgAlterada==1){
         newImg(userId);
     }
+    userUpdate(updateData);
+    window.parent.document.location.reload()
 }
 
 function verifyStatus(status){
@@ -107,6 +109,7 @@ function verifyStatus(status){
         return 'Ativo';
     else
         return 'Inativo';
+
 }
 
 

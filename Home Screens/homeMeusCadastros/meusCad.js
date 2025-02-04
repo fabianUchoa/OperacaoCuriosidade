@@ -31,7 +31,7 @@ function reloadPag(){
 }
 
 window.onload = function(){
-    getUsers()
+    getUsers();
 }
 
 function getUsers(){
@@ -218,6 +218,7 @@ function getFilter(){
 function applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut){
     axios.get('https://localhost:7064/api/user/filtros',{
         params: {
+            id: userLoginId,
             userCode : inputCod,
             status : inputStatus,
             tipo: inputType,
@@ -236,4 +237,11 @@ function applyFilter(inputCod,inputStatus,inputType,inputDateIn,inputDateOut){
 }
 
 
-//abre modais de detalhes
+//abre modal Cadastro de Curiosidade
+
+function abreCadastroCuriosidade(){
+    let iframe = document.getElementById('iframeModais');
+    iframe.src = '/Home Screens/modalsTelas/Operation Register/operationRegister.html'
+    iframe.style.display = 'block'
+    document.querySelector('.overlay').style.display = 'block'
+}
